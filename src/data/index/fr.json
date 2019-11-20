@@ -4,7 +4,10 @@
     "page": "/page-suivante",
     "siteTitle": "Bienvenue",
     "home": "Home",
-    "about": "Chi siamo",
+    "homeLink": "/",
+    "about": "About",
+    "aboutLink": "/about",
     "services": "Services",
-    "contact": "Contatti"
+    "contact": "Contact us",
+    "contactLink": "/contact-us"
 }

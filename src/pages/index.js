@@ -33,9 +33,12 @@ export const query = graphql`
         page
         siteTitle
         home
+        homeLink
         about
+        aboutLink
         services
         contact
+        contactLink
       }
     }
   }

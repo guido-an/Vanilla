@@ -1,51 +1,79 @@
-import {Link} from "gatsby"
-import React, {useState} from "react"
-import {graphql} from "gatsby"
+import { Link } from "gatsby"
+import React, { useState } from "react"
+import { graphql } from "gatsby"
 import Logo from "./logo"
 import "./header.css"
+import HamburgerMenu from "react-hamburger-menu"
+import LocalizedLink from "./LocalizedLink"
+import Cta from "./cta"
 
-{
-  /* site title gets from layout component*/
-}
-
-const Header = ({data}) => {
+const Header = ({ data }) => {
   const [visible, setVisible] = useState(false)
 
-  // showMobileMenu = () => {
-  //   this.setState(prevState => {
-  //     return { visible: !prevState.visible }
-  //   })
-  // }
-
-  // access data and use it accordingly
-  const {home, about, services, contact} = data.file.childIndexJson
+  const {
+    home,
+    homeLink,
+    about,
+    aboutLink,
+    services,
+    contact,
+    contactLink,
+  } = data.file.childIndexJson
 
   return (
-    <header className="header">
-      {visible ? (
-        <div className="header-container">
+    <section>
+      <header id="header-mobile" className="header">
+        <div className="mobile-header-container">
+          <div className="logo-container">
+            <Logo />
+          </div>
+          <div className="burger-icon">
+            <HamburgerMenu
+              isOpen={visible}
+              menuClicked={() => setVisible(!visible)}
+              width={30}
+              height={18}
+              strokeWidth={3}
+              rotate={0}
+              color="black"
+              borderRadius={0}
+              animationDuration={0.1}
+            />
+          </div>
+        </div>
+        {visible && (
+          <nav className="nav-mobile">
+            <ul>
+              <LocalizedLink to={homeLink}>{home}</LocalizedLink>
+              <LocalizedLink to={aboutLink}>{about}</LocalizedLink>
+              <LocalizedLink to="#">{services}</LocalizedLink>
+              <LocalizedLink to={contactLink}>{contact}</LocalizedLink>
+            </ul>
+          </nav>
+        )}
+      </header>
+
+      <header id="header-desktop" className="header">
+        <div className="desktop-header-container">
           <div className="logo-container">
             <Logo />
           </div>
           <div>
-            <nav>
+            <nav className="nav-desktop">
               <ul>
-                <li>{home}</li>
-                <li>{about}</li>
-                <li>{services}</li>
-                <li>{contact}</li>
-                <li>{visible}</li>
+                <LocalizedLink to={homeLink}>{home}</LocalizedLink>
+                <LocalizedLink to={aboutLink}>{about}</LocalizedLink>
+                <LocalizedLink to="#">{services}</LocalizedLink>
+                <LocalizedLink to={contactLink}>{contact}</LocalizedLink>
               </ul>
             </nav>
           </div>
-          <div>
-            <button onClick={() => setVisible(!visible)}>icon</button>
+          <div className="cta">
+            <Cta />
           </div>
         </div>
-      ) : (
-        <button onClick={() => setVisible(!visible)}>icon</button>
-      )}
-    </header>
+      </header>
+    </section>
   )
 }
 

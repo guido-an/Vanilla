@@ -1,9 +1,10 @@
 html {
-  font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
 body {
+  font-family: 'Poppins', sans-serif !important;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -63,6 +64,7 @@ dfn {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+ 
 }
 mark {
   background-color: #ff0;
@@ -619,4 +621,13 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+
+/** ***/
+p{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #3c4856
 }

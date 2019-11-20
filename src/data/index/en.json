@@ -4,7 +4,10 @@
     "page": "/next-page",
     "siteTitle": "Welcome",
     "home": "Home",
+    "homeLink": "/",
     "about": "About",
+    "aboutLink": "/about",
     "services": "Services",
-    "contact": "Contact us"
+    "contact": "Contact",
+    "contactLink": "/contact"
 }
