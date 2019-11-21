@@ -625,6 +625,11 @@ pre tt:after {
 
 
 /** ***/
+
+h1 {
+ font-family: 'Poppins', sans-serif !important;
+ color: #3c4856 !important;
+}
 p{
   font-size: 16px;
   font-weight: 400;

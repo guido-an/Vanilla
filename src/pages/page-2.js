@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import { graphql } from 'gatsby'
 
 const SecondPage = ({ pageContext: { locale }, data }) => {
-  console.log(data,"checkPage2")
+  
   return(
   
     <Layout path="/" locale={locale} data={data}>
@@ -16,14 +16,22 @@ const SecondPage = ({ pageContext: { locale }, data }) => {
     </Layout>
   )
 } 
-export const query = graphql`
-  query page2($locale: String) {
-    file(name: { eq: $locale }, relativeDirectory: { eq: "index" }) {
-      childIndexJson {
-        siteTitle
+
+
+  export const query = graphql`
+  query About($locale: String) {
+  header: file(name: { eq: $locale }, relativeDirectory: { eq: "header" }) {
+    childHeaderJson {
+        home
+        homeLink
+        about
+        aboutLink
+        services
+        contact
+        contactLink
       }
-    }
   }
-  `
+  }
+`
 
 export default SecondPage

@@ -1,0 +1,40 @@
+.footer{
+    background-color: #000;
+}
+.footer-container{
+  padding: 40px;
+}
+.footer-overtitle{
+    color: #f6ec32;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 10px
+}
+.footer-cta h2{
+    color: #fff
+}
+.footer-subtitle {
+    color: #b2b2b2;
+    margin-bottom: 60px
+}
+.divider-footer{
+    border-top: 1px solid #272727;
+    margin: 20px 40px
+}
+@media(min-width: 768px){
+    .footer{
+        margin: 0 4%;
+        border-radius: 16px;
+        text-align: center
+    }
+
+    .footer-cta{
+        width: 550px;
+        margin: 0 auto
+    }
+    .divider-footer{
+    margin: 40px 80px
+}
+}

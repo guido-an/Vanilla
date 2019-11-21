@@ -6,32 +6,30 @@ import Layout from "../components/layout"
 import Logo from "../components/logo"
 import SEO from "../components/seo"
 import LocalizedLink from '../components/LocalizedLink'
+import Hero from '../components/hero'
 
 const IndexPage = ({ pageContext: { locale }, data }) => {
-const {hello,NextPage,page } = data.file.childIndexJson
+const {hello,NextPage,page } = data.home.childIndexJson
   return(
     <Layout path="/" locale={locale} data={data}> {/* site title gets from graphql query and pass it to layout component */}
       <SEO title="Home" />
-      <h1>{hello}</h1>
-      <p><Link to="/">Ita</Link></p>
-      <p><Link to="/en">En</Link></p>
-      <p><Link to="/fr">Fr</Link></p>  {/* link for french langauge  */}
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Logo />
-      </div>
-      <LocalizedLink to={page}>{NextPage}</LocalizedLink>
+     
+   <Hero/>
     </Layout>
   )
 }
 // graphql query is used to read or fetch values from json file.
 export const query = graphql`
   query Home($locale: String) {
-    file(name: { eq: $locale }, relativeDirectory: { eq: "index" }) {
+home: file(name: { eq: $locale }, relativeDirectory: { eq: "index" }) {
       childIndexJson {
-        hello
         NextPage
         page
         siteTitle
+      }
+    }
+  header: file(name: { eq: $locale }, relativeDirectory: { eq: "header" }) {
+    childHeaderJson {
         home
         homeLink
         about
@@ -40,7 +38,7 @@ export const query = graphql`
         contact
         contactLink
       }
-    }
+  }
   }
 `
 // IndexPage.propTypes = {

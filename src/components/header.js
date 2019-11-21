@@ -18,14 +18,15 @@ const Header = ({ data }) => {
     services,
     contact,
     contactLink,
-  } = data.file.childIndexJson
+  } = data.header.childHeaderJson
 
+  
   return (
     <section>
       <header id="header-mobile" className="header">
         <div className="mobile-header-container">
           <div className="logo-container">
-            <Logo />
+            <LocalizedLink to={homeLink}><Logo/></LocalizedLink>
           </div>
           <div className="burger-icon">
             <HamburgerMenu
@@ -56,7 +57,7 @@ const Header = ({ data }) => {
       <header id="header-desktop" className="header">
         <div className="desktop-header-container">
           <div className="logo-container">
-            <Logo />
+              <LocalizedLink to={homeLink}><Logo/></LocalizedLink>
           </div>
           <div>
             <nav className="nav-desktop">
@@ -68,7 +69,7 @@ const Header = ({ data }) => {
               </ul>
             </nav>
           </div>
-          <div className="cta">
+          <div className="cta-header">
             <Cta />
           </div>
         </div>

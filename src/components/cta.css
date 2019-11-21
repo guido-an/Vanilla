@@ -1,0 +1,14 @@
+.cta{
+    background-color: yellow;
+    text-decoration: none;
+    background-color: #f6ec32;
+    border-radius: 28px;
+    color: #272727;
+    padding: 15px 30px;
+    font-size: 14px;
+    transition: all 0.2s;
+    box-shadow: 0px 0px 30px 0px rgba(12, 5, 5, 0.2)
+}
+.cta:hover{
+ box-shadow: 0px 0px 40px 0px rgba(12, 5, 5, 0.3)
+}
