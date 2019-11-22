@@ -11,6 +11,11 @@
     color: #272727;
     font-size:16px 
 }
+.services-container-img{
+    width: 64px;
+    margin: 0 auto;
+    margin-bottom: 20px
+}
 
 @media(min-width:1200px){
     .services-section{

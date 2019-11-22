@@ -20,7 +20,7 @@ const Header = ({ data }) => {
     contactLink,
   } = data.header.childHeaderJson
 
-  console.log(data, "data from header")
+ 
 
   
   return (
