@@ -20,6 +20,8 @@ const Header = ({ data }) => {
     contactLink,
   } = data.header.childHeaderJson
 
+  console.log(data, "data from header")
+
   
   return (
     <section>
@@ -69,8 +71,8 @@ const Header = ({ data }) => {
               </ul>
             </nav>
           </div>
-          <div className="cta-header">
-            <Cta />
+          <div className="cta-header-container">
+          <LocalizedLink className="cta-header-btn" to="#">Premium Support</LocalizedLink>
           </div>
         </div>
       </header>

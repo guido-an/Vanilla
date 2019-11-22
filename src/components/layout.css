@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -61,11 +61,10 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
+/* h1 {
   font-size: 2em;
   margin: 0.67em 0;
- 
-}
+} */
 mark {
   background-color: #ff0;
   color: #000;
@@ -623,16 +622,35 @@ pre tt:after {
   }
 }
 
-
 /** ***/
 
-h1 {
- font-family: 'Poppins', sans-serif !important;
- color: #3c4856 !important;
+.h1 {
+  font-family: "Poppins", sans-serif !important;
+  color: #272727 !important;
 }
-p{
+.title-section {
+  font-family: "Poppins", sans-serif;
+}
+.service-title{
+  font-family: "Poppins", sans-serif !important;
+}
+
+p {
   font-size: 16px;
   font-weight: 400;
   line-height: 25px;
-  color: #3c4856
+  color: #777;
+}
+.overtitle {
+  color: #777;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.section-desc{
+  margin-bottom: 60px;
+  font-size: 18px;
+  line-height: 32px;
+  color: #777
 }

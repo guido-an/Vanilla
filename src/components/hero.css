@@ -1,7 +1,46 @@
 .hero{
-    height: 100vh
+    height: 850px
 }
 .hero-container{
     margin-top: 40px;
-    padding: 0 40px
+    padding: 0 40px;
+    text-align: center;
+    margin-top: 40px
+}
+.hero-image-container{
+    margin-top: 60px
+}
+
+.btn-desc{
+    margin-top: 30px;
+    font-weight: 500;
+    color: #777
+}
+@media(min-width: 768px){
+    .hero{
+        height: 600px
+    }
+    .hero-container{
+        text-align: center;
+    }
+    .hero-image-container{
+        display: none
+    }
+}
+@media(min-width:1200px){
+    .hero-container{
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-evenly;
+        text-align: left;
+    }
+    .hero-image-container{
+        width: 500px;
+        display: block;
+        margin-top: 0
+    }
+    .hero-cta-container{
+        margin-top: 20px;
+        margin-right: 40px
+    }
 }

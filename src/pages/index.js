@@ -7,6 +7,7 @@ import Logo from "../components/logo"
 import SEO from "../components/seo"
 import LocalizedLink from '../components/LocalizedLink'
 import Hero from '../components/hero'
+import ServicesSection from '../components/servicesSection'
 
 const IndexPage = ({ pageContext: { locale }, data }) => {
 const {hello,NextPage,page } = data.home.childIndexJson
@@ -15,6 +16,8 @@ const {hello,NextPage,page } = data.home.childIndexJson
       <SEO title="Home" />
      
    <Hero/>
+   <ServicesSection/>
+   
     </Layout>
   )
 }

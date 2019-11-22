@@ -58,11 +58,24 @@
     top: 30px;
     right: 10px;
   }
-  .cta-header {
+  .cta-header-container {
     position: relative;
     top: 30px;
     display: block;
   }
+
+  .cta-header-btn{
+    text-decoration: none;
+    background-color: #272727;
+    border-radius: 28px;
+    color: #fff;
+    padding: 18px 30px;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+.cta-header-btn:hover{
+ box-shadow: 0px 0px 40px 0px rgba(12, 5, 5, 0.3)
+}
   .desktop-header-container ul {
     list-style: none;
   }
@@ -72,7 +85,7 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 25px;
-    color: #3c4856;
+    color: #777;
   }
   .desktop-header-container ul a:hover{
       color: #272727;
