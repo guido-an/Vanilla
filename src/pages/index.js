@@ -21,7 +21,7 @@ const IndexPage = ({ pageContext: { locale }, data }) => {
       <SEO title="Home" />
       <Hero />
       <ServicesSection />
-      <Testimonials data={data.testimonials.childTestimonialsJson} />
+      <Testimonials testimonials={data.testimonials.childTestimonialsJson} />
     </Layout>
   )
 }
@@ -54,6 +54,10 @@ home: file(name: { eq: $locale }, relativeDirectory: { eq: "index" }) {
               quote1
               client2
               quote2
+              client3
+              quote3
+              client4
+              quote4
           }
   }
   }
