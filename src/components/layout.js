@@ -20,7 +20,7 @@ const Layout = ({ children, locale, data }) => {  // accesss data"
       <Header data={data}/>        {/*pass 'data' to header so it can use GraphQL query  */}
       <div>
       <main>{children}</main>
-    <Footer/>
+      <Footer/>
       </div>
      </>
     </LocaleProvider>

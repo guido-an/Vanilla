@@ -7,6 +7,7 @@ import Logo from "../components/logo"
 import SEO from "../components/seo"
 import LocalizedLink from "../components/LocalizedLink"
 import Hero from "../components/hero"
+import FooterCta from '../components/footerCta'
 import ServicesSection from "../components/servicesSection"
 import Testimonials from "../components/testimonials"
 
@@ -22,6 +23,7 @@ const IndexPage = ({ pageContext: { locale }, data }) => {
       <Hero />
       <ServicesSection />
       <Testimonials testimonials={data.testimonials.childTestimonialsJson} />
+      <FooterCta/>
     </Layout>
   )
 }
