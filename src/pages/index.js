@@ -1,23 +1,27 @@
 import React from "react"
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { graphql } from 'gatsby'
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Logo from "../components/logo"
 import SEO from "../components/seo"
-import LocalizedLink from '../components/LocalizedLink'
-import Hero from '../components/hero'
-import ServicesSection from '../components/servicesSection'
+import LocalizedLink from "../components/LocalizedLink"
+import Hero from "../components/hero"
+import ServicesSection from "../components/servicesSection"
+import Testimonials from "../components/testimonials"
 
 const IndexPage = ({ pageContext: { locale }, data }) => {
-const {hello,NextPage,page } = data.home.childIndexJson
-  return(
-    <Layout path="/" locale={locale} data={data}> {/* site title gets from graphql query and pass it to layout component */}
+  const { hello, NextPage, page } = data.home.childIndexJson
+
+  console.log(data, "data")
+  return (
+    <Layout path="/" locale={locale} data={data}>
+      {" "}
+      {/* site title gets from graphql query and pass it to layout component */}
       <SEO title="Home" />
-     
-   <Hero/>
-   <ServicesSection/>
-   
+      <Hero />
+      <ServicesSection />
+      <Testimonials data={data.testimonials.childTestimonialsJson} />
     </Layout>
   )
 }
@@ -41,6 +45,16 @@ home: file(name: { eq: $locale }, relativeDirectory: { eq: "index" }) {
         contact
         contactLink
       }
+    }
+      testimonials: file(name: { eq: $locale }, relativeDirectory: { eq: "testimonials" }) {
+        childTestimonialsJson {
+              client0
+              quote0
+              client1
+              quote1
+              client2
+              quote2
+          }
   }
   }
 `
@@ -58,9 +72,4 @@ home: file(name: { eq: $locale }, relativeDirectory: { eq: "index" }) {
 //   }).isRequired
 // }
 
-
 export default IndexPage
-
-
-
-

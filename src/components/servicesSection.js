@@ -62,12 +62,12 @@ export default () => {
             </p>
           </div>
           <div>
-            <p className="service-title">
-              <div className="services-container-img">
-                {/* <Img fluid={data.placeholderImage.childImageSharp.fluid} /> */}
-              </div>
+            <p className="service-title"> </p>
+              {/* <div className="services-container-img">
+                <Img fluid={data.placeholderImage.childImageSharp.fluid} /> 
+              </div> */}
               <strong>SOCIAL MEDIA</strong>
-            </p>
+           
             <p className="service-desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua
