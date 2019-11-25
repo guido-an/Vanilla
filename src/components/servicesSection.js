@@ -46,9 +46,9 @@ export default () => {
         </p>
         <div className="services-container">
           <div>
-            <div className="services-container-img">
+            {/* <div className="services-container-img">
               <Img fluid={data.webDevIcon.childImageSharp.fluid} />
-            </div>
+            </div> */}
 
             <p className="service-title">
               <strong>WEB DEVELOPMENT</strong>
@@ -62,12 +62,13 @@ export default () => {
             </p>
           </div>
           <div>
-            <p className="service-title"> </p>
-              {/* <div className="services-container-img">
+            <p className="service-title">
+              <strong>SOCIAL MEDIA</strong>
+            </p>
+            {/* <div className="services-container-img">
                 <Img fluid={data.placeholderImage.childImageSharp.fluid} /> 
               </div> */}
-              <strong>SOCIAL MEDIA</strong>
-           
+
             <p className="service-desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua
@@ -78,9 +79,9 @@ export default () => {
           </div>
           <div>
             <p className="service-title">
-              <div className="services-container-img">
+              {/* <div className="services-container-img">
                 <Img fluid={data.webMarketingIcon.childImageSharp.fluid} />
-              </div>
+              </div> */}
               <strong>WEB MARKETING</strong>
             </p>
             <p className="service-desc">
@@ -93,9 +94,9 @@ export default () => {
           </div>
           <div>
             <p className="service-title">
-              <div className="services-container-img">
+              {/* <div className="services-container-img">
                 <Img fluid={data.graphicDesignIcon.childImageSharp.fluid} />
-              </div>
+              </div> */}
               <strong>GRAPHIC DESIGN</strong>
             </p>
             <p className="service-desc">
