@@ -57,7 +57,7 @@ export default function Testimonial({ testimonials }) {
         margin-top: 120px
       
       `}>
-        <p className="overtitle">TESTIMONIALS</p>
+        <p className="overtitle">DICONO DI NOI</p>
         <h2 className="title-section">
           Road To a Better And Faster
           <br /> SEOmonitor Website
@@ -93,6 +93,7 @@ export default function Testimonial({ testimonials }) {
           img {
             width: 100px;
             border-radius: 50%;
+            box-shadow: 0px 0px 10px 0px rgba(12, 5, 5, 0.6);
           }
         `}
       >
