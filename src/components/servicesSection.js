@@ -6,7 +6,21 @@ import Img from "gatsby-image"
 export default () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "monitor-sketch.png" }) {
+      webDevIcon: file(relativePath: { eq: "monitor-sketch-2.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 128) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      webMarketingIcon: file(relativePath: { eq: "dollars.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 128) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      graphicDesignIcon: file(relativePath: { eq: "heart-sketch.png" }) {
         childImageSharp {
           fluid(maxWidth: 128) {
             ...GatsbyImageSharpFluid
@@ -15,6 +29,8 @@ export default () => {
       }
     }
   `)
+  console.log(data, "data")
+
   return (
     <section className="services-section">
       <div className="services-section-container">
@@ -31,54 +47,63 @@ export default () => {
         <div className="services-container">
           <div>
             <div className="services-container-img">
-              <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+              <Img fluid={data.webDevIcon.childImageSharp.fluid} />
             </div>
 
             <p className="service-title">
               <strong>WEB DEVELOPMENT</strong>
             </p>
-            <p>
+            <p className="service-desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua
             </p>
             <p>
-              <strong>> Find out more</strong>
+              <strong className="service-cta-home">> Web Development</strong>
             </p>
           </div>
           <div>
             <p className="service-title">
+              <div className="services-container-img">
+                {/* <Img fluid={data.placeholderImage.childImageSharp.fluid} /> */}
+              </div>
               <strong>SOCIAL MEDIA</strong>
             </p>
-            <p>
+            <p className="service-desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua
             </p>
             <p>
-              <strong>> Find out more</strong>
+              <strong className="service-cta-home">> Social Media</strong>
             </p>
           </div>
           <div>
             <p className="service-title">
+              <div className="services-container-img">
+                <Img fluid={data.webMarketingIcon.childImageSharp.fluid} />
+              </div>
               <strong>WEB MARKETING</strong>
             </p>
-            <p>
+            <p className="service-desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua
             </p>
             <p>
-              <strong>> Find out more</strong>
+              <strong className="service-cta-home">> Web Marketing</strong>
             </p>
           </div>
           <div>
             <p className="service-title">
+              <div className="services-container-img">
+                <Img fluid={data.graphicDesignIcon.childImageSharp.fluid} />
+              </div>
               <strong>GRAPHIC DESIGN</strong>
             </p>
-            <p>
+            <p className="service-desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua
             </p>
             <p>
-              <strong>> Find out more</strong>
+              <strong className="service-cta-home">> Graphic Design</strong>
             </p>
           </div>
         </div>

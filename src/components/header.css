@@ -42,9 +42,11 @@
   #header-desktop {
     display: block;
     /* position: fixed; */
-    width: 100%;
+    
     background-color: #fff;
     z-index: 1;
+    margin: 0 80px
+    
     
   }
 
