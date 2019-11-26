@@ -13,7 +13,20 @@ module.exports = [
     path: '/pagina-successiva',
     component: path.resolve(`src/pages/page-2.js`)
   },
-  //next page route for french language 
+  //get-started
+  {
+    path: '/get-started',
+    component: path.resolve(`src/pages/get-started.js`)
+  },
+  {
+    path: '/get-started',
+    component: path.resolve(`src/pages/get-started.js`)
+  },
+  {
+    path: '/get-started',
+    component: path.resolve(`src/pages/get-started.js`)
+  },
+
   {
     path: '/page-suivante',
     component: path.resolve(`src/pages/page-2.js`)

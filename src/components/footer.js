@@ -59,7 +59,7 @@ export default () => {
     }
   `)
 
-  console.log(data, "data from footer")
+
   return (
     <footer className="footer">
       <div className="footer-container">

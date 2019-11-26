@@ -20,7 +20,6 @@ const Header = ({ data }) => {
   } = data.header.childHeaderJson
 
  
-
   
   return (
     <section>
