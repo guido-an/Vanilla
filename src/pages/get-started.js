@@ -30,7 +30,7 @@ const getStarted = ({ pageContext: { locale }, data }) => {
         </Link>
       </header>
       <div>
-      <form name="Contact Form" method="POST" data-netlify="true" action="/thank-you">
+      <form name="Contact Form" method="POST" data-netlify="true">
       <input type="hidden" name="form-name" value="Contact Form" />
       <div>
         <label>Name:</label>
