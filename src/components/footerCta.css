@@ -24,9 +24,10 @@
 .divider-footerCta{
     height: 40px;
     background-color: #272727;
-    width: 90%;
     border-bottom: 1px solid #777;
+    width: 90%;
     margin: 0 auto
+   
 }
 @media(min-width: 768px){
     .footerCta{

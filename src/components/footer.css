@@ -16,8 +16,41 @@
 .footer-section-container{
     margin-bottom: 60px
 }
-.footer-container p {
-    line-height: 10px;
+
+.footer-contact-container{
+    display: flex;
+    position: relative;
+   left: 9px
+
+}
+.icon-footer{
+    width: 16px;
+    height: 16px;
+    position: relative;
+    right: 8px
+}
+.footer-link{
+    color: #777;
+    font-size: 16px;
+    text-decoration: none;
+    line-height: 35px;
+    position: relative;
+    bottom: 8px;
+    display: block;
+}
+.footer-link:hover{
+    color: #b2b2b2
+}
+
+.footer-social-container{
+    display: flex
+}
+.footer-social-icon{
+    width: 28px;
+    height: 28px;
+    margin: 0 8px;
+    position: relative;
+    right: 6px
 }
 
 

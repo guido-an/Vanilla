@@ -1,18 +1,17 @@
 import React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Logo from "../components/logo"
+
 import SEO from "../components/seo"
-import LocalizedLink from "../components/LocalizedLink"
+
 import Hero from "../components/hero"
-import FooterCta from '../components/footerCta'
+import FooterCta from "../components/footerCta"
 import ServicesSection from "../components/servicesSection"
 import Testimonials from "../components/testimonials"
 
 const IndexPage = ({ pageContext: { locale }, data }) => {
-  const { hello, NextPage, page } = data.home.childIndexJson
+
 
   console.log(data, "data")
   return (
@@ -23,22 +22,22 @@ const IndexPage = ({ pageContext: { locale }, data }) => {
       <Hero />
       <ServicesSection />
       <Testimonials testimonials={data.testimonials.childTestimonialsJson} />
-      <FooterCta/>
+      <FooterCta />
     </Layout>
   )
 }
 // graphql query is used to read or fetch values from json file.
 export const query = graphql`
   query Home($locale: String) {
-home: file(name: { eq: $locale }, relativeDirectory: { eq: "index" }) {
+    home: file(name: { eq: $locale }, relativeDirectory: { eq: "index" }) {
       childIndexJson {
         NextPage
         page
         siteTitle
       }
     }
-  header: file(name: { eq: $locale }, relativeDirectory: { eq: "header" }) {
-    childHeaderJson {
+    header: file(name: { eq: $locale }, relativeDirectory: { eq: "header" }) {
+      childHeaderJson {
         home
         homeLink
         about
@@ -48,20 +47,23 @@ home: file(name: { eq: $locale }, relativeDirectory: { eq: "index" }) {
         contactLink
       }
     }
-      testimonials: file(name: { eq: $locale }, relativeDirectory: { eq: "testimonials" }) {
-        childTestimonialsJson {
-              client0
-              quote0
-              client1
-              quote1
-              client2
-              quote2
-              client3
-              quote3
-              client4
-              quote4
-          }
-  }
+    testimonials: file(
+      name: { eq: $locale }
+      relativeDirectory: { eq: "testimonials" }
+    ) {
+      childTestimonialsJson {
+        client0
+        quote0
+        client1
+        quote1
+        client2
+        quote2
+        client3
+        quote3
+        client4
+        quote4
+      }
+    }
   }
 `
 // IndexPage.propTypes = {
