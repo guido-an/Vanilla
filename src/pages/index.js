@@ -13,12 +13,11 @@ import Testimonials from "../components/testimonials"
 const IndexPage = ({ pageContext: { locale }, data }) => {
 
 
-  console.log(data, "data")
   return (
     <Layout path="/" locale={locale} data={data}>
-      {" "}
-      {/* site title gets from graphql query and pass it to layout component */}
-      <SEO title="Home" />
+  
+    {/* site title gets from graphql query and pass it to layout component */}
+      <SEO title="" />
       <Hero />
       <ServicesSection />
       <Testimonials testimonials={data.testimonials.childTestimonialsJson} />
