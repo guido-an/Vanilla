@@ -2,13 +2,13 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Footer from "../components/footer"
 import Logo from "../components/logo"
-import {LocaleProvider, LocaleConsumer} from '../constants/localeProviders'
+import './get-started.css'
+import {LocaleProvider} from '../constants/localeProviders'
+import LocalizedLink from "../components/LocalizedLink"
 
 const getStarted = ({ pageContext: { locale }, data }) => {
-  console.log(data, locale ,"data get started ")
   return (
      <LocaleProvider value={locale}>
-     <section>
         <header
           style={{
             display: "flex",
@@ -16,11 +16,11 @@ const getStarted = ({ pageContext: { locale }, data }) => {
             padding: "0 4%",
           }}
         >
-          <Logo />
-          <Link
+        <LocalizedLink to="/"><Logo/></LocalizedLink>
+          <LocalizedLink to="/"
             style={{
               position: "relative",
-              top: "30px",
+              top: "35px",
               color: "#777",
               textDecoration: "none",
               fontSize: "16px",
@@ -29,12 +29,16 @@ const getStarted = ({ pageContext: { locale }, data }) => {
             to="/"
           >
             No, I don't want any advice
-          </Link>
+          </LocalizedLink>
         </header>
+        <section className="get-started-section">
         <div>
-          <h1 style={{ textAlign: "center", marginTop: "40px" }}>
-            We are JAMstack developers.
+          <h1 style={{marginTop: "60px" }}>
+            {data.getStarted.childGetStartedJson.title}
           </h1>
+          <span> {data.getStarted.childGetStartedJson.subtitle} 
+          </span>
+          <p style={{color: "#777", fontSize: "20px", marginTop: "40px"}}>Get a <strong> {data.getStarted.childGetStartedJson.ctaText}</strong></p>
           <div>
             <form
               name="Contact Form"
@@ -44,23 +48,22 @@ const getStarted = ({ pageContext: { locale }, data }) => {
             >
               <input type="hidden" name="form-name" value="Contact Form" />
               <div>
-                <label>Name:</label>
-                <input type="text" name="name" />
+            
+                <input type="text" name="name" placeholder={data.getStarted.childGetStartedJson.namePlaceHolder} required />
               </div>
               <div>
-                <label>Your Email:</label>
-                <input type="email" name="email" placeholder="*Email" />
+           
+                <input type="email" name="email" placeholder={data.getStarted.childGetStartedJson.emailPlaceHolder} required />
               </div>
               <div>
-                <label>Message:</label>
-                <textarea name="message" placeholder="How can we help?" />
+                <textarea name="message" placeholder={data.getStarted.childGetStartedJson.textareaPlaceHolder} required />
               </div>
-              <button type="submit">Send</button>
+              <button type="submit">{data.getStarted.childGetStartedJson.ctaButton}</button>
             </form>
           </div>
         </div>
-       <Footer />
       </section>
+       <Footer />
      </LocaleProvider>
   )
 }
@@ -73,20 +76,16 @@ export const query = graphql`
       relativeDirectory: { eq: "get-started" }
     ) {
       childGetStartedJson {
-        getStarted
+        title
+        subtitle
+        ctaText
+        namePlaceHolder
+        emailPlaceHolder
+        textAreaPlaceHolder
+        ctaButton
+        homeLink
       }
     }
-    header: file(name: { eq: $locale }, relativeDirectory: { eq: "header" }) {
-        childHeaderJson {
-          home
-          homeLink
-          about
-          aboutLink
-          services
-          contact
-          contactLink
-        }
-      }
   }
 `
 

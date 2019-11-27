@@ -15,7 +15,7 @@ module.exports = [
   },
   //get-started
   {
-    path: '/get-started',
+    path: '/richiedi-un-preventivo',
     component: path.resolve(`src/pages/get-started.js`)
   },
   {

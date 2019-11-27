@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 
 
 
-export default () => {
+export default ({linkGetStarted}) => {
   
 
   return (
@@ -22,7 +22,7 @@ export default () => {
             Let us maximize your business potential with the latest and<br/>
             innovative technologies.
           </p>
-          <Cta />
+          <Cta linkGetStarted={linkGetStarted} />
           <p className="btn-desc">
             Get one-to-one consultation in less than 24h.
           </p>

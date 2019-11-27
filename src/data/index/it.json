@@ -9,5 +9,6 @@
     "aboutLink": "/chi-siamo",
     "services": "Servizi",
     "contact": "Contatti",
-    "contactLink": "/contatti"
+    "contactLink": "/contatti",
+    "linkGetStarted": "/richiedi-un-preventivo"
 }

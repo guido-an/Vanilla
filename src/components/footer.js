@@ -64,10 +64,12 @@ export default () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-section-container">
+          <LocalizedLink to="/">
           <Img
             className="logo-footer"
             fluid={data.logo.childImageSharp.fluid}
-          />
+          /></LocalizedLink>
+        
         </div>
         <div className="footer-section-container">
           <p className="footer-title">Services</p>
