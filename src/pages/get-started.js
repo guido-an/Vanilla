@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Footer from "../components/footer"
 import Logo from "../components/logo"
-import {LocaleProvider} from '../constants/localeProviders'
+import {LocaleProvider, LocaleConsumer} from '../constants/localeProviders'
 
 const getStarted = ({ pageContext: { locale }, data }) => {
   console.log(data, locale ,"data get started ")

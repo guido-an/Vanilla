@@ -57,7 +57,7 @@
 @media(min-width: 768px){
     .footer{
         margin: 0 4% 50px;
-        border-radius: 0 0 16px 16px;
+        border-radius: 16px;
     }
     .logo-footer{
         position: relative;
