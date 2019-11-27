@@ -3,14 +3,8 @@ import PropTypes from 'prop-types'
 import { graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
+import {LocaleProvider,LocaleConsumer} from '../constants/localeProviders'
 import "./layout.css"
-
-const {
-  Provider: LocaleProvider,
-  Consumer: LocaleConsumer
-} = React.createContext()
-
-
 
 const Layout = ({ children, locale, data }) => {  // accesss data"
   console.log(data,"fromlayout")
@@ -26,8 +20,6 @@ const Layout = ({ children, locale, data }) => {  // accesss data"
     </LocaleProvider>
   )
 }
-
-export { LocaleConsumer }
 
 Layout.propTypes = {
   children: PropTypes.oneOfType([

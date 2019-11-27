@@ -17,7 +17,6 @@ const SecondPage = ({ pageContext: { locale }, data }) => {
       <p>Welcome to page 2</p>
       <Link to="/">Go back to the homepage</Link>
       <LocalizedLink to="/">test</LocalizedLink>
-      <Footer/>
     </Layout>
   )
 } 

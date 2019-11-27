@@ -1,15 +1,14 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Footer from "../components/footer"
-import Layout from "../components/layout"
-import {LocaleConsumer} from "../components/layout"
-
 import Logo from "../components/logo"
+import {LocaleProvider} from '../constants/localeProviders'
 
 const getStarted = ({ pageContext: { locale }, data }) => {
-  console.log("data get started ", data, locale)
+  console.log(data, locale ,"data get started ")
   return (
-      <section>
+     <LocaleProvider value={locale}>
+     <section>
         <header
           style={{
             display: "flex",
@@ -60,10 +59,12 @@ const getStarted = ({ pageContext: { locale }, data }) => {
             </form>
           </div>
         </div>
-        {/* <Footer/> */}
+       <Footer />
       </section>
+     </LocaleProvider>
   )
 }
+
 
 export const query = graphql`
   query getStarted($locale: String) {
