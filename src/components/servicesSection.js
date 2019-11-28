@@ -6,21 +6,28 @@ import Img from "gatsby-image"
 export default () => {
   const data = useStaticQuery(graphql`
     query {
-      webDevIcon: file(relativePath: { eq: "monitor-sketch-2.png" }) {
+      webDevIcon: file(relativePath: { eq: "realizzazione-siti-web.png" }) {
         childImageSharp {
           fluid(maxWidth: 128) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      webMarketingIcon: file(relativePath: { eq: "dollars.png" }) {
+      socialMediaIcon: file(relativePath: { eq: "social-media-marketing.png" }) {
         childImageSharp {
           fluid(maxWidth: 128) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      graphicDesignIcon: file(relativePath: { eq: "heart-sketch.png" }) {
+      webMarketingIcon: file(relativePath: { eq: "web-marketing.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 128) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      graphicDesignIcon: file(relativePath: { eq: "graphic-design.png" }) {
         childImageSharp {
           fluid(maxWidth: 128) {
             ...GatsbyImageSharpFluid
@@ -46,9 +53,9 @@ export default () => {
         </p>
         <div className="services-container">
           <div>
-            {/* <div className="services-container-img">
+            <div className="services-container-img">
               <Img fluid={data.webDevIcon.childImageSharp.fluid} />
-            </div> */}
+            </div>
 
             <p className="service-title">
               <strong>WEB DEVELOPMENT</strong>
@@ -62,12 +69,13 @@ export default () => {
             </p>
           </div>
           <div>
+          <div className="services-container-img">
+                <Img fluid={data.socialMediaIcon.childImageSharp.fluid} /> 
+              </div>
             <p className="service-title">
               <strong>SOCIAL MEDIA</strong>
             </p>
-            {/* <div className="services-container-img">
-                <Img fluid={data.placeholderImage.childImageSharp.fluid} /> 
-              </div> */}
+           
 
             <p className="service-desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -78,10 +86,11 @@ export default () => {
             </p>
           </div>
           <div>
-            <p className="service-title">
-              {/* <div className="services-container-img">
+            <div className="services-container-img">
                 <Img fluid={data.webMarketingIcon.childImageSharp.fluid} />
-              </div> */}
+              </div>
+            <p className="service-title">
+              
               <strong>WEB MARKETING</strong>
             </p>
             <p className="service-desc">
@@ -93,10 +102,11 @@ export default () => {
             </p>
           </div>
           <div>
-            <p className="service-title">
-              {/* <div className="services-container-img">
+            <div className="services-container-img">
                 <Img fluid={data.graphicDesignIcon.childImageSharp.fluid} />
-              </div> */}
+              </div>
+            <p className="service-title">
+              
               <strong>GRAPHIC DESIGN</strong>
             </p>
             <p className="service-desc">
