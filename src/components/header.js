@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import Logo from "./logo"
 import "./header.css"
@@ -19,14 +19,16 @@ const Header = ({ data }) => {
     contactLink,
   } = data.header.childHeaderJson
 
- 
-  
+
+
   return (
     <section>
       <header id="header-mobile" className="header">
         <div className="mobile-header-container">
           <div className="logo-container">
-            <LocalizedLink to={homeLink}><Logo/></LocalizedLink>
+            <LocalizedLink to={homeLink}>
+              <Logo />
+            </LocalizedLink>
           </div>
           <div className="burger-icon">
             <HamburgerMenu
@@ -54,26 +56,32 @@ const Header = ({ data }) => {
         )}
       </header>
 
-      <header id="header-desktop" className="header">
-        <div className="desktop-header-container">
-          <div className="logo-container">
-              <LocalizedLink to={homeLink}><Logo/></LocalizedLink>
+  
+        <header id="header-desktop" className="header">
+          <div className="desktop-header-container">
+            <div className="logo-container">
+              <LocalizedLink to={homeLink}>
+                <Logo />
+              </LocalizedLink>
+            </div>
+            <div>
+              <nav className="nav-desktop">
+                <ul>
+                  <LocalizedLink to={homeLink}>{home}</LocalizedLink>
+                  <LocalizedLink to={aboutLink}>{about}</LocalizedLink>
+                  <LocalizedLink to="#">{services}</LocalizedLink>
+                  <LocalizedLink to={contactLink}>{contact}</LocalizedLink>
+                </ul>
+              </nav>
+            </div>
+            <div className="cta-header-container">
+              <LocalizedLink className="cta-header-btn" to="#">
+                Premium Support
+              </LocalizedLink>
+            </div>
           </div>
-          <div>
-            <nav className="nav-desktop">
-              <ul>
-                <LocalizedLink to={homeLink}>{home}</LocalizedLink>
-                <LocalizedLink to={aboutLink}>{about}</LocalizedLink>
-                <LocalizedLink to="#">{services}</LocalizedLink>
-                <LocalizedLink to={contactLink}>{contact}</LocalizedLink>
-              </ul>
-            </nav>
-          </div>
-          <div className="cta-header-container">
-          <LocalizedLink className="cta-header-btn" to="#">Premium Support</LocalizedLink>
-          </div>
-        </div>
-      </header>
+        </header>
+
     </section>
   )
 }

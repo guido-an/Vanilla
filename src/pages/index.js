@@ -25,7 +25,8 @@ const IndexPage = ({ pageContext: { locale }, data }) => {
     </Layout>
   )
 }
-// graphql query is used to read or fetch values from json file.
+
+
 export const query = graphql`
   query Home($locale: String) {
     home: file(name: { eq: $locale }, relativeDirectory: { eq: "index" }) {

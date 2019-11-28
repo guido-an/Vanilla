@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import "./servicesSection.css"
 import Img from "gatsby-image"
+import LocalizedLink from "./LocalizedLink"
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -13,7 +14,9 @@ export default () => {
           }
         }
       }
-      socialMediaIcon: file(relativePath: { eq: "social-media-marketing.png" }) {
+      socialMediaIcon: file(
+        relativePath: { eq: "social-media-marketing.png" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 128) {
             ...GatsbyImageSharpFluid
@@ -39,7 +42,7 @@ export default () => {
   console.log(data, "data")
 
   return (
-    <section className="services-section">
+    <section onScroll={console.log("scroll")} className="services-section">
       <div className="services-section-container">
         <p className="overtitle">FEATURED JAMSTACK CASE STUDY</p>
         <h2 className="title-section">
@@ -65,32 +68,29 @@ export default () => {
               eiusmod tempor incididunt ut labore et dolore magna aliqua
             </p>
             <p>
-              <strong className="service-cta-home">> Web Development</strong>
+              <LocalizedLink className="service-cta-home"><strong>> Web Development</strong></LocalizedLink>
             </p>
           </div>
           <div>
-          <div className="services-container-img">
-                <Img fluid={data.socialMediaIcon.childImageSharp.fluid} /> 
-              </div>
+            <div className="services-container-img">
+              <Img fluid={data.socialMediaIcon.childImageSharp.fluid} />
+            </div>
             <p className="service-title">
               <strong>SOCIAL MEDIA</strong>
             </p>
-           
 
             <p className="service-desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua
             </p>
             <p>
-              <strong className="service-cta-home">> Social Media</strong>
-            </p>
+            <LocalizedLink className="service-cta-home"><strong>> Social Media</strong></LocalizedLink>            </p>
           </div>
           <div>
             <div className="services-container-img">
-                <Img fluid={data.webMarketingIcon.childImageSharp.fluid} />
-              </div>
+              <Img fluid={data.webMarketingIcon.childImageSharp.fluid} />
+            </div>
             <p className="service-title">
-              
               <strong>WEB MARKETING</strong>
             </p>
             <p className="service-desc">
@@ -98,15 +98,14 @@ export default () => {
               eiusmod tempor incididunt ut labore et dolore magna aliqua
             </p>
             <p>
-              <strong className="service-cta-home">> Web Marketing</strong>
+            <LocalizedLink className="service-cta-home"><strong>> Web Marketing</strong></LocalizedLink>
             </p>
           </div>
           <div>
             <div className="services-container-img">
-                <Img fluid={data.graphicDesignIcon.childImageSharp.fluid} />
-              </div>
+              <Img fluid={data.graphicDesignIcon.childImageSharp.fluid} />
+            </div>
             <p className="service-title">
-              
               <strong>GRAPHIC DESIGN</strong>
             </p>
             <p className="service-desc">
@@ -114,8 +113,7 @@ export default () => {
               eiusmod tempor incididunt ut labore et dolore magna aliqua
             </p>
             <p>
-              <strong className="service-cta-home">> Graphic Design</strong>
-            </p>
+            <LocalizedLink className="service-cta-home"><strong>> Graphic Design</strong></LocalizedLink>            </p>
           </div>
         </div>
       </div>

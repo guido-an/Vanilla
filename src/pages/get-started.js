@@ -13,10 +13,13 @@ const getStarted = ({ pageContext: { locale }, data }) => {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            padding: "0 4%",
+            margin: "0 130px",
           }}
         >
+        <div style={{margin: "10px 0"}}>
         <LocalizedLink to="/"><Logo/></LocalizedLink>
+        </div>
+       
           <LocalizedLink to="/"
             style={{
               position: "relative",
@@ -56,7 +59,7 @@ const getStarted = ({ pageContext: { locale }, data }) => {
                 <input type="email" name="email" placeholder={data.getStarted.childGetStartedJson.emailPlaceHolder} required />
               </div>
               <div>
-                <textarea name="message" placeholder={data.getStarted.childGetStartedJson.textareaPlaceHolder} required />
+                <textarea name="message" placeholder={data.getStarted.childGetStartedJson.textAreaPlaceHolder} required />
               </div>
               <button type="submit">{data.getStarted.childGetStartedJson.ctaButton}</button>
             </form>

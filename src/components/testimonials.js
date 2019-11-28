@@ -4,6 +4,7 @@ import benedusi from "../images/alberto-benedusi.jpg"
 import scavone from "../images/giuseppe-scavone.jpg"
 import salvatore from "../images/salvatore-di-giovanni.jpg"
 import monica from "../images/monica-gili.jpg"
+import saputo from "../images/michele-saputo.jpg"
 
 export default function Testimonial({ testimonials }) {
   console.log(testimonials, "test")
@@ -18,7 +19,7 @@ export default function Testimonial({ testimonials }) {
       client: testimonials.client1,
       quote: testimonials.quote1,
       company: "Italia Bulldog",
-      img: "",
+      img: saputo,
     },
     {
       client: testimonials.client2,
@@ -115,9 +116,9 @@ export default function Testimonial({ testimonials }) {
           }
           span::before {
             content: "";
-            height: 8px;
-            width: 8px;
-            background-color: #777;
+            height: 10px;
+            width: 10px;
+            background-color: #d2d2d2;
             border-radius: 50%;
             transition: background-color 0.3s ease;
           }
