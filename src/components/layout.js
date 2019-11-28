@@ -11,7 +11,7 @@ const Layout = ({ children, locale, data }) => {  // accesss data"
   return(  
     <LocaleProvider value={locale}>
       <>
-      <Header data={data}/>        {/*pass 'data' to header so it can use GraphQL query  */}
+      <Header data={data} linkGetStarted={data.home.childIndexJson.linkGetStarted}/>        {/*pass 'data' to header so it can use GraphQL query  */}
       <div>
       <main>{children}</main>
       <Footer/>

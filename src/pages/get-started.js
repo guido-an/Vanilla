@@ -9,13 +9,7 @@ import LocalizedLink from "../components/LocalizedLink"
 const getStarted = ({ pageContext: { locale }, data }) => {
   return (
      <LocaleProvider value={locale}>
-        <header
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            margin: "0 130px",
-          }}
-        >
+        <header className="header-get-started">
         <div style={{margin: "10px 0"}}>
         <LocalizedLink to="/"><Logo/></LocalizedLink>
         </div>

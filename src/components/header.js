@@ -6,7 +6,7 @@ import HamburgerMenu from "react-hamburger-menu"
 import LocalizedLink from "./LocalizedLink"
 import Cta from "./cta"
 
-const Header = ({ data }) => {
+const Header = ({ data, linkGetStarted }) => {
   const [visible, setVisible] = useState(false)
 
   const {
@@ -52,7 +52,7 @@ const Header = ({ data }) => {
               <LocalizedLink to="#">{services}</LocalizedLink>
               <LocalizedLink to={contactLink}>{contact}</LocalizedLink>
             </ul>
-           {/* <Cta/> */}
+            <div className="mobile-menu-cta"><Cta linkGetStarted={linkGetStarted} /></div>
           </nav>
         )}
       </header>

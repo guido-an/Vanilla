@@ -14,7 +14,7 @@ const IndexPage = ({ pageContext: { locale }, data }) => {
 
 
   return (
-    <Layout path="/" locale={locale} data={data}>
+    <Layout path="/" locale={locale} data={data} linkGetStarted={data.home.childIndexJson.linkGetStarted} >
   
     {/* site title gets from graphql query and pass it to layout component */}
       <SEO title="" />
