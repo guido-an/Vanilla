@@ -18,19 +18,25 @@
 .mobile-header-container {
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
+  margin: 0 20px;
+}
+.nav-mobile{
+  margin: 20px 20px;
+  padding-top: 20px;
+  height: 100vh;
+  border-top: 1px solid #d2d2d2;
 }
 .nav-mobile ul {
   list-style: none;
-  padding: 0 20px;
+  padding: 0 0px;
 }
 .nav-mobile ul a {
   display: block;
-  padding: 10px 0;
+  padding: 12px 0;
   font-size: 16px;
   font-weight: 500;
   line-height: 25px;
-  color: #3c4856;
+  color: #777;
   line-height: 25px;
   text-decoration: none;
 }
