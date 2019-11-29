@@ -7,7 +7,7 @@ import {LocaleProvider,LocaleConsumer} from '../constants/localeProviders'
 import "./layout.css"
 
 const Layout = ({ children, locale, data }) => {  // accesss data"
-  console.log(data,"fromlayout")
+ console.log(data.home, "header")
   return(  
     <LocaleProvider value={locale}>
       <>

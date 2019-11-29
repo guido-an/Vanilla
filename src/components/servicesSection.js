@@ -68,7 +68,7 @@ export default () => {
               eiusmod tempor incididunt ut labore et dolore magna aliqua
             </p>
             <p>
-              <LocalizedLink className="service-cta-home"><strong>> Web Development</strong></LocalizedLink>
+              <LocalizedLink to="/" className="service-cta-home"><strong>> Web Development</strong></LocalizedLink>
             </p>
           </div>
           <div>
@@ -84,7 +84,7 @@ export default () => {
               eiusmod tempor incididunt ut labore et dolore magna aliqua
             </p>
             <p>
-            <LocalizedLink className="service-cta-home"><strong>> Social Media</strong></LocalizedLink>            </p>
+            <LocalizedLink to="/" className="service-cta-home"><strong>> Social Media</strong></LocalizedLink>            </p>
           </div>
           <div>
             <div className="services-container-img">
@@ -98,7 +98,7 @@ export default () => {
               eiusmod tempor incididunt ut labore et dolore magna aliqua
             </p>
             <p>
-            <LocalizedLink className="service-cta-home"><strong>> Web Marketing</strong></LocalizedLink>
+            <LocalizedLink to="/" className="service-cta-home"><strong>> Web Marketing</strong></LocalizedLink>
             </p>
           </div>
           <div>
@@ -113,7 +113,7 @@ export default () => {
               eiusmod tempor incididunt ut labore et dolore magna aliqua
             </p>
             <p>
-            <LocalizedLink className="service-cta-home"><strong>> Graphic Design</strong></LocalizedLink>            </p>
+            <LocalizedLink to="/" className="service-cta-home"><strong>> Graphic Design</strong></LocalizedLink>            </p>
           </div>
         </div>
       </div>
