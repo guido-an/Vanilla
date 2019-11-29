@@ -14,7 +14,7 @@ const IndexPage = ({ pageContext: { locale }, data }) => {
 
 
   return (
-    <Layout path="/" locale={locale} data={data} linkGetStarted={data.home.childIndexJson.linkGetStarted} >
+    <Layout path="/" locale={locale} data={data} >
   
     {/* site title gets from graphql query and pass it to layout component */}
       <SEO title="" />
@@ -34,7 +34,7 @@ export const query = graphql`
         NextPage
         page
         siteTitle
-       linkGetStarted
+        linkGetStarted
       }
     }
     header: file(name: { eq: $locale }, relativeDirectory: { eq: "header" }) {
