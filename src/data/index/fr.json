@@ -9,6 +9,5 @@
     "aboutLink": "/about",
     "services": "Services",
     "contact": "Contact us",
-    "contactLink": "/contact-us",
-    "linkGetStarted": "/get-started"
+    "contactLink": "/contact-us"
 }

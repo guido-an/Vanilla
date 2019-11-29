@@ -1,15 +1,29 @@
 import React, { useState, useEffect } from "react"
-import { graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+
 import Logo from "./logo"
+import LogoOnScroll from "./logoOnScroll"
 import "./header.css"
 import HamburgerMenu from "react-hamburger-menu"
 import LocalizedLink from "./LocalizedLink"
 import Cta from "./cta"
 
-const Header = ({ data, linkGetStarted }) => {
+const Header = ({ dataHeader }) => {
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     arrowDown: file(relativePath: { eq: "arrow-down.png" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 16) {
+  //           ...GatsbyImageSharpFluid
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
   const [visible, setVisible] = useState(false)
-  const [Scroll, setScroll] = useState(false)   // stateCheck for Scroll
-  console.log(Scroll,"checkScroll")
+  let [dropDownMenu, setDropDownMenu] = useState(false)
+  const [scroll, setScroll] = useState(false) // stateCheck for Scroll
   const {
     home,
     homeLink,
@@ -18,19 +32,29 @@ const Header = ({ data, linkGetStarted }) => {
     services,
     contact,
     contactLink,
-  } = data.header.childHeaderJson
+  } = dataHeader.header.childHeaderJson
 
+  const listenDropDownMenu = () => {
+    setDropDownMenu(dropDownMenu = !dropDownMenu)
+  }
+  const showDropDownMenuDesktop = () => {
+    setDropDownMenu(dropDownMenu = true )
+  }
+  const hideDropDownMenuDesktop = () => {
+    setDropDownMenu(dropDownMenu = false )
+  }
   const listenScrollEvent = () => {
-    if (window.scrollY > 200) {    // Scroll check / you can define your scroll in pixels eg.200
-      setScroll(true)   // if windowScroll to predifined position setState "true"
+    if (window.scrollY > 200) {
+      // Scroll check / you can define your scroll in pixels eg.200
+      setScroll(true) // if windowScroll to predifined position setState "true"
     } else {
-      setScroll(false)  // if windowNOTScrolled or set back to its starting postion setState "false"
+      setScroll(false) // if windowNOTScrolled or set back to its starting postion setState "false"
     }
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', listenScrollEvent)    // add event listner 
-  });
+    window.addEventListener("scroll", listenScrollEvent) // add event listner
+  })
 
   return (
     <section>
@@ -38,7 +62,7 @@ const Header = ({ data, linkGetStarted }) => {
         <div className="mobile-header-container">
           <div className="logo-container">
             <LocalizedLink to={homeLink}>
-              <Logo />
+              {!scroll ? <Logo /> : <LogoOnScroll />}
             </LocalizedLink>
           </div>
           <div className="burger-icon">
@@ -60,40 +84,61 @@ const Header = ({ data, linkGetStarted }) => {
             <ul>
               <LocalizedLink to={homeLink}>{home}</LocalizedLink>
               <LocalizedLink to={aboutLink}>{about}</LocalizedLink>
-              <LocalizedLink to="#">{services}</LocalizedLink>
+              <LocalizedLink onClick={listenDropDownMenu} to="#">{services} <span className="dropdown-icon">{dropDownMenu ? "v" : ">"}</span></LocalizedLink>
+              {dropDownMenu && (
+                <div>
+                  <LocalizedLink className="dropdown-item" to="#">{services}</LocalizedLink>
+                  <LocalizedLink className="dropdown-item" to="#">{services}</LocalizedLink>
+                </div>
+              )}
+
               <LocalizedLink to={contactLink}>{contact}</LocalizedLink>
             </ul>
-            <div className="mobile-menu-cta"><Cta linkGetStarted={linkGetStarted} /></div>
+            <div className="mobile-menu-cta">
+              <Cta
+                linkGetStarted={
+                  dataHeader.header.childHeaderJson.linkGetStarted
+                }
+              />
+            </div>
           </nav>
         )}
       </header>
-  
-        <header id="header-desktop" className="header">
-          <div className="desktop-header-container">
-            <div className="logo-container">
-              <LocalizedLink to={homeLink}>
-              {!Scroll  &&  <Logo /> }    
-              {/* {Scroll  &&  <Logo /> }     if scroll State 'true' unCommentThis & Add your changes in place of <logo/> */}
-              </LocalizedLink>
-            </div>
-            <div>
-              <nav className="nav-desktop">
-                <ul>
-                  <LocalizedLink to={homeLink}>{home}</LocalizedLink>
-                  <LocalizedLink to={aboutLink}>{about}</LocalizedLink>
-                  <LocalizedLink to="#">{services}</LocalizedLink>
-                  <LocalizedLink to={contactLink}>{contact}</LocalizedLink>
-                </ul>
-              </nav>
-            </div>
-            <div className="cta-header-container">
-              <LocalizedLink className="cta-header-btn" to="#">
-                Premium Support
-              </LocalizedLink>
-            </div>
-          </div>
-        </header>
 
+      <header onMouseLeave={hideDropDownMenuDesktop} id="header-desktop" className="header">
+        <div className="desktop-header-container">
+          <div className="logo-container">
+            <LocalizedLink to={homeLink}>
+              {/* on scroll change logo */}
+              {!scroll ? <Logo /> : <LogoOnScroll />}
+            </LocalizedLink>
+          </div>
+          <div>
+            <nav className="nav-desktop">
+              <ul>
+                <LocalizedLink to={homeLink}>{home}</LocalizedLink>
+                <LocalizedLink to={aboutLink}>{about}</LocalizedLink>
+                <LocalizedLink onMouseEnter={showDropDownMenuDesktop} to="#" className="dropdwon-service">{services} <span className="dropdown-icon">{dropDownMenu ? "v" : ">"}</span></LocalizedLink>
+              
+                <LocalizedLink to={contactLink}>{contact}</LocalizedLink>
+              </ul>
+            </nav>
+            {dropDownMenu && (
+                <div onMouseLeave={hideDropDownMenuDesktop} className="dropdown-menu-services-desktop">
+                  <LocalizedLink className="dropdown-item" to="#">Web development</LocalizedLink>
+                  <LocalizedLink className="dropdown-item" to="#">Social Media</LocalizedLink>
+                  <LocalizedLink className="dropdown-item" to="#">Web Marketing</LocalizedLink>
+                  <LocalizedLink className="dropdown-item" to="#">Graphic Design</LocalizedLink>
+                </div>
+              )}
+          </div>
+          <div className="cta-header-container">
+            <LocalizedLink className="cta-header-btn" to="#">
+              Premium Support
+            </LocalizedLink>
+          </div>
+        </div>
+      </header>
     </section>
   )
 }

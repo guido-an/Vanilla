@@ -8,7 +8,7 @@
   width: 100%;
   margin: 0 auto;
   z-index: 1;
-  background-color: rgba(255, 255, 255, .9);
+  background-color: rgba(255, 255, 255, .8);
   backdrop-filter: blur(5px);
 
 }
@@ -25,6 +25,15 @@
   padding-top: 20px;
   height: 100vh;
   border-top: 1px solid #d2d2d2;
+}
+.dropdown-icon{
+  font-size: 12px;
+  position: relative;
+  left: 8px;
+}
+.dropdown-item{
+  position: relative;
+  left: 10px
 }
 .nav-mobile ul {
   list-style: none;
@@ -62,12 +71,11 @@
     margin: 0 auto;
     padding: 0 80px;
     z-index: 1;
-    background-color: rgba(255, 255, 255, .9);
+    background-color: rgba(255, 255, 255, .8);
     backdrop-filter: blur(5px);
     height: 90px;
 
   }
-
 
   .desktop-header-container {
     display: flex;
@@ -78,6 +86,32 @@
     position: relative;
     top: 30px;
     right: 10px;
+  }
+  .dropdown-service{
+    position: relative;
+  }
+  .dropdown-menu-services-desktop{
+    position: relative;
+    top: 20px;
+    left: 285px;
+    box-shadow: 0px 0px 10px 0px rgba(12, 5, 5, 0.2);
+    width: 250px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #fff;
+
+  
+  }
+  .dropdown-menu-services-desktop a{
+    display: block;
+    color: #777;
+    text-decoration: none;
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: 500
+  }
+  .dropdown-menu-services-desktop a:hover{
+    color: #272727
   }
   .cta-header-container {
     position: relative;
@@ -113,4 +147,5 @@
       color: #272727;
       border-top: 3px solid #f6ec32
   }
+
 }

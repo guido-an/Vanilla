@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import LocalizedLink from "./LocalizedLink"
 
 export default () => {
+
   const data = useStaticQuery(graphql`
     query {
       logo: file(relativePath: { eq: "logo-vanilla-marketing-bianco.png" }) {
@@ -56,20 +57,52 @@ export default () => {
           }
         }
       }
+      italyFlag: file(relativePath: { eq: "italy-flag.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 24) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      ukFlag: file(relativePath: { eq: "uk-flag.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 24) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      franceFlag: file(relativePath: { eq: "france-flag.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 24) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
-
 
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-section-container">
           <LocalizedLink to="/">
-          <Img
-            className="logo-footer"
-            fluid={data.logo.childImageSharp.fluid}
-          /></LocalizedLink>
-        
+            <Img
+              className="logo-footer"
+              fluid={data.logo.childImageSharp.fluid}
+            />
+          </LocalizedLink>
+          <div className="flags-container-footer">
+         
+          <LocalizedLink to="/">
+            <Img className="flag-footer" fluid={data.italyFlag.childImageSharp.fluid} />
+          </LocalizedLink>
+          <LocalizedLink to="/en">
+            <Img className="flag-footer" fluid={data.ukFlag.childImageSharp.fluid} />
+          </LocalizedLink>
+          <LocalizedLink to="/fr">
+            <Img className="flag-footer" fluid={data.franceFlag.childImageSharp.fluid} />
+          </LocalizedLink>
+          </div>
         </div>
         <div className="footer-section-container">
           <p className="footer-title">Services</p>

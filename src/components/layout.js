@@ -11,10 +11,10 @@ const Layout = ({ children, locale, data }) => {  // accesss data"
   return(  
     <LocaleProvider value={locale}>
       <>
-      <Header data={data} />        {/*pass 'data' to header so it can use GraphQL query  */}
+      <Header dataHeader={data} />        {/*pass 'data' to header so it can use GraphQL query  */}
       <div>
       <main>{children}</main>
-      <Footer/>
+      <Footer />
       </div>
      </>
     </LocaleProvider>

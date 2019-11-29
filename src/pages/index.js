@@ -18,10 +18,10 @@ const IndexPage = ({ pageContext: { locale }, data }) => {
   
     {/* site title gets from graphql query and pass it to layout component */}
       <SEO title="" />
-      <Hero linkGetStarted={data.home.childIndexJson.linkGetStarted} />
+      <Hero linkGetStarted={data.header.childHeaderJson.linkGetStarted} />
       <ServicesSection />
       <Testimonials testimonials={data.testimonials.childTestimonialsJson} />
-      <FooterCta linkGetStarted={data.home.childIndexJson.linkGetStarted}/>
+      <FooterCta linkGetStarted={data.header.childHeaderJson.linkGetStarted}/>
     </Layout>
   )
 }
@@ -34,7 +34,6 @@ export const query = graphql`
         NextPage
         page
         siteTitle
-        linkGetStarted
       }
     }
     header: file(name: { eq: $locale }, relativeDirectory: { eq: "header" }) {
@@ -46,6 +45,7 @@ export const query = graphql`
         services
         contact
         contactLink
+        linkGetStarted
       }
     }
     testimonials: file(
