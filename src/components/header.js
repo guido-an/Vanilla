@@ -10,17 +10,17 @@ import LocalizedLink from "./LocalizedLink"
 import Cta from "./cta"
 
 const Header = ({ dataHeader }) => {
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     arrowDown: file(relativePath: { eq: "arrow-down.png" }) {
-  //       childImageSharp {
-  //         fluid(maxWidth: 16) {
-  //           ...GatsbyImageSharpFluid
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
+  const data = useStaticQuery(graphql`
+    query {
+      arrowDown: file(relativePath: { eq: "arrow-down.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 16) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
   const [visible, setVisible] = useState(false)
   let [dropDownMenu, setDropDownMenu] = useState(false)
   const [scroll, setScroll] = useState(false) // stateCheck for Scroll
@@ -115,10 +115,10 @@ const Header = ({ dataHeader }) => {
           </div>
           <div>
             <nav className="nav-desktop">
-              <ul>
+              <ul >
                 <LocalizedLink to={homeLink}>{home}</LocalizedLink>
                 <LocalizedLink to={aboutLink}>{about}</LocalizedLink>
-                <LocalizedLink onMouseEnter={showDropDownMenuDesktop} to="#" className="dropdwon-service">{services} <span className="dropdown-icon">{dropDownMenu ? "v" : ">"}</span></LocalizedLink>
+                <LocalizedLink onMouseEnter={showDropDownMenuDesktop} to="#" className="dropdwon-service">{services} <span className="dropdown-icon"><Img style={{width: "10px", display: "inline-block"}}fluid={data.arrowDown.childImageSharp.fluid} /></span></LocalizedLink>
               
                 <LocalizedLink to={contactLink}>{contact}</LocalizedLink>
               </ul>

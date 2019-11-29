@@ -29,11 +29,11 @@
 .dropdown-icon{
   font-size: 12px;
   position: relative;
-  left: 8px;
+  left: 6px;
 }
 .dropdown-item{
   position: relative;
-  left: 10px
+  left: 10px;
 }
 .nav-mobile ul {
   list-style: none;
@@ -87,26 +87,22 @@
     top: 30px;
     right: 10px;
   }
-  .dropdown-service{
-    position: relative;
-  }
+ 
   .dropdown-menu-services-desktop{
     position: relative;
     top: 20px;
-    left: 285px;
+    left: 295px;
     box-shadow: 0px 0px 10px 0px rgba(12, 5, 5, 0.2);
     width: 250px;
     padding: 10px 20px;
     border-radius: 8px;
     background-color: #fff;
-
-  
   }
   .dropdown-menu-services-desktop a{
     display: block;
     color: #777;
     text-decoration: none;
-    margin: 5px 0;
+    margin: 10px 0;
     font-size: 16px;
     font-weight: 500
   }
