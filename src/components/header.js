@@ -8,7 +8,8 @@ import Cta from "./cta"
 
 const Header = ({ data, linkGetStarted }) => {
   const [visible, setVisible] = useState(false)
-
+  const [Scroll, setScroll] = useState(false)   // stateCheck for Scroll
+  console.log(Scroll,"checkScroll")
   const {
     home,
     homeLink,
@@ -19,7 +20,17 @@ const Header = ({ data, linkGetStarted }) => {
     contactLink,
   } = data.header.childHeaderJson
 
+  const listenScrollEvent = () => {
+    if (window.scrollY > 200) {    // Scroll check / you can define your scroll in pixels eg.200
+      setScroll(true)   // if windowScroll to predifined position setState "true"
+    } else {
+      setScroll(false)  // if windowNOTScrolled or set back to its starting postion setState "false"
+    }
+  }
 
+  useEffect(() => {
+    window.addEventListener('scroll', listenScrollEvent)    // add event listner 
+  });
 
   return (
     <section>
@@ -61,7 +72,8 @@ const Header = ({ data, linkGetStarted }) => {
           <div className="desktop-header-container">
             <div className="logo-container">
               <LocalizedLink to={homeLink}>
-                <Logo />
+              {!Scroll  &&  <Logo /> }    
+              {/* {Scroll  &&  <Logo /> }     if scroll State 'true' unCommentThis & Add your changes in place of <logo/> */}
               </LocalizedLink>
             </div>
             <div>
