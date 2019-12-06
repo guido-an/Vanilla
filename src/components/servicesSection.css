@@ -15,6 +15,11 @@
 .services-section-container .title-section {
   color: #fff;
 }
+.service-container{
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
 .service-title {
   color: #fff;
   font-size: 16px;
@@ -22,13 +27,14 @@
 .service-desc {
   position: relative;
   bottom: 10px;
+  color: #b2b2b2;
 }
 .services-container-img {
   width: 64px;
   margin: 60px auto 20px;
 }
 .service-cta-home{
-    color: #777;
+    color: #b2b2b2;
     text-decoration: none;
 }
 .service-cta-home:hover{
@@ -43,6 +49,9 @@
   }
   .services-container {
     display: flex;
+  }
+  .service-container{
+    width: 100%;
   }
   .services-container-img {
     margin-top: 20px;

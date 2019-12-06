@@ -60,8 +60,8 @@ export default function Testimonial({ testimonials }) {
       `}>
         <p className="overtitle">DICONO DI NOI</p>
         <h2 className="title-section">
-          Road To a Better And Faster
-          <br /> SEOmonitor Website
+          Le parole di chi ha già
+          <br /> scelto Vanilla
         </h2>
       </div>
       <div

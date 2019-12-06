@@ -44,9 +44,9 @@ export default () => {
   return (
     <section onScroll={console.log("scroll")} className="services-section">
       <div className="services-section-container">
-        <p className="overtitle">FEATURED JAMSTACK CASE STUDY</p>
+        <p className="overtitle">I NOSTRI SERVIZI</p>
         <h2 className="title-section">
-          Road To a Better And Faster
+         Quello che possiamo fare per te 
           <br /> SEOmonitor Website
         </h2>
         <p className="section-desc">
@@ -55,7 +55,7 @@ export default () => {
           SEOmonitor website.
         </p>
         <div className="services-container">
-          <div>
+          <div className="service-container">
             <div className="services-container-img">
               <Img fluid={data.webDevIcon.childImageSharp.fluid} />
             </div>
@@ -64,14 +64,15 @@ export default () => {
               <strong>WEB DEVELOPMENT</strong>
             </p>
             <p className="service-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua
+          Siti, e-commerce e applicazioni web. Siamo tra le prime agenzia in Italia a utilizzare l'approcco JAMstack per risultati dannatamente migliori. 
             </p>
             <p>
-              <LocalizedLink to="/" className="service-cta-home"><strong>> Web Development</strong></LocalizedLink>
+              <LocalizedLink to="/" className="service-cta-home">
+                <strong>> Web Development</strong>
+              </LocalizedLink>
             </p>
           </div>
-          <div>
+          <div className="service-container">
             <div className="services-container-img">
               <Img fluid={data.socialMediaIcon.childImageSharp.fluid} />
             </div>
@@ -80,13 +81,17 @@ export default () => {
             </p>
 
             <p className="service-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua
+              Strategia, competenza e buon gusto: questi sono gli
+              aspetti che rendono riconoscibili ed efficaci le nostre gestioni
+              social media.
             </p>
             <p>
-            <LocalizedLink to="/" className="service-cta-home"><strong>> Social Media</strong></LocalizedLink>            </p>
+              <LocalizedLink to="/" className="service-cta-home">
+                <strong>> Social Media</strong>
+              </LocalizedLink>{" "}
+            </p>
           </div>
-          <div>
+          <div className="service-container">
             <div className="services-container-img">
               <Img fluid={data.webMarketingIcon.childImageSharp.fluid} />
             </div>
@@ -94,14 +99,19 @@ export default () => {
               <strong>WEB MARKETING</strong>
             </p>
             <p className="service-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua
+              Ottimizzazione SEO e link building, campagne Google Adwords e analisi dati per portare traffico al tuo sito e
+              aumentare le conversioni.
+              {/* Analisi di mercato, scelta di keyword competitive strategia
+              efficaci per portare traffico al tuo sito e renderlo più
+              remunerativo. La nostra promessa è: zero sprechi. */}
             </p>
             <p>
-            <LocalizedLink to="/" className="service-cta-home"><strong>> Web Marketing</strong></LocalizedLink>
+              <LocalizedLink to="/" className="service-cta-home">
+                <strong>> Web Marketing</strong>
+              </LocalizedLink>
             </p>
           </div>
-          <div>
+          <div className="service-container">
             <div className="services-container-img">
               <Img fluid={data.graphicDesignIcon.childImageSharp.fluid} />
             </div>
@@ -109,11 +119,13 @@ export default () => {
               <strong>GRAPHIC DESIGN</strong>
             </p>
             <p className="service-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua
+             Creatività, studio dell'immagine e grafica coordinata. Crediamo brand efficaci capaci di essere riconoscibili in ogni situazione.
             </p>
             <p>
-            <LocalizedLink to="/" className="service-cta-home"><strong>> Graphic Design</strong></LocalizedLink>            </p>
+              <LocalizedLink to="/" className="service-cta-home">
+                <strong>> Graphic Design</strong>
+              </LocalizedLink>
+            </p>
           </div>
         </div>
       </div>

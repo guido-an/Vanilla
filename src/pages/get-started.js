@@ -14,7 +14,7 @@ const getStarted = ({ pageContext: { locale }, data }) => {
         <LocalizedLink to="/"><Logo/></LocalizedLink>
         </div>
        
-          <LocalizedLink to="/"
+          {/* <LocalizedLink to="/"
             style={{
               position: "relative",
               top: "35px",
@@ -26,6 +26,19 @@ const getStarted = ({ pageContext: { locale }, data }) => {
             to="/"
           >
             No, I don't want any advice
+          </LocalizedLink> */}
+          <LocalizedLink to="/"
+            style={{
+              position: "relative",
+              top: "35px",
+              color: "#777",
+              textDecoration: "none",
+              fontSize: "16px",
+              fontWeight: "500",
+            }}
+            to="/"
+          >
+            No, non voglio nessun consiglio
           </LocalizedLink>
         </header>
         <section className="get-started-section">
@@ -35,7 +48,7 @@ const getStarted = ({ pageContext: { locale }, data }) => {
           </h1>
           <span> {data.getStarted.childGetStartedJson.subtitle} 
           </span>
-          <p style={{color: "#777", fontSize: "20px", marginTop: "40px"}}>Get a <strong> {data.getStarted.childGetStartedJson.ctaText}</strong></p>
+          <p style={{color: "#777", fontSize: "20px", marginTop: "40px"}}><strong> {data.getStarted.childGetStartedJson.ctaText}</strong></p>
           <div>
             <form
               name="Contact Form"
