@@ -3,11 +3,10 @@ import PropTypes from 'prop-types'
 import { graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
-import {LocaleProvider,LocaleConsumer} from '../constants/localeProviders'
+import {LocaleProvider, LocaleConsumer} from '../constants/localeProviders'
 import "./layout.css"
 
 const Layout = ({ children, locale, data }) => {  // accesss data"
- console.log(data.home, "header")
   return(  
     <LocaleProvider value={locale}>
       <>

@@ -46,13 +46,13 @@ export default () => {
       <div className="services-section-container">
         <p className="overtitle">I NOSTRI SERVIZI</p>
         <h2 className="title-section">
-         Quello che possiamo fare per te 
-          <br /> SEOmonitor Website
+         Quello che possiamo fare per te
+          <br />
         </h2>
         <p className="section-desc">
-          GatsbyJS, Contentful and Netlify for a faster and more secure
+          Siti, applicazioni web, social, web marketing e graphic design
           <br />
-          SEOmonitor website.
+          dall'effetto wow :)
         </p>
         <div className="services-container">
           <div className="service-container">
@@ -81,7 +81,7 @@ export default () => {
             </p>
 
             <p className="service-desc">
-              Strategia, competenza e buon gusto: questi sono gli
+              Strategia, competenza e buon gusto sono garantiti. Questi gli
               aspetti che rendono riconoscibili ed efficaci le nostre gestioni
               social media.
             </p>
@@ -99,11 +99,9 @@ export default () => {
               <strong>WEB MARKETING</strong>
             </p>
             <p className="service-desc">
-              Ottimizzazione SEO e link building, campagne Google Adwords e analisi dati per portare traffico al tuo sito e
-              aumentare le conversioni.
-              {/* Analisi di mercato, scelta di keyword competitive strategia
-              efficaci per portare traffico al tuo sito e renderlo più
-              remunerativo. La nostra promessa è: zero sprechi. */}
+              Ottimizzazione SEO e link building, campagne Google Adwords e analisi dati per
+              aumentare, finalmente, il traffico e le conversioni
+            
             </p>
             <p>
               <LocalizedLink to="/" className="service-cta-home">
@@ -119,7 +117,7 @@ export default () => {
               <strong>GRAPHIC DESIGN</strong>
             </p>
             <p className="service-desc">
-             Creatività, studio dell'immagine e grafica coordinata. Crediamo brand efficaci capaci di essere riconoscibili in ogni situazione.
+             Creatività, studio dell'immagine e grafica coordinata. Creiamo brand efficaci capaci di essere riconoscibili anche a occhi chiusi.
             </p>
             <p>
               <LocalizedLink to="/" className="service-cta-home">

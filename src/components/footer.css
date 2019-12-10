@@ -38,7 +38,7 @@
     right: 8px
 }
 .footer-link{
-    color: #777;
+    color: #b2b2b2;
     font-size: 16px;
     text-decoration: none;
     line-height: 35px;
@@ -60,8 +60,6 @@
     position: relative;
     right: 6px
 }
-
-
 
 
 @media(min-width: 768px){

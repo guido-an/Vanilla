@@ -7,7 +7,6 @@ import monica from "../images/monica-gili.jpg"
 import saputo from "../images/michele-saputo.jpg"
 
 export default function Testimonial({ testimonials }) {
-  console.log(testimonials, "test")
   const quotes = [
     {
       client: testimonials.client0,

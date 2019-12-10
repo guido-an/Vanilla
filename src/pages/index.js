@@ -11,11 +11,11 @@ import ServicesSection from "../components/servicesSection"
 import Testimonials from "../components/testimonials"
 
 const IndexPage = ({ pageContext: { locale }, data }) => {
-
+console.log(data.header, "data.header")
 
   return (
     <Layout path="/" locale={locale} data={data} >
-  
+
     {/* site title gets from graphql query and pass it to layout component */}
       <SEO title="" />
       <Hero linkGetStarted={data.header.childHeaderJson.linkGetStarted} />

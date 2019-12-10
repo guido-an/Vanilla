@@ -10,10 +10,9 @@ export default function footerCta({linkGetStarted}) {
       <div className="footerCta-container">
         <div className="footerCta-cta">
           <span className="footerCta-overtitle">DIGITAL CREATORS</span>
-          <h2 className="title-section">Ready to join JAMstack revolution?</h2>
+          <h2 className="title-section">Pronto a fare il passo successivo?</h2>
           <p className="footerCta-subtitle">
-            Start your super-fast project with us or take your existing product
-            to the next level.
+          Ottieni la tua consulenza gratuita in meno di 24 ore.
           </p>
           <Cta linkGetStarted={linkGetStarted}/>
         </div>

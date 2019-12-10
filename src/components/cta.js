@@ -5,5 +5,6 @@ import './cta.css'
 
 
 export default function cta({linkGetStarted}) {
+  console.log("link get start", linkGetStarted)
   return <LocalizedLink style={{textDecoration: "none"}} to={linkGetStarted}><span className="cta">Comincia da qui</span></LocalizedLink>
 }

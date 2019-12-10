@@ -15,6 +15,9 @@
 .services-section-container .title-section {
   color: #fff;
 }
+.services-section-container .section-desc{
+  color: #b2b2b2
+}
 .service-container{
   width: 80%;
   margin: 0 auto;
