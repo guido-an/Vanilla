@@ -676,7 +676,7 @@ width: 400px;
 margin: 0 auto;
 }
 .page-bg{
-  background-color: #272727;
+  background-color: #fafafa;
   padding: 60px 40px;
   text-align: center;
   margin-top: 60px
@@ -688,18 +688,22 @@ margin: 0 auto;
 .page-bg .text-service-container p{
   line-height: 27px
 }
-.page-bg h1 {
+/* .page-bg h1 {
   color: #fff !important
-}
-.page-bg p{
+} */
+/* .page-bg p{
   color: #b2b2b2
-}
+} */
 
 @media(min-width: 768px){
   .page-bg{
     border-radius: 16px;
     margin: 4%;
   }
+ 
+}
+
+@media(min-width: 1200px){
   .subtitle-page{
     width: 40%;
     margin: 0 auto

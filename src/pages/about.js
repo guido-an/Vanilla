@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import LocalizedLink from "../components/LocalizedLink"
 import FooterCta from "../components/footerCta"
-import "./about.css"
+
 
 const About = ({ pageContext: { locale }, data }) => {
   return (
@@ -20,7 +20,7 @@ const About = ({ pageContext: { locale }, data }) => {
           <div className="page-bg">
             
            
-            <span className="overtitle-yellow">NICE TO MEET YOU</span>
+            <span className="overtitle-dark">NICE TO MEET YOU</span>
             <h1>Chi Siamo</h1>
             <p className="subtitle-page"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 veritatis commodi unde doloribus laboriosam</p>

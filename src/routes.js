@@ -19,7 +19,7 @@ module.exports = [
     path: '/get-started',
     component: path.resolve(`src/pages/get-started.js`)
   },
-  //about
+  //ABOUT
   {
     path: '/chi-siamo',
     component: path.resolve(`src/pages/about.js`)
@@ -31,5 +31,18 @@ module.exports = [
   {
     path: '/about',
     component: path.resolve(`src/pages/about.js`)
+  },
+   //CONTACT
+   {
+    path: '/contatti',
+    component: path.resolve(`src/pages/contact.js`)
+  },
+  {
+    path: '/contact',
+    component: path.resolve(`src/pages/contact.js`)
+  },
+  {
+    path: '/contact',
+    component: path.resolve(`src/pages/contact.js`)
   }
 ];

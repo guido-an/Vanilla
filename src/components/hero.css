@@ -35,8 +35,10 @@
         /* text-align: left; */
     }
     
+   
     .hero-title{
-        font-size: 48px
+        font-size: 48px;
+        line-height: 60px;
     }
 
     .hero-image-container{
