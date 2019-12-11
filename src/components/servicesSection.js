@@ -42,9 +42,9 @@ export default () => {
   console.log(data, "data")
 
   return (
-    <section onScroll={console.log("scroll")} className="services-section">
+    <section className="services-section">
       <div className="services-section-container">
-        <p className="overtitle">I NOSTRI SERVIZI</p>
+        <span className="overtitle-yellow">I NOSTRI SERVIZI</span>
         <h2 className="title-section">
          Quello che possiamo fare per te
           <br />

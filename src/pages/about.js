@@ -6,33 +6,58 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import LocalizedLink from "../components/LocalizedLink"
 import FooterCta from "../components/footerCta"
-import './about.css'
-
+import "./about.css"
 
 const About = ({ pageContext: { locale }, data }) => {
-  // const aboutData = useStaticQuery(graphql`
-  //   query {
-  //     bigV: file(relativePath: { eq: "vanilla-chi-siamo.jpg" }) {
-  //       childImageSharp {
-  //         fluid(maxWidth: 600) {
-  //           ...GatsbyImageSharpFluid
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-
   return (
     <Layout path="/" locale={locale} data={data}>
       <SEO title="Chi Siamo" />
       <section className="margin-top">
-        <div>
-        <Img className="big-icon" fluid={data.bigV.childImageSharp.fluid} />
+        <div className="about-section-container">
+          <div>
+            <Img className="big-icon" fluid={data.bigV.childImageSharp.fluid} />
+          </div>
+          <div className="page-bg">
+            
+           
+            <span className="overtitle-yellow">NICE TO MEET YOU</span>
+            <h1>Chi Siamo</h1>
+            <p className="subtitle-page"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                veritatis commodi unde doloribus laboriosam</p>
+            <div className="text-service-container">
+           
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veritatis commodi unde doloribus laboriosam, placeat est
+                dignissimos, reprehenderit repudiandae, non qui temporibus culpa
+                soluta praesentium? 
+                
+                Quia ipsum minima eaque voluptate
+                dignissimos? Maxime tenetur nesciunt unde minima reiciendis quia
+                quos, architecto eveniet! Dolorum qui enim obcaecati,
+                accusantium unde sed totam harum cupiditate iure ipsa dolore
+                aspernatur laboriosam odio neque nostrum similique magnam.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veritatis commodi unde doloribus laboriosam, placeat est
+                dignissimos, reprehenderit repudiandae, non qui temporibus culpa
+                soluta praesentium? 
+                
+                Quia ipsum minima eaque voluptate
+                dignissimos? Maxime tenetur nesciunt unde minima reiciendis quia
+                quos, architecto eveniet! Dolorum qui enim obcaecati,
+                accusantium unde sed totam harum cupiditate iure ipsa dolore
+                aspernatur laboriosam odio neque nostrum similique magnam.
+              </p>
+              
+            </div>
+          </div>
         </div>
       </section>
 
       {/* <LocalizedLink to="/">back to hoem</LocalizedLink> */}
-      <FooterCta linkGetStarted={data.header.childHeaderJson.linkGetStarted}/>
+      <FooterCta linkGetStarted={data.header.childHeaderJson.linkGetStarted} />
     </Layout>
   )
 }
@@ -58,7 +83,7 @@ export const query = graphql`
     }
     bigV: file(relativePath: { eq: "vanilla-chi-siamo.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 600) {
+        fluid(maxWidth: 400) {
           ...GatsbyImageSharpFluid
         }
       }

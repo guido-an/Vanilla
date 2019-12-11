@@ -1,19 +1,12 @@
 .footerCta{
     background-color: #272727;
     position: relative;
-    top:25px;
+    top: 25px;
 }
 .footerCta-container{
   padding: 60px 40px;
 }
-.footerCta-overtitle{
-    color: #f6ec32;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    display: block;
-    margin-bottom: 10px
-}
+
 .footerCta-cta h2{
     color: #fff
 }

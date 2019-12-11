@@ -641,13 +641,25 @@ p {
   line-height: 25px;
   color: #777;
 }
-.overtitle {
-  color: #777;
+
+
+.overtitle-dark, 
+.overtitle-yellow{
   font-size: 14px;
   letter-spacing: 2px;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+
 }
+.overtitle-dark {
+  color: #777;
+}
+.overtitle-yellow {
+  color: #f6ec32;
+}
+
+
 .section-desc{
   margin-bottom: 60px;
   font-size: 18px;
@@ -662,6 +674,46 @@ p {
 .big-icon{
 width: 400px;
 margin: 0 auto;
-
+}
+.page-bg{
+  background-color: #272727;
+  padding: 60px 40px;
+  text-align: center;
+  margin-top: 60px
+}
+.subtitle-page{
+  font-size: 18px;
+  line-height: 32px
+}
+.page-bg .text-service-container p{
+  line-height: 27px
+}
+.page-bg h1 {
+  color: #fff !important
+}
+.page-bg p{
+  color: #b2b2b2
 }
 
+@media(min-width: 768px){
+  .page-bg{
+    border-radius: 16px;
+    margin: 4%;
+  }
+  .subtitle-page{
+    width: 40%;
+    margin: 0 auto
+  }
+  .text-service-container{
+    margin: 4%
+  }
+  .page-bg .text-service-container{
+    display: flex;
+  }
+
+  .page-bg .text-service-container p{
+    padding: 0 20px 80px;
+    text-align: left;
+
+  }
+}

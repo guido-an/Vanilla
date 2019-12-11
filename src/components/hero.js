@@ -12,7 +12,7 @@ export default ({linkGetStarted}) => {
     <section className="hero">
       <div className="hero-container">
         <div className="hero-cta-container">
-          <span className="overtitle">WE ARE DIGITAL CREATORS</span>
+          <span className="overtitle-dark">WE ARE DIGITAL CREATORS</span>
           <h1 className="hero-title">
           Digital Products,<br />
      That Work.

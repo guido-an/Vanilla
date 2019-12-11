@@ -57,7 +57,7 @@ export default function Testimonial({ testimonials }) {
         margin-top: 120px
       
       `}>
-        <p className="overtitle">DICONO DI NOI</p>
+        <span className="overtitle-dark">DICONO DI NOI</span>
         <h2 className="title-section">
           Le parole di chi ha già
           <br /> scelto Vanilla

@@ -9,7 +9,7 @@ export default function footerCta({linkGetStarted}) {
     <footer className="footerCta">
       <div className="footerCta-container">
         <div className="footerCta-cta">
-          <span className="footerCta-overtitle">DIGITAL CREATORS</span>
+          <span className="overtitle-yellow">DIGITAL CREATORS</span>
           <h2 className="title-section">Pronto a fare il passo successivo?</h2>
           <p className="footerCta-subtitle">
           Ottieni la tua consulenza gratuita in meno di 24 ore.
