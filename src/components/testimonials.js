@@ -50,7 +50,7 @@ export default function Testimonial({ testimonials }) {
 
   return (
     <section className={css`
-        margin-bottom: 180px;
+        margin-bottom: 140px;
     `}>
       <div className={css`
         text-align: center;

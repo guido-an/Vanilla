@@ -7,7 +7,6 @@ import { graphql } from "gatsby"
 import LocalizedLink from "../components/LocalizedLink"
 import FooterCta from "../components/footerCta"
 
-
 const About = ({ pageContext: { locale }, data }) => {
   return (
     <Layout path="/" locale={locale} data={data}>
@@ -18,39 +17,43 @@ const About = ({ pageContext: { locale }, data }) => {
             <Img className="big-icon" fluid={data.bigV.childImageSharp.fluid} />
           </div>
           <div className="page-bg">
-            
-           
-            <span className="overtitle-dark">NICE TO MEET YOU</span>
-            <h1>Chi Siamo</h1>
-            <p className="subtitle-page"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                veritatis commodi unde doloribus laboriosam</p>
+            <span className="overtitle-dark">DIGITAL CREATORS</span>
+            <h1>Vanilla Manifesto</h1>
+            <p className="subtitle-page">
+              {data.about.childAboutJson.subtitle}
+            </p>
             <div className="text-service-container">
-           
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Veritatis commodi unde doloribus laboriosam, placeat est
-                dignissimos, reprehenderit repudiandae, non qui temporibus culpa
-                soluta praesentium? 
-                
-                Quia ipsum minima eaque voluptate
-                dignissimos? Maxime tenetur nesciunt unde minima reiciendis quia
-                quos, architecto eveniet! Dolorum qui enim obcaecati,
-                accusantium unde sed totam harum cupiditate iure ipsa dolore
-                aspernatur laboriosam odio neque nostrum similique magnam.
+                Crediamo nel nostro lavoro. Ci crediamo tanto che per migliorare
+                ci mettiamo in discussione, giriamo il mondo, frequentiamo
+                corsi, leggiamo libri perché, solo così, possiamo essere certi
+                di creare qualità, una qualità che funziona. Crediamo nella
+                nostra qualità. Dopo anni di esperienza, giorno dopo giorno,
+                seduti con umiltà e umanità davanti a un computer abbiamo capito
+                che quello che stavamo facendo sarebbe diventato grande perché
+                grande era il cuore che ci mettevamo. Crediamo che il nostro
+                lavoro sia fatto più di persone che di dispositivi ed email.
+                Crediamo nei sorrisi: quelli che una ciurma affiatata come la
+                nostra riesce a mantenere anche nelle giornate di burrasca.
+                Crediamo che solo dando il meglio otterremo la vostra fiducia.
+                Ecco perché ogni cosa che passa da qui, anche la più piccola, ha
+                valore e richiede tempo e concentrazione.
               </p>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Veritatis commodi unde doloribus laboriosam, placeat est
-                dignissimos, reprehenderit repudiandae, non qui temporibus culpa
-                soluta praesentium? 
-                
-                Quia ipsum minima eaque voluptate
-                dignissimos? Maxime tenetur nesciunt unde minima reiciendis quia
-                quos, architecto eveniet! Dolorum qui enim obcaecati,
-                accusantium unde sed totam harum cupiditate iure ipsa dolore
-                aspernatur laboriosam odio neque nostrum similique magnam.
+                Qui in Vanilla parliamo quattro lingue, creiamo siti, e-commerce
+                e applicazioni web e siamo tra le prime agenzia in Italia a
+                utilizzare l'approccio JAMstack. Sviluppiamo strategie social e
+                campagne SEM e SEO che danno risultati concreti. Ci occupiamo di
+                copy, di brand, immagini coordinate e concept. Facciamo
+                formazione sia in aziende che in convegni, business school e
+                università. Dopo anni di problemi risolti, urgenze placate e
+                soluzioni trovate siamo diventati i super eroi della customer
+                care :) Abbiamo, quindi, deciso di passare al livello successivo
+                creando un’area riservata ai clienti Vanilla:
+                www.premiumsupport.vanillamarketing.it. Ci guida la passione, ci
+                guida la curiosità, ci guida la consapevolezza. Noi siamo
+                Vanilla, siamo Digital Creators.
               </p>
-              
             </div>
           </div>
         </div>
@@ -78,7 +81,7 @@ export const query = graphql`
     }
     about: file(name: { eq: $locale }, relativeDirectory: { eq: "about" }) {
       childAboutJson {
-        about
+        subtitle
       }
     }
     bigV: file(relativePath: { eq: "vanilla-chi-siamo.jpg" }) {
