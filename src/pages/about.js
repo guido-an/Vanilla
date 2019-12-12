@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import LocalizedLink from "../components/LocalizedLink"
 import FooterCta from "../components/footerCta"
+import './about.css'
 
 const About = ({ pageContext: { locale }, data }) => {
   return (
@@ -13,9 +14,12 @@ const About = ({ pageContext: { locale }, data }) => {
       <SEO title="Chi Siamo" />
       <section className="margin-top">
         <div className="about-section-container">
+
           <div>
             <Img className="big-icon" fluid={data.bigV.childImageSharp.fluid} />
           </div>
+
+
           <div className="page-bg">
             <span className="overtitle-dark">DIGITAL CREATORS</span>
             <h1>Vanilla Manifesto</h1>
@@ -23,40 +27,49 @@ const About = ({ pageContext: { locale }, data }) => {
               {data.about.childAboutJson.subtitle}
             </p>
             <div className="text-service-container">
-              <p>
-                Crediamo nel nostro lavoro. Ci crediamo tanto che per migliorare
-                ci mettiamo in discussione, giriamo il mondo, frequentiamo
-                corsi, leggiamo libri perché, solo così, possiamo essere certi
-                di creare qualità, una qualità che funziona. Crediamo nella
-                nostra qualità. Dopo anni di esperienza, giorno dopo giorno,
-                seduti con umiltà e umanità davanti a un computer abbiamo capito
-                che quello che stavamo facendo sarebbe diventato grande perché
-                grande era il cuore che ci mettevamo. Crediamo che il nostro
-                lavoro sia fatto più di persone che di dispositivi ed email.
-                Crediamo nei sorrisi: quelli che una ciurma affiatata come la
-                nostra riesce a mantenere anche nelle giornate di burrasca.
-                Crediamo che solo dando il meglio otterremo la vostra fiducia.
-                Ecco perché ogni cosa che passa da qui, anche la più piccola, ha
-                valore e richiede tempo e concentrazione.
-              </p>
-              <p>
-                Qui in Vanilla parliamo quattro lingue, creiamo siti, e-commerce
-                e applicazioni web e siamo tra le prime agenzia in Italia a
-                utilizzare l'approccio JAMstack. Sviluppiamo strategie social e
-                campagne SEM e SEO che danno risultati concreti. Ci occupiamo di
-                copy, di brand, immagini coordinate e concept. Facciamo
-                formazione sia in aziende che in convegni, business school e
-                università. Dopo anni di problemi risolti, urgenze placate e
-                soluzioni trovate siamo diventati i super eroi della customer
-                care :) Abbiamo, quindi, deciso di passare al livello successivo
-                creando un’area riservata ai clienti Vanilla:
-                www.premiumsupport.vanillamarketing.it. Ci guida la passione, ci
-                guida la curiosità, ci guida la consapevolezza. Noi siamo
-                Vanilla, siamo Digital Creators.
-              </p>
+ 
+             <div>
+              {data.about.childAboutJson.multiline1.map((string, i) => {
+              
+                return <p key={i}>{string}</p>
+              })}
+              </div>
+              <div>
+              {data.about.childAboutJson.multiline2.map((string, i) => {
+                   
+                   if(string.includes("www")){
+                      var str = "www.premiumsupport.vanillamarketing.it";
+                      var URL = "http://www.premiumsupport.vanillamarketing.it";  
+                       return <a style={{textDecoration: "none"}} href={URL} target="_blank"><p>{string}</p></a>
+                  
+                   } else {
+                       return <p key={i}>{string}</p>
+                   }    
+    
+              })}
+            </div>
             </div>
           </div>
         </div>
+        
+      <div className="about-photo-container">
+       <span className="overtitle-dark">DIGITAL CREATORS</span>
+            <h1>Vanilla Manifesto</h1>
+            <p className="subtitle-page">
+              {data.about.childAboutJson.subtitle}
+            </p>
+      <div className="photo-row-1">
+      <Img className="about-photo" fluid={data.fotoV.childImageSharp.fluid} />
+      <Img className="about-photo" fluid={data.fotoV.childImageSharp.fluid} />
+      <Img className="about-photo" fluid={data.fotoV.childImageSharp.fluid} />
+      </div>
+      <div className="photo-row-2">
+      <Img className="about-photo" fluid={data.fotoV.childImageSharp.fluid} />
+      <Img className="about-photo" fluid={data.fotoV.childImageSharp.fluid} />
+      <Img className="about-photo" fluid={data.fotoV.childImageSharp.fluid} />
+      </div>
+
+      </div>
       </section>
 
       {/* <LocalizedLink to="/">back to hoem</LocalizedLink> */}
@@ -81,9 +94,12 @@ export const query = graphql`
     }
     about: file(name: { eq: $locale }, relativeDirectory: { eq: "about" }) {
       childAboutJson {
-        subtitle
+       subtitle
+       multiline1
+       multiline2
       }
     }
+
     bigV: file(relativePath: { eq: "vanilla-chi-siamo.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 400) {
@@ -91,6 +107,14 @@ export const query = graphql`
         }
       }
     }
+      fotoV: file(relativePath: { eq: "foto-test.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+   
   }
 `
 
