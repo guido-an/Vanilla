@@ -95,7 +95,7 @@ export const query = graphql`
     }
   bigIcon: file(relativePath: { eq: "vanilla-chi-siamo.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 323) {
+        fluid(maxWidth: 323, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }

@@ -2,9 +2,12 @@ import React from 'react'
 import Img from "gatsby-image"
 
 
+
+
 const pageBody= (props) => {
     return(
     <section className="margin-top">
+
         <div className="about-section-container">
           <Img className="big-icon" fluid={props.bigIcon} />
           <div className="page-bg">
@@ -16,20 +19,25 @@ const pageBody= (props) => {
             <div className="text-service-container">
              <div>
                {props.multiline1.map((string, i) => {
-               if(string.includes("www")){
+                
+                
+               if(string.includes("www.premiumsupport")){
                       var str = "www.premiumsupport.vanillamarketing.it";
                       var URL = "http://www.premiumsupport.vanillamarketing.it";  
                        return <a style={{textDecoration: "none"}} href={URL} target="_blank"><p style={{position: "relative", bottom:"22px"}}>{string}</p></a>
                   
-                   } else {
+                   } 
+                   else {
                        return <p key={i}>{string}</p>
-                   }    
+                   }  
               
               })}
+
               </div>
             </div>
           </div>
         </div>
+        
       </section>
     )
 }

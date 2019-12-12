@@ -39,7 +39,7 @@ export default () => {
       }
     }
   `)
-  console.log(data, "data")
+ 
 
   return (
     <section className="services-section">

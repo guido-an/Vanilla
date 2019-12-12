@@ -667,7 +667,7 @@ p {
   color: #777
 }
 
-/* PAGES  */
+/* bodyPage  */
 .margin-top{
   margin-top: 140px
 }
@@ -681,13 +681,11 @@ margin: 0 auto;
   text-align: center;
   margin-top: 60px
 }
+
 .subtitle-page{
   font-size: 18px;
   line-height: 32px
 }
-/* .page-bg .text-service-container p{
-  line-height: 27px
-} */
 
 @media(min-width: 768px){
   .page-bg{
@@ -718,7 +716,33 @@ margin: 0 auto;
   }
 
   .page-bg .text-service-container p{
-    /* padding: 0 20px 80px; */
     text-align: left;
   }
+}
+
+
+/* portfolio */
+.portfolio-section{
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 120px;
+}
+
+.logo-portfolio{
+  width: 350px;
+  margin: 40px auto;
+  display: block;
+}
+
+@media(min-width: 1200px){
+  .logo-portfolio-container{
+  display: flex;
+  margin: 0 8% 0
+
+}
+
+.logo-portfolio{
+ 
+  margin: 40px 40px;
+}
 }
