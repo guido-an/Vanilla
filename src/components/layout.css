@@ -672,7 +672,7 @@ p {
   margin-top: 140px
 }
 .big-icon{
-width: 400px;
+width: 323px;
 margin: 0 auto;
 }
 .page-bg{
@@ -710,8 +710,11 @@ margin: 0 auto;
   }
 
   .page-bg .text-service-container div{
-    width: 50%;
-    margin: 0 20px
+    /* width: 50%; */
+    width: 75%;
+    margin: 0 auto;
+    padding: 0 40px;
+    /* margin: 0 20px */
   }
 
   .page-bg .text-service-container p{
