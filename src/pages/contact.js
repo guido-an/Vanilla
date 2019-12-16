@@ -17,7 +17,7 @@ const Contact = ({ pageContext: { locale }, data }) => {
       <section className="margin-top">
         <div className="contact-page-container">
           <h1>hello</h1>
-          <span>.</span>
+          <span></span>
           <p className="subtitle-page">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
             commodi unde doloribus laboriosam

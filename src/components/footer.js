@@ -109,7 +109,7 @@ export default () => {
           <LocalizedLink className="footer-link" to="#">
             Web Development
           </LocalizedLink>
-          <LocalizedLink className="footer-link" to="#">
+          <LocalizedLink className="footer-link" to="/social-media">
             Social Media
           </LocalizedLink>
           <LocalizedLink className="footer-link" to="#">

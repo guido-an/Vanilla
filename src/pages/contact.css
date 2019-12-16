@@ -45,8 +45,8 @@
     height: 40px;
     width: 40px;
     position: relative;
-    bottom: 20px;
-    left: 5px;
+    top: 0px;
+    left: 0px;
   }
 
   .contact-info-container {
