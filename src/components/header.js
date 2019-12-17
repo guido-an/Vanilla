@@ -128,7 +128,7 @@ const Header = ({ dataHeader }) => {
                   <LocalizedLink className="dropdown-item" to="/">Web development</LocalizedLink>
                   <LocalizedLink className="dropdown-item" to="/social-media">Social Media</LocalizedLink>
                   <LocalizedLink className="dropdown-item" to="/web-marketing">Web Marketing</LocalizedLink>
-                  <LocalizedLink className="dropdown-item" to="#">Graphic Design</LocalizedLink>
+                  <LocalizedLink className="dropdown-item" to="/graphic-design-and-branding">Graphic Design</LocalizedLink>
                 </div>
               )}
           </div>
