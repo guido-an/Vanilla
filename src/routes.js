@@ -37,6 +37,11 @@ module.exports = [
     path: '/social-media',
     component: path.resolve(`src/pages/social-media.js`)
   },
+     //WEB MARKETING
+     {
+      path: '/web-marketing',
+      component: path.resolve(`src/pages/social-media.js`)
+    },
    //CONTACT
    {
     path: '/contatti',

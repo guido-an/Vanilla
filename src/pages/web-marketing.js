@@ -6,16 +6,16 @@ import PageBody from "../components/pageBody"
 import PortfolioLogo from "../components/portfolioLogo"
 import FooterCta from "../components/footerCta"
 
-const socialMedia = ({ pageContext: { locale }, data }) => {
+const webMarketing = ({ pageContext: { locale }, data }) => {
     return(
         <Layout path="/" locale={locale} data={data}>
-        <SEO title="Social Media Marketing" />
+        <SEO title="Web Marketing" />
          <PageBody 
          bigIcon={data.bigIcon.childImageSharp.fluid} 
-         overtitle={data.socialMedia.childSocialMediaJson.overtitle} 
-         title={data.socialMedia.childSocialMediaJson.title} 
-         subtitle={data.socialMedia.childSocialMediaJson.subtitle} 
-         multiline1={data.socialMedia.childSocialMediaJson.multiline1}/>
+         overtitle={data.webMarketing.childWebMarketingJson.overtitle} 
+         title={data.webMarketing.childWebMarketingJson.title} 
+         subtitle={data.webMarketing.childWebMarketingJson.subtitle} 
+         multiline1={data.webMarketing.childWebMarketingJson.multiline1}/>
          <PortfolioLogo/>
           <FooterCta linkGetStarted={data.header.childHeaderJson.linkGetStarted} />
         </Layout>
@@ -23,7 +23,7 @@ const socialMedia = ({ pageContext: { locale }, data }) => {
 }
 
 export const query = graphql`
-  query SocialMedia($locale: String) {
+  query WebMarketing($locale: String) {
     header: file(name: { eq: $locale }, relativeDirectory: { eq: "header" }) {
       childHeaderJson {
         home
@@ -36,15 +36,15 @@ export const query = graphql`
         linkGetStarted
       }
     }
-     socialMedia: file(name: { eq: $locale }, relativeDirectory: { eq: "social-media" }) {
-      childSocialMediaJson {
+     webMarketing: file(name: { eq: $locale }, relativeDirectory: { eq: "web-marketing" }) {
+      childWebMarketingJson {
       overtitle
       title
        subtitle
        multiline1
       }
     }
-  bigIcon: file(relativePath: { eq: "social-media-marketing.jpg" }) {
+  bigIcon: file(relativePath: { eq: "web-marketing.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 323, quality: 100) {
           ...GatsbyImageSharpFluid
@@ -54,4 +54,4 @@ export const query = graphql`
   }
 `
 
-export default socialMedia
+export default webMarketing

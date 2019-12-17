@@ -125,9 +125,9 @@ const Header = ({ dataHeader }) => {
             </nav>
             {dropDownMenu && (
                 <div onMouseLeave={hideDropDownMenuDesktop} className="dropdown-menu-services-desktop">
-                  <LocalizedLink className="dropdown-item" to="/vrhrh">Web development</LocalizedLink>
+                  <LocalizedLink className="dropdown-item" to="/">Web development</LocalizedLink>
                   <LocalizedLink className="dropdown-item" to="/social-media">Social Media</LocalizedLink>
-                  <LocalizedLink className="dropdown-item" to="#">Web Marketing</LocalizedLink>
+                  <LocalizedLink className="dropdown-item" to="/web-marketing">Web Marketing</LocalizedLink>
                   <LocalizedLink className="dropdown-item" to="#">Graphic Design</LocalizedLink>
                 </div>
               )}
