@@ -14,6 +14,7 @@ const socialMedia = ({ pageContext: { locale }, data }) => {
          bigIcon={data.bigIcon.childImageSharp.fluid} 
          overtitle={data.socialMedia.childSocialMediaJson.overtitle} 
          title={data.socialMedia.childSocialMediaJson.title} 
+         subtitle={data.socialMedia.childSocialMediaJson.subtitle} 
          multiline1={data.socialMedia.childSocialMediaJson.multiline1}/>
          <PortfolioLogo/>
          <FooterCta 
@@ -46,6 +47,7 @@ export const query = graphql`
       overtitle
       title
        multiline1
+       subtitle
       }
     }
     footerCta: file( name: { eq: $locale } relativeDirectory: { eq: "footer-cta" }) {
