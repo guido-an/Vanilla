@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Footer from "../components/footer"
 import Logo from "../components/logo"
 import './get-started.css'

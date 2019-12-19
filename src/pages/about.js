@@ -3,7 +3,6 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import LocalizedLink from "../components/LocalizedLink"
 import FooterCta from "../components/footerCta"
 import PageBody from "../components/pageBody"
 import './about.css'

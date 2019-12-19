@@ -1,11 +1,8 @@
 import React from "react"
-import { Link, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
-import LocalizedLink from "../components/LocalizedLink"
-import FooterCta from "../components/footerCta"
 import "./contact.css"
 
 
