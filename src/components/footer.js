@@ -93,7 +93,7 @@ export default () => {
           </LocalizedLink>
           <div className="flags-container-footer">
          
-          <LocalizedLink to="/">
+          {/* <LocalizedLink to="/">
             <Img className="flag-footer" fluid={data.italyFlag.childImageSharp.fluid} />
           </LocalizedLink>
           <LocalizedLink to="/en">
@@ -101,21 +101,21 @@ export default () => {
           </LocalizedLink>
           <LocalizedLink to="/fr">
             <Img className="flag-footer" fluid={data.franceFlag.childImageSharp.fluid} />
-          </LocalizedLink>
+          </LocalizedLink> */}
           </div>
         </div>
         <div className="footer-section-container">
           <p className="footer-title">Services</p>
-          <LocalizedLink className="footer-link" to="#">
+          <LocalizedLink className="footer-link" to="/realizzazione-siti-web">
             Web Development
           </LocalizedLink>
-          <LocalizedLink className="footer-link" to="/social-media">
+          <LocalizedLink className="footer-link" to="/social-media-marketing">
             Social Media
           </LocalizedLink>
-          <LocalizedLink className="footer-link" to="#">
+          <LocalizedLink className="footer-link" to="/web-marketing">
             Web Marketing
           </LocalizedLink>
-          <LocalizedLink className="footer-link" to="#">
+          <LocalizedLink className="footer-link" to="/graphic-design">
             Graphic Design
           </LocalizedLink>
         </div>

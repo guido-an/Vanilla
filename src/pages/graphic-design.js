@@ -17,7 +17,12 @@ const graphicDesign = ({ pageContext: { locale }, data }) => {
          subtitle={data.graphicDesign.childGraphicDesignJson.subtitle} 
          multiline1={data.graphicDesign.childGraphicDesignJson.multiline1}/>
          <PortfolioLogo/>
-          <FooterCta linkGetStarted={data.header.childHeaderJson.linkGetStarted} />
+         <FooterCta 
+          linkGetStarted={data.header.childHeaderJson.linkGetStarted}
+          textGetStarted={data.header.childHeaderJson.textGetStarted}
+          title={data.footerCta.childFooterCtaJson.title}
+          subtitle={data.footerCta.childFooterCtaJson.subtitle}  
+           />
         </Layout>
     )
 }
@@ -34,6 +39,7 @@ export const query = graphql`
         contact
         contactLink
         linkGetStarted
+        textGetStarted
       }
     }
      graphicDesign: file(name: { eq: $locale }, relativeDirectory: { eq: "graphic-design" }) {
@@ -42,6 +48,12 @@ export const query = graphql`
       title
        subtitle
        multiline1
+      }
+    }
+    footerCta: file( name: { eq: $locale } relativeDirectory: { eq: "footer-cta" }) {
+      childFooterCtaJson {
+      title
+      subtitle
       }
     }
   bigIcon: file(relativePath: { eq: "graphic-design.jpg" }) {

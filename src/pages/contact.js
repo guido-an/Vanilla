@@ -11,22 +11,23 @@ import "./contact.css"
 
 const Contact = ({ pageContext: { locale }, data }) => {
 
+ const { title, subtitle, phoneText, addressText } = data.contact.childContactJson
+ 
   return (
     <Layout path="/" locale={locale} data={data}>
       <SEO title="Contatti" />
       <section className="margin-top">
         <div className="contact-page-container">
-          <h1>hello</h1>
+          <h1>{title}</h1>
           <span></span>
           <p className="subtitle-page">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            commodi unde doloribus laboriosam
+            {subtitle}
           </p>
           <div className="contact-info-container">
             <div>
             <Img className="icons-contact-page" fluid={data.phoneIcon.childImageSharp.fluid} />
               <p>
-                <strong>Telefono</strong>
+                <strong>{phoneText}</strong>
               </p>
               <a href="tel:+393516711311">
                 <p>+39 351 671 1311</p>
@@ -69,7 +70,7 @@ const Contact = ({ pageContext: { locale }, data }) => {
             <div>
             <Img className="icons-contact-page" fluid={data.addressIcon.childImageSharp.fluid} />
               <p>
-                <strong>Indirizzo</strong>
+                <strong>{addressText}</strong>
               </p>
               <a href="https://www.google.com/maps/place/Corso+Garibaldi,+91,+60121+Ancona+AN,+Italia/@43.6177873,13.5117078,17z/data=!3m1!4b1!4m5!3m4!1s0x132d7fbc3dca2295:0xaef827aca378eaf8!8m2!3d43.6177834!4d13.5138965" target="_blank">
                 <p style={{ lineHeight: "32px" }}>
@@ -98,6 +99,14 @@ export const query = graphql`
         contact
         contactLink
         linkGetStarted
+      }
+    }
+    contact: file(name: { eq: $locale }, relativeDirectory: { eq: "contact" }) {
+      childContactJson {
+        title
+        subtitle
+        phoneText
+        addressText
       }
     }
     emailIcon: file(relativePath: { eq: "email-icona-contatti.png" }) {

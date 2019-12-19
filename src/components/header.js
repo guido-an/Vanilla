@@ -125,17 +125,15 @@ const Header = ({ dataHeader }) => {
             </nav>
             {dropDownMenu && (
                 <div onMouseLeave={hideDropDownMenuDesktop} className="dropdown-menu-services-desktop">
-                  <LocalizedLink className="dropdown-item" to="/">Web development</LocalizedLink>
-                  <LocalizedLink className="dropdown-item" to="/social-media">Social Media</LocalizedLink>
+                  <LocalizedLink className="dropdown-item" to="/realizzazione-siti-web">Web development</LocalizedLink>
+                  <LocalizedLink className="dropdown-item" to="/social-media-marketing">Social Media</LocalizedLink>
                   <LocalizedLink className="dropdown-item" to="/web-marketing">Web Marketing</LocalizedLink>
-                  <LocalizedLink className="dropdown-item" to="/graphic-design-and-branding">Graphic Design</LocalizedLink>
+                  <LocalizedLink className="dropdown-item" to="/graphic-design">Graphic Design</LocalizedLink>
                 </div>
               )}
           </div>
           <div className="cta-header-container">
-            <LocalizedLink className="cta-header-btn" to="#">
-              Premium Support
-            </LocalizedLink>
+            <a className="cta-header-btn" href="http://premiumsupport.vanillamarketing.it/" target="_blank"> Premium Support</a>
           </div>
         </div>
       </header>

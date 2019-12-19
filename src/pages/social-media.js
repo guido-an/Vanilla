@@ -14,10 +14,14 @@ const socialMedia = ({ pageContext: { locale }, data }) => {
          bigIcon={data.bigIcon.childImageSharp.fluid} 
          overtitle={data.socialMedia.childSocialMediaJson.overtitle} 
          title={data.socialMedia.childSocialMediaJson.title} 
-         subtitle={data.socialMedia.childSocialMediaJson.subtitle} 
          multiline1={data.socialMedia.childSocialMediaJson.multiline1}/>
          <PortfolioLogo/>
-          <FooterCta linkGetStarted={data.header.childHeaderJson.linkGetStarted} />
+         <FooterCta 
+          linkGetStarted={data.header.childHeaderJson.linkGetStarted}
+          textGetStarted={data.header.childHeaderJson.textGetStarted}
+          title={data.footerCta.childFooterCtaJson.title}
+          subtitle={data.footerCta.childFooterCtaJson.subtitle}  
+           />
         </Layout>
     )
 }
@@ -34,14 +38,20 @@ export const query = graphql`
         contact
         contactLink
         linkGetStarted
+        textGetStarted
       }
     }
      socialMedia: file(name: { eq: $locale }, relativeDirectory: { eq: "social-media" }) {
       childSocialMediaJson {
       overtitle
       title
-       subtitle
        multiline1
+      }
+    }
+    footerCta: file( name: { eq: $locale } relativeDirectory: { eq: "footer-cta" }) {
+      childFooterCtaJson {
+      title
+      subtitle
       }
     }
   bigIcon: file(relativePath: { eq: "social-media-marketing.jpg" }) {

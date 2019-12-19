@@ -80,9 +80,9 @@ const data = useStaticQuery(graphql`
   `)
       return(
           <div className="portfolio-section">
-           <span className="overtitle-dark">LOREM IPSUM SIN AMET</span>
-            <h1>Lorem ipsum</h1>
-            <p style={{marginBottom: "60px"}} className="subtitle-page">Ci guida la passione, ci guida la curiosità, ci guida la consapevolezza.</p>
+           <span className="overtitle-dark">È UNA QUESTIONE DI FIDUCIA</span>
+            <h1>I nostri clienti</h1>
+            <p style={{marginBottom: "60px"}} className="subtitle-page">Ecco alcune delle realtà che hanno scelto di collaborare con noi.</p>
             <div className="logo-portfolio-container">
             <Img className="logo-portfolio" fluid={data.cameraCommercio.childImageSharp.fluid} />
         

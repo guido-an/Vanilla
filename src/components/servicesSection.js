@@ -4,7 +4,7 @@ import "./servicesSection.css"
 import Img from "gatsby-image"
 import LocalizedLink from "./LocalizedLink"
 
-export default () => {
+export default ({serviceTitle, serviceSubtitle, serviceDesc1, serviceDesc2, webDevDesc, socialMediaDesc,webMarketingDesc, graphicDesignDesc}) => {
   const data = useStaticQuery(graphql`
     query {
       webDevIcon: file(relativePath: { eq: "realizzazione-siti-web.png" }) {
@@ -44,15 +44,15 @@ export default () => {
   return (
     <section className="services-section">
       <div className="services-section-container">
-        <span className="overtitle-yellow">I NOSTRI SERVIZI</span>
+        <span className="overtitle-yellow">{serviceTitle}</span>
         <h2 className="title-section">
-         Quello che possiamo fare per te
+         {serviceSubtitle}
           <br />
         </h2>
         <p className="section-desc">
-          Siti, applicazioni web, social, web marketing e graphic design
+          {serviceDesc1}
           <br />
-          dall'effetto wow :)
+          {serviceDesc2}
         </p>
         <div className="services-container">
           <div className="service-container">
@@ -64,10 +64,10 @@ export default () => {
               <strong>WEB DEVELOPMENT</strong>
             </p>
             <p className="service-desc">
-          Siti, e-commerce e applicazioni web. Siamo tra le prime agenzia in Italia a utilizzare l'approcco JAMstack per risultati dannatamente migliori. 
+          {webDevDesc}
             </p>
             <p>
-              <LocalizedLink to="/" className="service-cta-home">
+              <LocalizedLink to="/web-development" className="service-cta-home">
                 <strong>> Web Development</strong>
               </LocalizedLink>
             </p>
@@ -81,12 +81,10 @@ export default () => {
             </p>
 
             <p className="service-desc">
-              Strategia, competenza e buon gusto sono garantiti. Questi gli
-              aspetti che rendono riconoscibili ed efficaci le nostre gestioni
-              social media.
+            {socialMediaDesc}
             </p>
             <p>
-              <LocalizedLink to="/" className="service-cta-home">
+              <LocalizedLink to="/social-media-marketing" className="service-cta-home">
                 <strong>> Social Media</strong>
               </LocalizedLink>{" "}
             </p>
@@ -99,8 +97,7 @@ export default () => {
               <strong>WEB MARKETING</strong>
             </p>
             <p className="service-desc">
-              Ottimizzazione SEO e link building, campagne Google Adwords e analisi dati per
-              aumentare, finalmente, il traffico e le conversioni
+         {webMarketingDesc}
             
             </p>
             <p>
@@ -117,8 +114,8 @@ export default () => {
               <strong>GRAPHIC DESIGN</strong>
             </p>
             <p className="service-desc">
-             Creatività, studio dell'immagine e grafica coordinata. Creiamo brand efficaci capaci di essere riconoscibili anche a occhi chiusi.
-            </p>
+              {graphicDesignDesc}
+              </p>
             <p>
               <LocalizedLink to="/" className="service-cta-home">
                 <strong>> Graphic Design</strong>

@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import './cta.css'
 
 
-export default function cta({linkGetStarted}) {
-  console.log("link get start", linkGetStarted)
-  return <LocalizedLink style={{textDecoration: "none"}} to={linkGetStarted}><span className="cta">Comincia da qui</span></LocalizedLink>
+export default function cta({linkGetStarted, textGetStarted}) {
+  console.log("textGetStarted", textGetStarted)
+
+  return <LocalizedLink style={{textDecoration: "none"}} to={linkGetStarted}><span className="cta">{textGetStarted}</span></LocalizedLink>
 }

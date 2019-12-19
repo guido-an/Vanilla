@@ -32,9 +32,15 @@ module.exports = [
     path: '/about',
     component: path.resolve(`src/pages/about.js`)
   },
+    //WEB DEV
+    {
+      path: '/realizzazione-siti-web',
+      component: path.resolve(`src/pages/web-development.js`)
+    },
+
      //SOCIAL MEDIA
    {
-    path: '/social-media',
+    path: '/social-media-marketing',
     component: path.resolve(`src/pages/social-media.js`)
   },
      //WEB MARKETING

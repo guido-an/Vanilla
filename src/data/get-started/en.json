@@ -6,5 +6,6 @@
     "emailPlaceHolder": "Your business email",
     "textAreaPlaceHolder": "How can we help you?",
     "ctaButton": "Request Free Consultation Now!",
-    "homeLink": "/en"
+    "rejectText": "No, I don't want any advice"
+
 }

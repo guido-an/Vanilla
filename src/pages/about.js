@@ -9,49 +9,24 @@ import PageBody from "../components/pageBody"
 import './about.css'
 
 const About = ({ pageContext: { locale }, data }) => {
-  console.log("data", data)
+
+  const { overtitle, title, subtitle, multiline1 } = data.about.childAboutJson
+
   return (
     <Layout path="/" locale={locale} data={data}>
       <SEO title="Chi Siamo" />
-      <PageBody bigIcon={data.bigIcon.childImageSharp.fluid} overtitle={data.about.childAboutJson.overtitle} title={data.about.childAboutJson.title} subtitle={data.about.childAboutJson.subtitle} multiline1={data.about.childAboutJson.multiline1}/>
-      {/* <section className="margin-top">
-        <div className="about-section-container">
-
-      
-            <Img className="big-icon" fluid={data.bigV.childImageSharp.fluid} />
-          
-
-
-          <div className="page-bg">
-            <span className="overtitle-dark">DIGITAL CREATORS</span>
-            <h1>Vanilla Manifesto</h1>
-            <p className="subtitle-page">
-              {data.about.childAboutJson.subtitle}
-            </p>
-            <div className="text-service-container">
-             <div>
-              {data.about.childAboutJson.multiline1.map((string, i) => {
-               if(string.includes("www")){
-                      var str = "www.premiumsupport.vanillamarketing.it";
-                      var URL = "http://www.premiumsupport.vanillamarketing.it";  
-                       return <a style={{textDecoration: "none"}} href={URL} target="_blank"><p style={{position: "relative", bottom:"22px"}}>{string}</p></a>
-                  
-                   } else {
-                       return <p key={i}>{string}</p>
-                   }    
-              
-              })}
-            
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
+      <PageBody 
+      bigIcon={data.bigIcon.childImageSharp.fluid} 
+      overtitle={overtitle} 
+      title={title} 
+      subtitle={subtitle} 
+      multiline1={multiline1}
+      />
       <div className="about-photo-container">
-       <span className="overtitle-dark">PIACERE DI CONOSCERTI</span>
-            <h1>La ciurma Vanilla</h1>
+       <span className="overtitle-dark">PIACERE DI CONOSCERTI :)</span>
+            <h1>Ecco chi siamo</h1>
             <p className="subtitle-page">
-              {data.about.childAboutJson.subtitle}
+            Si! Anche Olivia, il bulldog pigro e paffuto, fa parte di Vanilla."
             </p>
       <div className="photo-row-1">
       <Img className="about-photo" fluid={data.fotoV.childImageSharp.fluid} />
@@ -63,10 +38,14 @@ const About = ({ pageContext: { locale }, data }) => {
       <Img className="about-photo" fluid={data.fotoV.childImageSharp.fluid} />
       <Img className="about-photo" fluid={data.fotoV.childImageSharp.fluid} />
       </div>
-
       </div>
      
-      <FooterCta linkGetStarted={data.header.childHeaderJson.linkGetStarted} />
+      <FooterCta 
+      linkGetStarted={data.header.childHeaderJson.linkGetStarted} 
+      textGetStarted={data.header.childHeaderJson.textGetStarted} 
+      title={data.footerCta.childFooterCtaJson.title}
+      subtitle={data.footerCta.childFooterCtaJson.subtitle}
+      />
     </Layout>
   )
 }
@@ -83,6 +62,7 @@ export const query = graphql`
         contact
         contactLink
         linkGetStarted
+        textGetStarted
       }
     }
     about: file(name: { eq: $locale }, relativeDirectory: { eq: "about" }) {
@@ -98,6 +78,12 @@ export const query = graphql`
         fluid(maxWidth: 323, quality: 100) {
           ...GatsbyImageSharpFluid
         }
+      }
+    }
+    footerCta: file( name: { eq: $locale } relativeDirectory: { eq: "footer-cta" }) {
+      childFooterCtaJson {
+      title
+      subtitle
       }
     }
       fotoV: file(relativePath: { eq: "foto-test.jpg" }) {

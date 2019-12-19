@@ -6,5 +6,6 @@
     "services": "Services",
     "contact": "Contact",
     "contactLink": "/contact",
-    "linkGetStarted": "/get-started"
+    "linkGetStarted": "/get-started",
+    "textGetStarted": "Comincia da qui"
 }

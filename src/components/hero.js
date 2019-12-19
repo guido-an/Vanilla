@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 
 
 
-export default ({linkGetStarted}) => {
+export default ({linkGetStarted, textGetStarted, heroSubtitle1,heroSubtitle2, ctaSubtitle }) => {
  console.log("Link get started from hero", linkGetStarted)
   return (
     <section className="hero">
@@ -18,13 +18,12 @@ export default ({linkGetStarted}) => {
      That Work.
           </h1>
           <p className="section-desc">
-            Innovazione, creatività ed eleganza,<br />
-            è quello che stai cercando?
-            
+            {heroSubtitle1}<br />   
+            {heroSubtitle2} 
           </p>
-          <Cta linkGetStarted={linkGetStarted} />
+          <Cta linkGetStarted={linkGetStarted} textGetStarted={textGetStarted} />
           <p className="btn-desc">
-            Per la tua consulenza gratuita in meno di 24 ore. 
+            {ctaSubtitle}
           </p>
         </div>
         

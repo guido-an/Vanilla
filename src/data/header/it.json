@@ -6,5 +6,6 @@
     "services": "Servizi",
     "contact": "Contatti",
     "contactLink": "/contatti",
-    "linkGetStarted": "/richiedi-un-preventivo"
+    "linkGetStarted": "/richiedi-un-preventivo",
+    "textGetStarted": "Comincia da qui"
 }

@@ -1,13 +1,12 @@
 {
-    "hello": "Salut",
-    "NextPage": "Page suivante",
-    "page": "/page-suivante",
-    "siteTitle": "Bienvenue",
     "home": "Home",
     "homeLink": "/",
-    "about": "About",
-    "aboutLink": "/about",
-    "services": "Services",
-    "contact": "Contact us",
-    "contactLink": "/contact-us"
+    "about": "Chi siamo",
+    "aboutLink": "/chi-siamo",
+    "services": "Servizi",
+    "contact": "Contatti",
+    "contactLink": "/contatti",
+    "heroSubtitle1": "Innovazione, creatività ed eleganza,",
+    "heroSubtitle2": "è quello che stai cercando?",
+    "ctaSubtitle": "Per la tua consulenza gratuita in meno di 24 ore.",
 }

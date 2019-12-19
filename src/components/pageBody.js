@@ -11,7 +11,7 @@ const pageBody= (props) => {
         <div className="about-section-container">
           <Img className="big-icon" fluid={props.bigIcon} />
           <div className="page-bg">
-            <span className="overtitle-dark">{props.overtitle}</span>
+            <span className="overtitle-dark">DIGITAL CREATORS</span>
             <h1>{props.title}</h1>
             <p className="subtitle-page">
               {props.subtitle}

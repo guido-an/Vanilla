@@ -6,7 +6,7 @@ import salvatore from "../images/salvatore-di-giovanni.jpg"
 import monica from "../images/monica-gili.jpg"
 import saputo from "../images/michele-saputo.jpg"
 
-export default function Testimonial({ testimonials }) {
+export default function Testimonial({ testimonials, overtitle, title1, title2 }) {
   const quotes = [
     {
       client: testimonials.client0,
@@ -57,10 +57,10 @@ export default function Testimonial({ testimonials }) {
         margin-top: 120px
       
       `}>
-        <span className="overtitle-dark">DICONO DI NOI</span>
+        <span className="overtitle-dark">{overtitle}</span>
         <h2 className="title-section">
-          Le parole di chi ha già
-          <br /> scelto Vanilla
+          {title1}
+          <br /> {title2}
         </h2>
       </div>
       <div
