@@ -8,7 +8,7 @@ import PageBody from '../components/pageBody'
 import './about.css'
 
 const About = ({ pageContext: { locale }, data }) => {
-  const { overtitle, title, subtitle, multiline1 } = data.about.childAboutJson
+  const { overtitle, title, subtitle, multiline1, photoOvertitle, photoTitle, photoSubtitle} = data.about.childAboutJson
 
   return (
     <Layout path='/' locale={locale} data={data}>
@@ -21,10 +21,10 @@ const About = ({ pageContext: { locale }, data }) => {
         multiline1={multiline1}
       />
       <div className="about-photo-container">
-        <span className="overtitle-dark">PIACERE DI CONOSCERTI :)</span>
-        <h1>Ecco chi siamo</h1>
+        <span className="overtitle-dark">{photoOvertitle}</span>
+        <h1>{photoTitle}</h1>
         <p className="subtitle-page">
-          Si! Anche Olivia, il bulldog pigro e paffuto, fa parte di Vanilla.
+          {photoSubtitle}
         </p>
         <div className="photo-row-1">
           <Img
@@ -87,6 +87,9 @@ export const query = graphql`
         title
         subtitle
         multiline1
+        photoOvertitle,
+        photoTitle,
+        photoSubtitle
       }
     }
     bigIcon: file(relativePath: { eq: "vanilla-chi-siamo.jpg" }) {

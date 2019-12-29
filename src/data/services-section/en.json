@@ -1,10 +1,10 @@
 {
-    "serviceTitle": "I NOSTRI SERVIZI",
-    "serviceSubtitle": "Quello che possiamo fare per te",
-    "serviceDesc1": "Siti, applicazioni web, social, web marketing e graphic design",
-    "serviceDesc2": "dall'effetto wow :)",
-    "webDevDesc": " Siti, e-commerce e applicazioni web. Siamo tra le prime agenzia in Italia a utilizzare l'approcco JAMstack per risultati dannatamente migliori.",
-    "socialMediaDesc": " Strategia, competenza e buon gusto sono garantiti. Questi gli aspetti che rendono riconoscibili ed efficaci le nostre gestioni social media.",
-    "webMarketingDesc": "Ottimizzazione SEO e link building, campagne Google Adwords e analisi dati per aumentare, finalmente, il traffico e le conversioni",
-    "graphicDesignDesc": "Creatività, studio dell'immagine e grafica coordinata. Creiamo brand efficaci capaci di essere riconoscibili anche a occhi chiusi."
+    "serviceTitle": "OUR SERVICES",
+    "serviceSubtitle": "What we can do for you",
+    "serviceDesc1": "Websites, web applications, social media, web marketing and graphic design",
+    "serviceDesc2": "from the wow effect :)",
+    "webDevDesc": " Websites, e-commerce and web applications. We are among the first agencies in Italy to use the JAMstack approach for blazing fast websites.",
+    "socialMediaDesc": "Strategy, competence and fineness are guaranteed with us. These are the aspects that make our social media management recognizable and effective.",
+    "webMarketingDesc": "SEO optimization, link building, Google Adwords campaigns and data analysis to finally increase traffic and conversions.",
+    "graphicDesignDesc": "Creativity, study of the brand and corporate identity. We create effective brands that can be recognized even with closed eyes."
 }

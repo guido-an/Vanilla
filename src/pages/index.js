@@ -49,7 +49,6 @@ const IndexPage = ({ pageContext: { locale }, data }) => {
   )
 }
 
-
 export const query = graphql`
   query Home($locale: String) {
     header: file(name: { eq: $locale }, relativeDirectory: { eq: "header" }) {

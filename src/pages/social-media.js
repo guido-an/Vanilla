@@ -1,15 +1,15 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import SEO from '../components/seo'
-import Layout from '../components/layout'
-import PageBody from '../components/pageBody'
-import PortfolioLogo from '../components/portfolioLogo'
-import FooterCta from '../components/footerCta'
+import React from "react"
+import { graphql } from "gatsby"
+import SEO from "../components/seo"
+import Layout from "../components/layout"
+import PageBody from "../components/pageBody"
+import PortfolioLogo from "../components/portfolioLogo"
+import FooterCta from "../components/footerCta"
 
 const socialMedia = ({ pageContext: { locale }, data }) => {
   return (
-    <Layout path='/' locale={locale} data={data}>
-      <SEO title='Social Media Marketing' />
+    <Layout path="/" locale={locale} data={data}>
+      <SEO title="Social Media Marketing" />
       <PageBody
         bigIcon={data.bigIcon.childImageSharp.fluid}
         overtitle={data.socialMedia.childSocialMediaJson.overtitle}
@@ -17,7 +17,11 @@ const socialMedia = ({ pageContext: { locale }, data }) => {
         subtitle={data.socialMedia.childSocialMediaJson.subtitle}
         multiline1={data.socialMedia.childSocialMediaJson.multiline1}
       />
-      <PortfolioLogo />
+      <PortfolioLogo
+        overtitle={data.portfolio.childPortfolioJson.overtitle}
+        title={data.portfolio.childPortfolioJson.title}
+        subtitle={data.portfolio.childPortfolioJson.subtitle}
+      />
       <FooterCta
         linkGetStarted={data.header.childHeaderJson.linkGetStarted}
         textGetStarted={data.header.childHeaderJson.textGetStarted}
@@ -51,6 +55,16 @@ export const query = graphql`
         overtitle
         title
         multiline1
+        subtitle
+      }
+    }
+    portfolio: file(
+      name: { eq: $locale }
+      relativeDirectory: { eq: "portfolio" }
+    ) {
+      childPortfolioJson {
+        overtitle
+        title
         subtitle
       }
     }

@@ -1,15 +1,15 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import SEO from '../components/seo'
-import Layout from '../components/layout'
-import PageBody from '../components/pageBody'
-import PortfolioLogo from '../components/portfolioLogo'
-import FooterCta from '../components/footerCta'
+import React from "react"
+import { graphql } from "gatsby"
+import SEO from "../components/seo"
+import Layout from "../components/layout"
+import PageBody from "../components/pageBody"
+import PortfolioLogo from "../components/portfolioLogo"
+import FooterCta from "../components/footerCta"
 
 const webMarketing = ({ pageContext: { locale }, data }) => {
   return (
-    <Layout path='/' locale={locale} data={data}>
-      <SEO title='Web Marketing' />
+    <Layout path="/" locale={locale} data={data}>
+      <SEO title="Web Marketing" />
       <PageBody
         bigIcon={data.bigIcon.childImageSharp.fluid}
         overtitle={data.webMarketing.childWebMarketingJson.overtitle}
@@ -17,8 +17,17 @@ const webMarketing = ({ pageContext: { locale }, data }) => {
         subtitle={data.webMarketing.childWebMarketingJson.subtitle}
         multiline1={data.webMarketing.childWebMarketingJson.multiline1}
       />
-      <PortfolioLogo />
-      <FooterCta linkGetStarted={data.header.childHeaderJson.linkGetStarted} />
+      <PortfolioLogo
+        overtitle={data.portfolio.childPortfolioJson.overtitle}
+        title={data.portfolio.childPortfolioJson.title}
+        subtitle={data.portfolio.childPortfolioJson.subtitle}
+      />
+      <FooterCta
+        linkGetStarted={data.header.childHeaderJson.linkGetStarted}
+        textGetStarted={data.header.childHeaderJson.textGetStarted}
+        title={data.footerCta.childFooterCtaJson.title}
+        subtitle={data.footerCta.childFooterCtaJson.subtitle}
+      />
     </Layout>
   )
 }
@@ -35,6 +44,7 @@ export const query = graphql`
         contact
         contactLink
         linkGetStarted
+        textGetStarted
       }
     }
     webMarketing: file(
@@ -53,6 +63,25 @@ export const query = graphql`
         fluid(maxWidth: 323, quality: 100) {
           ...GatsbyImageSharpFluid
         }
+      }
+    }
+    portfolio: file(
+      name: { eq: $locale }
+      relativeDirectory: { eq: "portfolio" }
+    ) {
+      childPortfolioJson {
+        overtitle
+        title
+        subtitle
+      }
+    }
+    footerCta: file(
+      name: { eq: $locale }
+      relativeDirectory: { eq: "footer-cta" }
+    ) {
+      childFooterCtaJson {
+        title
+        subtitle
       }
     }
   }
