@@ -31,17 +31,17 @@ const Header = ({ dataHeader }) => {
     aboutLink,
     services,
     contact,
-    contactLink,
+    contactLink
   } = dataHeader.header.childHeaderJson
 
   const listenDropDownMenu = () => {
-    setDropDownMenu(dropDownMenu = !dropDownMenu)
+    setDropDownMenu((dropDownMenu = !dropDownMenu))
   }
   const showDropDownMenuDesktop = () => {
-    setDropDownMenu(dropDownMenu = true )
+    setDropDownMenu((dropDownMenu = true))
   }
   const hideDropDownMenuDesktop = () => {
-    setDropDownMenu(dropDownMenu = false )
+    setDropDownMenu((dropDownMenu = false))
   }
   const listenScrollEvent = () => {
     if (window.scrollY > 200) {
@@ -84,11 +84,26 @@ const Header = ({ dataHeader }) => {
             <ul>
               <LocalizedLink to={homeLink}>{home}</LocalizedLink>
               <LocalizedLink to={aboutLink}>{about}</LocalizedLink>
-              <LocalizedLink onClick={listenDropDownMenu} to="#">{services} <span className="dropdown-icon">{dropDownMenu ? "v" : ">"}</span></LocalizedLink>
+              <p className='services-mobile' onClick={listenDropDownMenu}>
+                {services}
+                <span className="dropdown-icon">
+                  {dropDownMenu ? "v" : ">"}
+                </span>
+              </p>
               {dropDownMenu && (
                 <div>
-                  <LocalizedLink className="dropdown-item" to="#">{services}</LocalizedLink>
-                  <LocalizedLink className="dropdown-item" to="#">{services}</LocalizedLink>
+                  <LocalizedLink className="dropdown-item" to="/web-development">
+                    Web Development
+                  </LocalizedLink>
+                  <LocalizedLink className="dropdown-item" to="/social-media-marketing">
+                    Social Media
+                  </LocalizedLink>
+                  <LocalizedLink className="dropdown-item" to="/web-marketing">
+                    Web Marketing
+                  </LocalizedLink>
+                  <LocalizedLink className="dropdown-item" to="/graphic-design">
+                    Graphic Design
+                  </LocalizedLink>
                 </div>
               )}
 
@@ -105,7 +120,11 @@ const Header = ({ dataHeader }) => {
         )}
       </header>
 
-      <header onMouseLeave={hideDropDownMenuDesktop} id="header-desktop" className="header">
+      <header
+        onMouseLeave={hideDropDownMenuDesktop}
+        id="header-desktop"
+        className="header"
+      >
         <div className="desktop-header-container">
           <div className="logo-container">
             <LocalizedLink to={homeLink}>
@@ -115,25 +134,58 @@ const Header = ({ dataHeader }) => {
           </div>
           <div>
             <nav className="nav-desktop">
-              <ul >
+              <ul>
                 <LocalizedLink to={homeLink}>{home}</LocalizedLink>
                 <LocalizedLink to={aboutLink}>{about}</LocalizedLink>
-                <LocalizedLink onMouseEnter={showDropDownMenuDesktop} to="#" className="dropdwon-service">{services} <span className="dropdown-icon"><Img style={{width: "10px", display: "inline-block"}}fluid={data.arrowDown.childImageSharp.fluid} /></span></LocalizedLink>
-              
+                <LocalizedLink
+                  onMouseEnter={showDropDownMenuDesktop}
+                  to="#"
+                  className="dropdwon-service"
+                >
+                  {services}{" "}
+                  <span className="dropdown-icon">
+                    <Img
+                      style={{ width: "10px", display: "inline-block" }}
+                      fluid={data.arrowDown.childImageSharp.fluid}
+                    />
+                  </span>
+                </LocalizedLink>
+
                 <LocalizedLink to={contactLink}>{contact}</LocalizedLink>
               </ul>
             </nav>
             {dropDownMenu && (
-                <div onMouseLeave={hideDropDownMenuDesktop} className="dropdown-menu-services-desktop">
-                  <LocalizedLink className="dropdown-item" to="/web-development">Web development</LocalizedLink>
-                  <LocalizedLink className="dropdown-item" to="/social-media-marketing">Social Media</LocalizedLink>
-                  <LocalizedLink className="dropdown-item" to="/web-marketing">Web Marketing</LocalizedLink>
-                  <LocalizedLink className="dropdown-item" to="/graphic-design">Graphic Design</LocalizedLink>
-                </div>
-              )}
+              <div
+                onMouseLeave={hideDropDownMenuDesktop}
+                className="dropdown-menu-services-desktop"
+              >
+                <LocalizedLink className="dropdown-item" to="/web-development">
+                  Web development
+                </LocalizedLink>
+                <LocalizedLink
+                  className="dropdown-item"
+                  to="/social-media-marketing"
+                >
+                  Social Media
+                </LocalizedLink>
+                <LocalizedLink className="dropdown-item" to="/web-marketing">
+                  Web Marketing
+                </LocalizedLink>
+                <LocalizedLink className="dropdown-item" to="/graphic-design">
+                  Graphic Design
+                </LocalizedLink>
+              </div>
+            )}
           </div>
           <div className="cta-header-container">
-            <a className="cta-header-btn" href="http://premiumsupport.vanillamarketing.it/" target="_blank"> Premium Support</a>
+            <a
+              className="cta-header-btn"
+              href="http://premiumsupport.vanillamarketing.it/"
+              target="_blank"
+            >
+              {" "}
+              Premium Support
+            </a>
           </div>
         </div>
       </header>

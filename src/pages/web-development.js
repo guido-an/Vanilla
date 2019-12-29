@@ -14,6 +14,7 @@ const webDevelopment = ({ pageContext: { locale }, data }) => {
         bigIcon={data.bigIcon.childImageSharp.fluid}
         overtitle={data.webDevelopment.childWebDevelopmentJson.overtitle}
         title={data.webDevelopment.childWebDevelopmentJson.title}
+        subtitle={data.webDevelopment.childWebDevelopmentJson.subtitle}
         multiline1={data.webDevelopment.childWebDevelopmentJson.multiline1}
       />
       <PortfolioLogo
@@ -53,6 +54,7 @@ export const query = graphql`
       childWebDevelopmentJson {
         overtitle
         title
+        subtitle
         multiline1
       }
     }

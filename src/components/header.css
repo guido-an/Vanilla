@@ -26,6 +26,14 @@
   height: 100vh;
   border-top: 1px solid #d2d2d2;
 }
+.services-mobile{
+  font-weight: 500;
+  position: relative;
+  top: 12px
+}
+.services-mobile:hover{
+  cursor: pointer;
+}
 .dropdown-icon{
   font-size: 12px;
   position: relative;
