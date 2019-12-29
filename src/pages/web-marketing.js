@@ -1,25 +1,26 @@
 import React from 'react'
-import { graphql } from "gatsby"
-import SEO from "../components/seo"
-import Layout from "../components/layout"
-import PageBody from "../components/pageBody"
-import PortfolioLogo from "../components/portfolioLogo"
-import FooterCta from "../components/footerCta"
+import { graphql } from 'gatsby'
+import SEO from '../components/seo'
+import Layout from '../components/layout'
+import PageBody from '../components/pageBody'
+import PortfolioLogo from '../components/portfolioLogo'
+import FooterCta from '../components/footerCta'
 
 const webMarketing = ({ pageContext: { locale }, data }) => {
-    return(
-        <Layout path="/" locale={locale} data={data}>
-        <SEO title="Web Marketing" />
-         <PageBody 
-         bigIcon={data.bigIcon.childImageSharp.fluid} 
-         overtitle={data.webMarketing.childWebMarketingJson.overtitle} 
-         title={data.webMarketing.childWebMarketingJson.title} 
-         subtitle={data.webMarketing.childWebMarketingJson.subtitle} 
-         multiline1={data.webMarketing.childWebMarketingJson.multiline1}/>
-         <PortfolioLogo/>
-          <FooterCta linkGetStarted={data.header.childHeaderJson.linkGetStarted} />
-        </Layout>
-    )
+  return (
+    <Layout path='/' locale={locale} data={data}>
+      <SEO title='Web Marketing' />
+      <PageBody
+        bigIcon={data.bigIcon.childImageSharp.fluid}
+        overtitle={data.webMarketing.childWebMarketingJson.overtitle}
+        title={data.webMarketing.childWebMarketingJson.title}
+        subtitle={data.webMarketing.childWebMarketingJson.subtitle}
+        multiline1={data.webMarketing.childWebMarketingJson.multiline1}
+      />
+      <PortfolioLogo />
+      <FooterCta linkGetStarted={data.header.childHeaderJson.linkGetStarted} />
+    </Layout>
+  )
 }
 
 export const query = graphql`
@@ -36,15 +37,18 @@ export const query = graphql`
         linkGetStarted
       }
     }
-     webMarketing: file(name: { eq: $locale }, relativeDirectory: { eq: "web-marketing" }) {
+    webMarketing: file(
+      name: { eq: $locale }
+      relativeDirectory: { eq: "web-marketing" }
+    ) {
       childWebMarketingJson {
-      overtitle
-      title
-       subtitle
-       multiline1
+        overtitle
+        title
+        subtitle
+        multiline1
       }
     }
-  bigIcon: file(relativePath: { eq: "web-marketing.jpg" }) {
+    bigIcon: file(relativePath: { eq: "web-marketing.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 323, quality: 100) {
           ...GatsbyImageSharpFluid

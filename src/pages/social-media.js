@@ -1,30 +1,31 @@
 import React from 'react'
-import { graphql } from "gatsby"
-import SEO from "../components/seo"
-import Layout from "../components/layout"
-import PageBody from "../components/pageBody"
-import PortfolioLogo from "../components/portfolioLogo"
-import FooterCta from "../components/footerCta"
+import { graphql } from 'gatsby'
+import SEO from '../components/seo'
+import Layout from '../components/layout'
+import PageBody from '../components/pageBody'
+import PortfolioLogo from '../components/portfolioLogo'
+import FooterCta from '../components/footerCta'
 
 const socialMedia = ({ pageContext: { locale }, data }) => {
-    return(
-        <Layout path="/" locale={locale} data={data}>
-        <SEO title="Social Media Marketing" />
-         <PageBody 
-         bigIcon={data.bigIcon.childImageSharp.fluid} 
-         overtitle={data.socialMedia.childSocialMediaJson.overtitle} 
-         title={data.socialMedia.childSocialMediaJson.title} 
-         subtitle={data.socialMedia.childSocialMediaJson.subtitle} 
-         multiline1={data.socialMedia.childSocialMediaJson.multiline1}/>
-         <PortfolioLogo/>
-         <FooterCta 
-          linkGetStarted={data.header.childHeaderJson.linkGetStarted}
-          textGetStarted={data.header.childHeaderJson.textGetStarted}
-          title={data.footerCta.childFooterCtaJson.title}
-          subtitle={data.footerCta.childFooterCtaJson.subtitle}  
-           />
-        </Layout>
-    )
+  return (
+    <Layout path='/' locale={locale} data={data}>
+      <SEO title='Social Media Marketing' />
+      <PageBody
+        bigIcon={data.bigIcon.childImageSharp.fluid}
+        overtitle={data.socialMedia.childSocialMediaJson.overtitle}
+        title={data.socialMedia.childSocialMediaJson.title}
+        subtitle={data.socialMedia.childSocialMediaJson.subtitle}
+        multiline1={data.socialMedia.childSocialMediaJson.multiline1}
+      />
+      <PortfolioLogo />
+      <FooterCta
+        linkGetStarted={data.header.childHeaderJson.linkGetStarted}
+        textGetStarted={data.header.childHeaderJson.textGetStarted}
+        title={data.footerCta.childFooterCtaJson.title}
+        subtitle={data.footerCta.childFooterCtaJson.subtitle}
+      />
+    </Layout>
+  )
 }
 
 export const query = graphql`
@@ -42,21 +43,27 @@ export const query = graphql`
         textGetStarted
       }
     }
-     socialMedia: file(name: { eq: $locale }, relativeDirectory: { eq: "social-media" }) {
+    socialMedia: file(
+      name: { eq: $locale }
+      relativeDirectory: { eq: "social-media" }
+    ) {
       childSocialMediaJson {
-      overtitle
-      title
-       multiline1
-       subtitle
+        overtitle
+        title
+        multiline1
+        subtitle
       }
     }
-    footerCta: file( name: { eq: $locale } relativeDirectory: { eq: "footer-cta" }) {
+    footerCta: file(
+      name: { eq: $locale }
+      relativeDirectory: { eq: "footer-cta" }
+    ) {
       childFooterCtaJson {
-      title
-      subtitle
+        title
+        subtitle
       }
     }
-  bigIcon: file(relativePath: { eq: "social-media-marketing.jpg" }) {
+    bigIcon: file(relativePath: { eq: "social-media-marketing.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 323, quality: 100) {
           ...GatsbyImageSharpFluid

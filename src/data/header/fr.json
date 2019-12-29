@@ -1,11 +1,11 @@
 {
-    "home": "Home",
+    "home": "Accueil",
     "homeLink": "/",
-    "about": "About",
-    "aboutLink": "/about",
+    "about": "À propos",
+    "aboutLink": "/a-propos",
     "services": "Services",
     "contact": "Contact",
     "contactLink": "/contact",
-    "linkGetStarted": "/get-started",
-    "textGetStarted": "Comincia da qui"
+    "linkGetStarted": "/part-d-ici ",
+    "textGetStarted": "Part d’ici "
 }

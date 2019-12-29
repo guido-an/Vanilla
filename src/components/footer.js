@@ -3,9 +3,11 @@ import "./footer.css"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import LocalizedLink from "./LocalizedLink"
+import italyFlag from "../images/italy-flag.png"
+import ukFlag from "../images/uk-flag.png"
+import franceFlag from "../images/france-flag.png"
 
 export default () => {
-
   const data = useStaticQuery(graphql`
     query {
       logo: file(relativePath: { eq: "logo-vanilla-marketing-bianco.png" }) {
@@ -92,16 +94,15 @@ export default () => {
             />
           </LocalizedLink>
           <div className="flags-container-footer">
-         
-          {/* <LocalizedLink to="/">
-            <Img className="flag-footer" fluid={data.italyFlag.childImageSharp.fluid} />
-          </LocalizedLink>
-          <LocalizedLink to="/en">
-            <Img className="flag-footer" fluid={data.ukFlag.childImageSharp.fluid} />
-          </LocalizedLink>
-          <LocalizedLink to="/fr">
-            <Img className="flag-footer" fluid={data.franceFlag.childImageSharp.fluid} />
-          </LocalizedLink> */}
+            <a href='https://vanillamarketing.it/'>
+              <img className='flag-footer' src={italyFlag} alt='italy-flag' />
+            </a>
+            <a href='https://vanillamarketing.it/en'>
+              <img className='flag-footer' src={ukFlag} alt='uk-flag' />
+            </a>
+            <a href='https://vanillamarketing.it/fr'>
+              <img className='flag-footer' src={franceFlag} alt='france-flag' />
+            </a>
           </div>
         </div>
         <div className="footer-section-container">
