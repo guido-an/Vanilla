@@ -21,7 +21,7 @@ const Header = ({ dataHeader }) => {
       }
       logo: file(relativePath: { eq: "logo-vanilla-marketing.png" }) {
         childImageSharp {
-          fluid(maxWidth: 190) {
+          fluid(maxWidth: 190, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

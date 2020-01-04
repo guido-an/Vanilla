@@ -1,6 +1,6 @@
 import React from "react"
 import "./footer.css"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import LocalizedLink from "./LocalizedLink"
 import italyFlag from "../images/italy-flag.png"
@@ -39,20 +39,6 @@ export default () => {
         }
       }
       mobileIcon: file(relativePath: { eq: "mobile-icon.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 32) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      instagramIcon: file(relativePath: { eq: "instagram-icon.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 32) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      facebookIcon: file(relativePath: { eq: "facebook-icon.png" }) {
         childImageSharp {
           fluid(maxWidth: 32) {
             ...GatsbyImageSharpFluid
@@ -170,7 +156,7 @@ export default () => {
         <div className="footer-section-container">
           <p className="footer-title">Social</p>
           <div className="footer-social-container">
-            <a
+            {/* <a
               href="https://www.facebook.com/AgenziaVanillaMarketing"
               target="_blank"
             >
@@ -187,6 +173,52 @@ export default () => {
                 className="footer-social-icon"
                 fluid={data.instagramIcon.childImageSharp.fluid}
               />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/vanilla-marketing"
+              target="_blank"
+            >
+              <Img
+                className="footer-social-icon"
+                fluid={data.linkedinIcon.childImageSharp.fluid}
+              />
+            </a>
+            <a
+              href="https://open.spotify.com/user/jq8rsmhffl01j9izazr9hx2yk?si=fJCM68DNRxuUxsYcWoay_g"
+              target="_blank"
+            >
+              <Img
+                className="footer-social-icon"
+                fluid={data.spotifyIcon.childImageSharp.fluid}
+              />
+            </a> */}
+            <a
+              className="footer-link"
+              href="https://www.facebook.com/AgenziaVanillaMarketing"
+              target='_blank'
+            >
+              Facebook
+            </a>
+            <a
+              className="footer-link"
+              href="https://www.instagram.com/vanilla.marketing/"
+              target='_blank'
+            >
+              Instagram
+            </a>
+            <a
+              className="footer-link"
+              href="https://www.linkedin.com/company/vanilla-marketing"
+              target='_blank'
+            >
+              Linkedin
+            </a>
+            <a
+              className="footer-link"
+              href="https://open.spotify.com/user/jq8rsmhffl01j9izazr9hx2yk?si=fJCM68DNRxuUxsYcWoay_g"
+              target='_blank'
+            >
+              Spotify
             </a>
           </div>
         </div>

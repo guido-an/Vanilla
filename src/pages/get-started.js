@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import "./get-started.css"
 import { LocaleProvider } from "../constants/localeProviders"
 import LocalizedLink from "../components/LocalizedLink"
+import LogoOnScroll from "../components/logoOnScroll"
 
 const getStarted = ({ pageContext: { locale }, data }) => {
   const {
@@ -22,7 +23,11 @@ const getStarted = ({ pageContext: { locale }, data }) => {
       <header className="header-get-started">
         <div style={{ margin: "10px 0" }}>
           <LocalizedLink to="/">
-            <Img className="logo" fluid={data.logo.childImageSharp.fluid} />
+            <Img
+              className="logo-get-started"
+              fluid={data.logo.childImageSharp.fluid}
+            />
+            <LogoOnScroll />
           </LocalizedLink>
         </div>
         <LocalizedLink

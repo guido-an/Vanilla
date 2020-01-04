@@ -47,20 +47,8 @@
     display: block;
 }
 .footer-link:hover{
-    color: #b2b2b2
+    color: #f6ec32
 }
-
-.footer-social-container{
-    display: flex
-}
-.footer-social-icon{
-    width: 28px;
-    height: 28px;
-    margin: 0 8px;
-    position: relative;
-    right: 6px
-}
-
 
 @media(min-width: 768px){
     .footer{
