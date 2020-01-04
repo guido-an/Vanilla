@@ -1,13 +1,16 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { graphql, Link } from 'gatsby'
+import { graphql, Link } from "gatsby"
 
 const NotFoundPage = ({ pageContext: { locale }, data }) => (
   <Layout path="/" locale={locale} data={data}>
     <SEO title="404: Not found" />
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p><br/>
-    <Link to="/">Go back home!</Link>
+    <div style={{ height: '800px', marginTop: '120px' }}>
+      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <br />
+      <Link to='/' style={{ textDecoration: 'none', color: '#777' }}>Go back home!</Link>
+    </div>
   </Layout>
 )
 
@@ -26,10 +29,8 @@ export const query = graphql`
         textGetStarted
       }
     }
-}
+  }
 `
-
-
 //   function NotFoundPage(){
 //       return(
 //           <section>
