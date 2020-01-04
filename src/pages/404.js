@@ -6,7 +6,7 @@ import { graphql, Link } from "gatsby"
 const NotFoundPage = ({ pageContext: { locale }, data }) => (
   <Layout path="/" locale={locale} data={data}>
     <SEO title="404: Not found" />
-    <div style={{ height: '800px', marginTop: '120px' }}>
+    <div style={{ height: '800px', marginTop: '120px', textAlign: 'center' }}>
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
       <br />
       <Link to='/' style={{ textDecoration: 'none', color: '#777' }}>Go back home!</Link>
