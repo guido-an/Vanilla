@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 const NotFoundPage = ({ pageContext: { locale }, data }) => (
   <Layout path="/" locale={locale} data={data}>
@@ -10,15 +10,25 @@ const NotFoundPage = ({ pageContext: { locale }, data }) => (
     <Link to="/">Go back home!</Link>
   </Layout>
 )
-// export const query = graphql`
-//   query page404($locale: String) {
-//     file(name: { eq: $locale }, relativeDirectory: { eq: "index" }) {
-//       childIndexJson {
-//         siteTitle
-//       }
-//     }
-//   }
-//   `
+
+export const query = graphql`
+  query page404($locale: String) {
+    header: file(name: { eq: $locale }, relativeDirectory: { eq: "header" }) {
+      childHeaderJson {
+        home
+        homeLink
+        about
+        aboutLink
+        services
+        contact
+        contactLink
+        linkGetStarted
+        textGetStarted
+      }
+    }
+}
+`
+
 
 //   function NotFoundPage(){
 //       return(
