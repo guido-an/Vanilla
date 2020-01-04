@@ -27,10 +27,10 @@ const getStarted = ({ pageContext: { locale }, data }) => {
               className="logo-get-started"
               fluid={data.logo.childImageSharp.fluid}
             />
-            <LogoOnScroll />
           </LocalizedLink>
         </div>
         <LocalizedLink
+        className="reject-text"
           to="/"
           style={{
             position: "relative",

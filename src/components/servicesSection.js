@@ -40,7 +40,6 @@ export default ({serviceTitle, serviceSubtitle, serviceDesc1, serviceDesc2, webD
     }
   `)
  
-
   return (
     <section className="services-section">
       <div className="services-section-container">

@@ -639,9 +639,6 @@ h1 {
   position: relative;
   right: 40px;
 }
-.header-get-started .logo-get-started {
-  display: none;
-}
 .title-section {
   font-family: "Poppins", sans-serif;
 }
@@ -721,12 +718,7 @@ p {
   .logo-on-scroll {
     width: 170px;
   }
-  .header-get-started .logo-get-started {
-    display: block;
-  }
-  .header-get-started .logo-on-scroll {
-    display: none;
-  }
+
 }
 
 @media (min-width: 1200px) {
@@ -762,7 +754,7 @@ p {
 }
 
 .logo-portfolio {
-  width: 350px;
+  width: 250px;
   margin: 40px auto;
   display: block;
 }

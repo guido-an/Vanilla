@@ -66,6 +66,9 @@
 .get-started-section form button:focus {
   outline-width: 0;
 }
+.reject-text{
+  display: none
+}
 @media (min-width: 1200px) {
   .header-get-started {
     margin: 0 auto;
@@ -86,5 +89,8 @@
     color: #777;
     display: block;
     margin: 0 10px;
+  }
+  .reject-text{
+    display: block
   }
 }
