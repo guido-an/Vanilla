@@ -50,6 +50,9 @@ const Header = ({ dataHeader }) => {
   const hideDropDownMenuDesktop = () => {
     setDropDownMenu((dropDownMenu = false))
   }
+  const comingSoon = () => {
+    alert('Coming Soon :) ')
+  }
   const listenScrollEvent = () => {
     if (window.scrollY > 200) {
       // Scroll check / you can define your scroll in pixels eg.200
@@ -62,7 +65,8 @@ const Header = ({ dataHeader }) => {
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent) // add event listner
   })
-
+  
+ 
   return (
     <section>
       <header id="header-mobile" className="header">
@@ -203,8 +207,8 @@ const Header = ({ dataHeader }) => {
           </div>
           <div className="cta-header-container">
             <a
+            onClick={comingSoon}
               className="cta-header-btn"
-              href="http://premiumsupport.vanillamarketing.it/"
               target="_blank"
             >
               {" "}
