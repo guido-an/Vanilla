@@ -9,7 +9,7 @@ import FooterCta from "../components/footerCta"
 const webMarketing = ({ pageContext: { locale }, data }) => {
   return (
     <Layout path="/" locale={locale} data={data}>
-      <SEO title="Web Marketing" />
+      <SEO title="Web Marketing | Vanilla Marketing" />
       <PageBody
         bigIcon={data.bigIcon.childImageSharp.fluid}
         overtitle={data.webMarketing.childWebMarketingJson.overtitle}

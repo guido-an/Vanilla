@@ -54,6 +54,8 @@ const Contact = ({ pageContext: { locale }, data }) => {
               </a>
             </div>
             <div>
+              
+
               <Img
                 className='icons-contact-page'
                 fluid={data.socialIcon.childImageSharp.fluid}
@@ -72,6 +74,18 @@ const Contact = ({ pageContext: { locale }, data }) => {
                 target='_blank'
               >
                 <p>Instagram</p>
+              </a>
+              <a
+                href='https://www.linkedin.com/company/vanilla-marketing'
+                target='_blank'
+              >
+                <p>Linkedin</p>
+              </a>
+              <a
+                href='https://open.spotify.com/user/jq8rsmhffl01j9izazr9hx2yk?si=fJCM68DNRxuUxsYcWoay_g'
+                target='_blank'
+              >
+                <p>Spotify</p>
               </a>
             </div>
             <div>

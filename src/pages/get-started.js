@@ -1,41 +1,52 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Footer from "../components/footer"
-import Logo from "../components/logo"
-import './get-started.css'
-import {LocaleProvider} from '../constants/localeProviders'
+import Img from "gatsby-image"
+import "./get-started.css"
+import { LocaleProvider } from "../constants/localeProviders"
 import LocalizedLink from "../components/LocalizedLink"
 
 const getStarted = ({ pageContext: { locale }, data }) => {
-  const {title, subtitle, ctaText, namePlaceHolder, emailPlaceHolder, textAreaPlaceHolder, ctaButton, rejectText} = data.getStarted.childGetStartedJson
+  const {
+    title,
+    subtitle,
+    ctaText,
+    namePlaceHolder,
+    emailPlaceHolder,
+    textAreaPlaceHolder,
+    ctaButton,
+    rejectText,
+  } = data.getStarted.childGetStartedJson
   return (
-     <LocaleProvider value={locale}>
-        <header className="header-get-started">
-        <div style={{margin: "10px 0"}}>
-        <LocalizedLink to="/"><Logo/></LocalizedLink>
-        </div>
-        <LocalizedLink to="/"
-            style={{
-              position: "relative",
-              top: "35px",
-              color: "#777",
-              textDecoration: "none",
-              fontSize: "16px",
-              fontWeight: "500",
-            }}
-            to="/"
-          >
-           {rejectText}
+    <LocaleProvider value={locale}>
+      <header className="header-get-started">
+        <div style={{ margin: "10px 0" }}>
+          <LocalizedLink to="/">
+            <Img className="logo" fluid={data.logo.childImageSharp.fluid} />
           </LocalizedLink>
-        </header>
-        <section className="get-started-section">
+        </div>
+        <LocalizedLink
+          to="/"
+          style={{
+            position: "relative",
+            top: "35px",
+            color: "#777",
+            textDecoration: "none",
+            fontSize: "16px",
+            fontWeight: "500",
+          }}
+          to="/"
+        >
+          {rejectText}
+        </LocalizedLink>
+      </header>
+      <section className="get-started-section">
         <div>
-          <h1 style={{marginTop: "60px" }}>
-            {title}
-          </h1>
-          <span> {subtitle} 
-          </span>
-          <p style={{color: "#777", fontSize: "20px", marginTop: "40px"}}><strong> {ctaText}</strong></p>
+          <h1 style={{ marginTop: "60px" }}>{title}</h1>
+          <span> {subtitle}</span>
+          <p style={{ color: "#777", fontSize: "20px", marginTop: "40px" }}>
+            <strong> {ctaText}</strong>
+          </p>
           <div>
             <form
               name="Contact Form"
@@ -45,30 +56,44 @@ const getStarted = ({ pageContext: { locale }, data }) => {
             >
               <input type="hidden" name="form-name" value="Contact Form" />
               <div>
-            
-                <input type="text" name="name" placeholder={namePlaceHolder} required />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder={namePlaceHolder}
+                  required
+                />
               </div>
               <div>
-           
-                <input type="email" name="email" placeholder={emailPlaceHolder} required />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder={emailPlaceHolder}
+                  required
+                />
               </div>
               <div>
-                <textarea name="message" placeholder={textAreaPlaceHolder} required />
+                <textarea
+                  name="message"
+                  placeholder={textAreaPlaceHolder}
+                  required
+                />
               </div>
               <button type="submit">{ctaButton}</button>
             </form>
           </div>
         </div>
       </section>
-       <Footer />
-     </LocaleProvider>
+      <Footer />
+    </LocaleProvider>
   )
 }
 
-
 export const query = graphql`
   query getStarted($locale: String) {
-    getStarted: file( name: { eq: $locale } relativeDirectory: { eq: "get-started" }) {
+    getStarted: file(
+      name: { eq: $locale }
+      relativeDirectory: { eq: "get-started" }
+    ) {
       childGetStartedJson {
         title
         subtitle
@@ -78,6 +103,13 @@ export const query = graphql`
         textAreaPlaceHolder
         ctaButton
         rejectText
+      }
+    }
+    logo: file(relativePath: { eq: "logo-vanilla-marketing.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 190) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
   }

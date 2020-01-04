@@ -12,7 +12,7 @@ const About = ({ pageContext: { locale }, data }) => {
 
   return (
     <Layout path='/' locale={locale} data={data}>
-      <SEO title='Chi Siamo' />
+      <SEO title='Chi Siamo | Vanilla Marketing' />
       <PageBody
         bigIcon={data.bigIcon.childImageSharp.fluid}
         overtitle={overtitle}

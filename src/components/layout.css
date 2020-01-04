@@ -622,11 +622,20 @@ pre tt:after {
   }
 }
 
-/** ***/
-
+/** STYLE ***/
 h1 {
   font-family: "Poppins", sans-serif !important;
   color: #272727 !important;
+}
+.logo{
+  width:150px;
+  position: relative;
+  top: 5px
+}
+.logo-on-scroll{
+  width: 160px;
+  position: relative;
+  right: 40px
 }
 .title-section {
   font-family: "Poppins", sans-serif;
@@ -687,12 +696,22 @@ margin: 0 auto;
   line-height: 32px
 }
 
+.page-bg .text-service-container p{
+  text-align: left;
+}
+
 @media(min-width: 768px){
   .page-bg{
     border-radius: 16px;
     margin: 4%;
   }
- 
+  .logo{
+    width:180px;
+    top: 0
+  }
+  .logo-on-scroll{
+    width: 170px
+  }
 }
 
 @media(min-width: 1200px){

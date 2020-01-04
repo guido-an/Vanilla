@@ -94,14 +94,14 @@ export default () => {
             />
           </LocalizedLink>
           <div className="flags-container-footer">
-            <a href='https://vanillamarketing.it/'>
-              <img className='flag-footer' src={italyFlag} alt='italy-flag' />
+            <a href="https://vanillamarketing.it/">
+              <img className="flag-footer" src={italyFlag} alt="italy-flag" />
             </a>
-            <a href='https://vanillamarketing.it/en'>
-              <img className='flag-footer' src={ukFlag} alt='uk-flag' />
+            <a href="https://vanillamarketing.it/en">
+              <img className="flag-footer" src={ukFlag} alt="uk-flag" />
             </a>
-            <a href='https://vanillamarketing.it/fr'>
-              <img className='flag-footer' src={franceFlag} alt='france-flag' />
+            <a href="https://vanillamarketing.it/fr">
+              <img className="flag-footer" src={franceFlag} alt="france-flag" />
             </a>
           </div>
         </div>
@@ -154,7 +154,7 @@ export default () => {
               fluid={data.phoneIcon.childImageSharp.fluid}
             />
             <a className="footer-link" href="tel:+393516711311">
-              +39 351 671 1311
+              +39 071 204002
             </a>
           </div>
           <div className="footer-contact-container">
@@ -163,7 +163,7 @@ export default () => {
               fluid={data.mobileIcon.childImageSharp.fluid}
             />
             <a className="footer-link" href="tel:+39071204002">
-              +39 071 204002
+              +39 351 671 1311
             </a>
           </div>
         </div>

@@ -96,10 +96,10 @@ export default ({overtitle, title, subtitle}) => {
           fluid={data.cameraCommercio.childImageSharp.fluid}
         />
 
-        <Img
+        {/* <Img
           className="logo-portfolio"
           fluid={data.univpm.childImageSharp.fluid}
-        />
+        /> */}
         <Img
           className="logo-portfolio"
           fluid={data.mongrip.childImageSharp.fluid}
@@ -121,10 +121,10 @@ export default ({overtitle, title, subtitle}) => {
           className="logo-portfolio"
           fluid={data.blomdahl.childImageSharp.fluid}
         />
-        <Img
+        {/* <Img
           className="logo-portfolio"
           fluid={data.yumyum.childImageSharp.fluid}
-        />
+        /> */}
 
         <Img
           className="logo-portfolio"

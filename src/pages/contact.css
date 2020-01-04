@@ -28,9 +28,13 @@
   margin-top: 60px;
 }
 
-.contact-info-container div a:nth-child(4) {
+/* .contact-info-container div a:nth-child(4) {
   position: relative;
   bottom: 15px;
+} */
+.contact-info-container div a p{
+  display: block;
+  line-height: 12px
 }
 .icons-contact-page{
     width: 64px;

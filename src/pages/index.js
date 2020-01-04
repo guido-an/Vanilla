@@ -11,39 +11,42 @@ import ServicesSection from "../components/servicesSection"
 import Testimonials from "../components/testimonials"
 
 const IndexPage = ({ pageContext: { locale }, data }) => {
-
   return (
-    <Layout path="/" locale={locale} data={data} >
-
-    {/* site title gets from graphql query and pass it to layout component */}
-      <SEO title="" />
-      <Hero linkGetStarted={data.header.childHeaderJson.linkGetStarted} 
-      heroSubtitle1={data.hero.childHeroJson.heroSubtitle1} 
-      heroSubtitle2={data.hero.childHeroJson.heroSubtitle2} 
-      ctaSubtitle={data.hero.childHeroJson.ctaSubtitle} 
-      textGetStarted={data.header.childHeaderJson.textGetStarted}
+    <Layout path='/' locale={locale} data={data}>
+      {/* site title gets from graphql query and pass it to layout component */}
+      <SEO title='Vanilla Marketing | Digital Creators' description="La digital agency ad Ancona per lo sviluppo di siti internet, gestione di social media, strategie di web marketing e grafica." />
+      <Hero
+        linkGetStarted={data.header.childHeaderJson.linkGetStarted}
+        heroSubtitle1={data.hero.childHeroJson.heroSubtitle1}
+        heroSubtitle2={data.hero.childHeroJson.heroSubtitle2}
+        ctaSubtitle={data.hero.childHeroJson.ctaSubtitle}
+        textGetStarted={data.header.childHeaderJson.textGetStarted}
       />
-      <ServicesSection 
-      serviceTitle={data.services.childServicesSectionJson.serviceTitle} 
-      serviceSubtitle={data.services.childServicesSectionJson.serviceSubtitle} 
-      serviceDesc1={data.services.childServicesSectionJson.serviceDesc1} 
-      serviceDesc2={data.services.childServicesSectionJson.serviceDesc2} 
-      webDevDesc={data.services.childServicesSectionJson.webDevDesc} 
-      socialMediaDesc={data.services.childServicesSectionJson.socialMediaDesc} 
-      webMarketingDesc={data.services.childServicesSectionJson.webMarketingDesc} 
-      graphicDesignDesc={data.services.childServicesSectionJson.graphicDesignDesc} 
+      <ServicesSection
+        serviceTitle={data.services.childServicesSectionJson.serviceTitle}
+        serviceSubtitle={data.services.childServicesSectionJson.serviceSubtitle}
+        serviceDesc1={data.services.childServicesSectionJson.serviceDesc1}
+        serviceDesc2={data.services.childServicesSectionJson.serviceDesc2}
+        webDevDesc={data.services.childServicesSectionJson.webDevDesc}
+        socialMediaDesc={data.services.childServicesSectionJson.socialMediaDesc}
+        webMarketingDesc={
+          data.services.childServicesSectionJson.webMarketingDesc
+        }
+        graphicDesignDesc={
+          data.services.childServicesSectionJson.graphicDesignDesc
+        }
       />
-      <Testimonials 
-      testimonials={data.testimonials.childTestimonialsJson} 
-      overtitle={data.testimonials.childTestimonialsJson.overtitle} 
-      title1={data.testimonials.childTestimonialsJson.title1} 
-      title2={data.testimonials.childTestimonialsJson.title2} 
+      <Testimonials
+        testimonials={data.testimonials.childTestimonialsJson}
+        overtitle={data.testimonials.childTestimonialsJson.overtitle}
+        title1={data.testimonials.childTestimonialsJson.title1}
+        title2={data.testimonials.childTestimonialsJson.title2}
       />
-      <FooterCta 
-      linkGetStarted={data.header.childHeaderJson.linkGetStarted}
-      textGetStarted={data.header.childHeaderJson.textGetStarted}
-      title={data.footerCta.childFooterCtaJson.title}
-      subtitle={data.footerCta.childFooterCtaJson.subtitle}
+      <FooterCta
+        linkGetStarted={data.header.childHeaderJson.linkGetStarted}
+        textGetStarted={data.header.childHeaderJson.textGetStarted}
+        title={data.footerCta.childFooterCtaJson.title}
+        subtitle={data.footerCta.childFooterCtaJson.subtitle}
       />
     </Layout>
   )
@@ -71,7 +74,10 @@ export const query = graphql`
         ctaSubtitle
       }
     }
-    services: file(name: { eq: $locale }, relativeDirectory: { eq: "services-section" }) {
+    services: file(
+      name: { eq: $locale }
+      relativeDirectory: { eq: "services-section" }
+    ) {
       childServicesSectionJson {
         serviceTitle
         serviceSubtitle
@@ -83,7 +89,10 @@ export const query = graphql`
         graphicDesignDesc
       }
     }
-    testimonials: file( name: { eq: $locale } relativeDirectory: { eq: "testimonials" }) {
+    testimonials: file(
+      name: { eq: $locale }
+      relativeDirectory: { eq: "testimonials" }
+    ) {
       childTestimonialsJson {
         overtitle
         title1
@@ -100,13 +109,15 @@ export const query = graphql`
         quote4
       }
     }
-    footerCta: file( name: { eq: $locale } relativeDirectory: { eq: "footer-cta" }) {
+    footerCta: file(
+      name: { eq: $locale }
+      relativeDirectory: { eq: "footer-cta" }
+    ) {
       childFooterCtaJson {
-      title
-      subtitle
+        title
+        subtitle
       }
     }
-    
   }
 `
 // IndexPage.propTypes = {

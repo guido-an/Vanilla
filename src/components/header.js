@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-
-import Logo from "./logo"
 import LogoOnScroll from "./logoOnScroll"
 import "./header.css"
 import HamburgerMenu from "react-hamburger-menu"
@@ -10,11 +8,20 @@ import LocalizedLink from "./LocalizedLink"
 import Cta from "./cta"
 
 const Header = ({ dataHeader }) => {
+  console.log(dataHeader, "data")
+
   const data = useStaticQuery(graphql`
     query {
       arrowDown: file(relativePath: { eq: "arrow-down.png" }) {
         childImageSharp {
           fluid(maxWidth: 16) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      logo: file(relativePath: { eq: "logo-vanilla-marketing.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 190) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -31,7 +38,7 @@ const Header = ({ dataHeader }) => {
     aboutLink,
     services,
     contact,
-    contactLink
+    contactLink,
   } = dataHeader.header.childHeaderJson
 
   const listenDropDownMenu = () => {
@@ -46,9 +53,9 @@ const Header = ({ dataHeader }) => {
   const listenScrollEvent = () => {
     if (window.scrollY > 200) {
       // Scroll check / you can define your scroll in pixels eg.200
-      setScroll(true) // if windowScroll to predifined position setState "true"
+      setScroll(true) // if windowScroll to predifined position setState 'true'
     } else {
-      setScroll(false) // if windowNOTScrolled or set back to its starting postion setState "false"
+      setScroll(false) // if windowNOTScrolled or set back to its starting postion setState 'false'
     }
   }
 
@@ -62,10 +69,14 @@ const Header = ({ dataHeader }) => {
         <div className="mobile-header-container">
           <div className="logo-container">
             <LocalizedLink to={homeLink}>
-              {!scroll ? <Logo /> : <LogoOnScroll />}
+              {!scroll ? (
+                <Img className='logo' fluid={data.logo.childImageSharp.fluid} />
+              ) : (
+                <LogoOnScroll />
+              )}
             </LocalizedLink>
           </div>
-          <div className="burger-icon">
+          <div className='burger-icon'>
             <HamburgerMenu
               isOpen={visible}
               menuClicked={() => setVisible(!visible)}
@@ -84,7 +95,7 @@ const Header = ({ dataHeader }) => {
             <ul>
               <LocalizedLink to={homeLink}>{home}</LocalizedLink>
               <LocalizedLink to={aboutLink}>{about}</LocalizedLink>
-              <p className='services-mobile' onClick={listenDropDownMenu}>
+              <p className="services-mobile" onClick={listenDropDownMenu}>
                 {services}
                 <span className="dropdown-icon">
                   {dropDownMenu ? "v" : ">"}
@@ -92,10 +103,16 @@ const Header = ({ dataHeader }) => {
               </p>
               {dropDownMenu && (
                 <div>
-                  <LocalizedLink className="dropdown-item" to="/web-development">
+                  <LocalizedLink
+                    className="dropdown-item"
+                    to="/web-development"
+                  >
                     Web Development
                   </LocalizedLink>
-                  <LocalizedLink className="dropdown-item" to="/social-media-marketing">
+                  <LocalizedLink
+                    className="dropdown-item"
+                    to="/social-media-marketing"
+                  >
                     Social Media
                   </LocalizedLink>
                   <LocalizedLink className="dropdown-item" to="/web-marketing">
@@ -114,6 +131,9 @@ const Header = ({ dataHeader }) => {
                 linkGetStarted={
                   dataHeader.header.childHeaderJson.linkGetStarted
                 }
+                textGetStarted={
+                  dataHeader.header.childHeaderJson.textGetStarted
+                }
               />
             </div>
           </nav>
@@ -129,7 +149,11 @@ const Header = ({ dataHeader }) => {
           <div className="logo-container">
             <LocalizedLink to={homeLink}>
               {/* on scroll change logo */}
-              {!scroll ? <Logo /> : <LogoOnScroll />}
+              {!scroll ? (
+                <Img className="logo" fluid={data.logo.childImageSharp.fluid} />
+              ) : (
+                <LogoOnScroll />
+              )}
             </LocalizedLink>
           </div>
           <div>
