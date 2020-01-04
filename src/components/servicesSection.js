@@ -100,7 +100,7 @@ export default ({serviceTitle, serviceSubtitle, serviceDesc1, serviceDesc2, webD
             
             </p>
             <p>
-              <LocalizedLink to="/" className="service-cta-home">
+              <LocalizedLink to="/web-marketing" className="service-cta-home">
                 <strong>> Web Marketing</strong>
               </LocalizedLink>
             </p>
@@ -116,7 +116,7 @@ export default ({serviceTitle, serviceSubtitle, serviceDesc1, serviceDesc2, webD
               {graphicDesignDesc}
               </p>
             <p>
-              <LocalizedLink to="/" className="service-cta-home">
+              <LocalizedLink to="/graphic-design" className="service-cta-home">
                 <strong>> Graphic Design</strong>
               </LocalizedLink>
             </p>
