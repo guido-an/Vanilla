@@ -718,7 +718,6 @@ p {
   .logo-on-scroll {
     width: 170px;
   }
-
 }
 
 @media (min-width: 1200px) {
@@ -763,6 +762,7 @@ p {
   .logo-portfolio-container {
     display: flex;
     margin: 0 8% 0;
+    justify-content: center;
   }
 
   .logo-portfolio {

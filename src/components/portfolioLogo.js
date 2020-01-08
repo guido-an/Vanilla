@@ -1,8 +1,8 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
-export default ({overtitle, title, subtitle}) => {
+export default ({ overtitle, title, subtitle }) => {
   const data = useStaticQuery(graphql`
     query {
       blomdahl: file(relativePath: { eq: "portfolio/blomdahl-logo.png" }) {
@@ -84,15 +84,15 @@ export default ({overtitle, title, subtitle}) => {
     }
   `)
   return (
-    <div className="portfolio-section">
-      <span className="overtitle-dark">{overtitle}</span>
+    <div className='portfolio-section'>
+      <span className='overtitle-dark'>{overtitle}</span>
       <h1>{title}</h1>
-      <p style={{ marginBottom: "60px" }} className="subtitle-page">
+      <p style={{ marginBottom: '60px' }} className='subtitle-page'>
         {subtitle}
       </p>
-      <div className="logo-portfolio-container">
+      <div className='logo-portfolio-container'>
         <Img
-          className="logo-portfolio"
+          className='logo-portfolio'
           fluid={data.cameraCommercio.childImageSharp.fluid}
         />
 
@@ -101,24 +101,24 @@ export default ({overtitle, title, subtitle}) => {
           fluid={data.univpm.childImageSharp.fluid}
         /> */}
         <Img
-          className="logo-portfolio"
+          className='logo-portfolio'
           fluid={data.mongrip.childImageSharp.fluid}
         />
 
         <Img
-          className="logo-portfolio"
+          className='logo-portfolio'
           fluid={data.autoritaPortuale.childImageSharp.fluid}
         />
 
         <Img
-          className="logo-portfolio"
+          className='logo-portfolio'
           fluid={data.curandera.childImageSharp.fluid}
         />
       </div>
 
-      <div className="logo-portfolio-container">
+      <div className='logo-portfolio-container'>
         <Img
-          className="logo-portfolio"
+          className='logo-portfolio'
           fluid={data.blomdahl.childImageSharp.fluid}
         />
         {/* <Img
@@ -127,15 +127,15 @@ export default ({overtitle, title, subtitle}) => {
         /> */}
 
         <Img
-          className="logo-portfolio"
+          className='logo-portfolio'
           fluid={data.aroundAwt.childImageSharp.fluid}
         />
         <Img
-          className="logo-portfolio"
+          className='logo-portfolio'
           fluid={data.walkingEolie.childImageSharp.fluid}
         />
         <Img
-          className="logo-portfolio"
+          className='logo-portfolio'
           fluid={data.difar.childImageSharp.fluid}
         />
       </div>
