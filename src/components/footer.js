@@ -116,6 +116,7 @@ export default () => {
             <a
               className='footer-link'
               target='_blank'
+              rel='noopener noreferrer'
               href='https://www.google.com/maps/place/Corso+Giuseppe+Garibaldi,+91,+60121+Ancona+AN,+Italia/@43.6177941,13.5117425,17z/data=!3m1!4b1!4m5!3m4!1s0x132d7fbc3d6aac41:0x2f2b499114e7475b!8m2!3d43.6177902!4d13.5139312'
             >
               Corso Garibaldi 91/b, Ancona
@@ -129,6 +130,7 @@ export default () => {
             <a
               className='footer-link'
               target='_blank'
+              rel='noopener noreferrer'
               href='mailto:info@vanillamarketing.it'
             >
               info@vanillamarketing.it

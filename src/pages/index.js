@@ -1,20 +1,17 @@
-import React from "react"
-
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
-
-import SEO from "../components/seo"
-
-import Hero from "../components/hero"
-import FooterCta from "../components/footerCta"
-import ServicesSection from "../components/servicesSection"
-import Testimonials from "../components/testimonials"
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import Hero from '../components/hero'
+import FooterCta from '../components/footerCta'
+import ServicesSection from '../components/servicesSection'
+import Testimonials from '../components/testimonials'
 
 const IndexPage = ({ pageContext: { locale }, data }) => {
   return (
     <Layout path='/' locale={locale} data={data}>
       {/* site title gets from graphql query and pass it to layout component */}
-      <SEO title='Vanilla Marketing | Digital Creators' description="La digital agency ad Ancona per lo sviluppo di siti internet, gestione di social media, strategie di web marketing e grafica." />
+      <SEO title={data.hero.childHeroJson.titleSeo} description={data.hero.childHeroJson.descriptionSeo} />
       <Hero
         linkGetStarted={data.header.childHeaderJson.linkGetStarted}
         heroSubtitle1={data.hero.childHeroJson.heroSubtitle1}
@@ -72,6 +69,8 @@ export const query = graphql`
         heroSubtitle1
         heroSubtitle2
         ctaSubtitle
+        titleSeo
+        descriptionSeo
       }
     }
     services: file(

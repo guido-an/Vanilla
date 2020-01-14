@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import LogoOnScroll from "./logoOnScroll"
-import "./header.css"
-import HamburgerMenu from "react-hamburger-menu"
-import LocalizedLink from "./LocalizedLink"
-import Cta from "./cta"
+import React, { useState, useEffect } from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import LogoOnScroll from './logoOnScroll'
+import './header.css'
+import HamburgerMenu from 'react-hamburger-menu'
+import LocalizedLink from './LocalizedLink'
+import Cta from './cta'
 
 const Header = ({ dataHeader }) => {
-  console.log(dataHeader, "data")
+  console.log(dataHeader, 'data')
 
   const data = useStaticQuery(graphql`
     query {
@@ -38,7 +38,7 @@ const Header = ({ dataHeader }) => {
     aboutLink,
     services,
     contact,
-    contactLink,
+    contactLink
   } = dataHeader.header.childHeaderJson
 
   const listenDropDownMenu = () => {
@@ -63,15 +63,14 @@ const Header = ({ dataHeader }) => {
   }
 
   useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent) // add event listner
+    window.addEventListener('scroll', listenScrollEvent) // add event listner
   })
-  
- 
+
   return (
     <section>
-      <header id="header-mobile" className="header">
-        <div className="mobile-header-container">
-          <div className="logo-container">
+      <header id='header-mobile' className='header'>
+        <div className='mobile-header-container'>
+          <div className='logo-container'>
             <LocalizedLink to={homeLink}>
               {!scroll ? (
                 <Img className='logo' fluid={data.logo.childImageSharp.fluid} />
@@ -88,41 +87,41 @@ const Header = ({ dataHeader }) => {
               height={18}
               strokeWidth={3}
               rotate={0}
-              color="black"
+              color='black'
               borderRadius={0}
               animationDuration={0.1}
             />
           </div>
         </div>
         {visible && (
-          <nav className="nav-mobile">
+          <nav className='nav-mobile'>
             <ul>
               <LocalizedLink to={homeLink}>{home}</LocalizedLink>
               <LocalizedLink to={aboutLink}>{about}</LocalizedLink>
-              <p className="services-mobile" onClick={listenDropDownMenu}>
+              <p className='services-mobile' onClick={listenDropDownMenu}>
                 {services}
-                <span className="dropdown-icon">
-                  {dropDownMenu ? "v" : ">"}
+                <span className='dropdown-icon'>
+                  {dropDownMenu ? 'v' : '>'}
                 </span>
               </p>
               {dropDownMenu && (
                 <div>
                   <LocalizedLink
-                    className="dropdown-item"
-                    to="/web-development"
+                    className='dropdown-item'
+                    to='/web-development'
                   >
                     Web Development
                   </LocalizedLink>
                   <LocalizedLink
-                    className="dropdown-item"
-                    to="/social-media-marketing"
+                    className='dropdown-item'
+                    to='/social-media-marketing'
                   >
                     Social Media
                   </LocalizedLink>
-                  <LocalizedLink className="dropdown-item" to="/web-marketing">
+                  <LocalizedLink className='dropdown-item' to='/web-marketing'>
                     Web Marketing
                   </LocalizedLink>
-                  <LocalizedLink className="dropdown-item" to="/graphic-design">
+                  <LocalizedLink className='dropdown-item' to='/graphic-design'>
                     Graphic Design
                   </LocalizedLink>
                 </div>
@@ -130,7 +129,7 @@ const Header = ({ dataHeader }) => {
 
               <LocalizedLink to={contactLink}>{contact}</LocalizedLink>
             </ul>
-            <div className="mobile-menu-cta">
+            <div className='mobile-menu-cta'>
               <Cta
                 linkGetStarted={
                   dataHeader.header.childHeaderJson.linkGetStarted
@@ -146,34 +145,34 @@ const Header = ({ dataHeader }) => {
 
       <header
         onMouseLeave={hideDropDownMenuDesktop}
-        id="header-desktop"
-        className="header"
+        id='header-desktop'
+        className='header'
       >
-        <div className="desktop-header-container">
-          <div className="logo-container">
+        <div className='desktop-header-container'>
+          <div className='logo-container'>
             <LocalizedLink to={homeLink}>
               {/* on scroll change logo */}
               {!scroll ? (
-                <Img className="logo" fluid={data.logo.childImageSharp.fluid} />
+                <Img className='logo' fluid={data.logo.childImageSharp.fluid} />
               ) : (
                 <LogoOnScroll />
               )}
             </LocalizedLink>
           </div>
           <div>
-            <nav className="nav-desktop">
+            <nav className='nav-desktop'>
               <ul>
                 <LocalizedLink to={homeLink}>{home}</LocalizedLink>
                 <LocalizedLink to={aboutLink}>{about}</LocalizedLink>
                 <LocalizedLink
                   onMouseEnter={showDropDownMenuDesktop}
-                  to="#"
-                  className="dropdwon-service"
+                  to='#'
+                  className='dropdwon-service'
                 >
-                  {services}{" "}
-                  <span className="dropdown-icon">
+                  {services}{' '}
+                  <span className='dropdown-icon'>
                     <Img
-                      style={{ width: "10px", display: "inline-block" }}
+                      style={{ width: '10px', display: 'inline-block' }}
                       fluid={data.arrowDown.childImageSharp.fluid}
                     />
                   </span>
@@ -185,33 +184,33 @@ const Header = ({ dataHeader }) => {
             {dropDownMenu && (
               <div
                 onMouseLeave={hideDropDownMenuDesktop}
-                className="dropdown-menu-services-desktop"
+                className='dropdown-menu-services-desktop'
               >
-                <LocalizedLink className="dropdown-item" to="/web-development">
+                <LocalizedLink className='dropdown-item' to='/web-development'>
                   Web development
                 </LocalizedLink>
                 <LocalizedLink
-                  className="dropdown-item"
-                  to="/social-media-marketing"
+                  className='dropdown-item'
+                  to='/social-media-marketing'
                 >
                   Social Media
                 </LocalizedLink>
-                <LocalizedLink className="dropdown-item" to="/web-marketing">
+                <LocalizedLink className='dropdown-item' to='/web-marketing'>
                   Web Marketing
                 </LocalizedLink>
-                <LocalizedLink className="dropdown-item" to="/graphic-design">
+                <LocalizedLink className='dropdown-item' to='/graphic-design'>
                   Graphic Design
                 </LocalizedLink>
               </div>
             )}
           </div>
-          <div className="cta-header-container">
+          <div className='cta-header-container'>
             <a
-            onClick={comingSoon}
-              className="cta-header-btn"
-              target="_blank"
+              onClick={comingSoon}
+              className='cta-header-btn'
+              target='_blank'
             >
-              {" "}
+              {' '}
               Premium Support
             </a>
           </div>

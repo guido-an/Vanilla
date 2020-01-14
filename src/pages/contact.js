@@ -54,8 +54,6 @@ const Contact = ({ pageContext: { locale }, data }) => {
               </a>
             </div>
             <div>
-              
-
               <Img
                 className='icons-contact-page'
                 fluid={data.socialIcon.childImageSharp.fluid}
@@ -66,24 +64,28 @@ const Contact = ({ pageContext: { locale }, data }) => {
               <a
                 href='https://www.facebook.com/AgenziaVanillaMarketing'
                 target='_blank'
+                rel='noopener noreferrer'
               >
                 <p>Facebook</p>
               </a>
               <a
                 href='https://www.instagram.com/vanilla.marketing/'
                 target='_blank'
+                rel='noopener noreferrer'
               >
                 <p>Instagram</p>
               </a>
               <a
                 href='https://www.linkedin.com/company/vanilla-marketing'
                 target='_blank'
+                rel='noopener noreferrer'
               >
                 <p>Linkedin</p>
               </a>
               <a
                 href='https://open.spotify.com/user/jq8rsmhffl01j9izazr9hx2yk?si=fJCM68DNRxuUxsYcWoay_g'
                 target='_blank'
+                rel='noopener noreferrer'
               >
                 <p>Spotify</p>
               </a>
@@ -99,6 +101,7 @@ const Contact = ({ pageContext: { locale }, data }) => {
               <a
                 href='https://www.google.com/maps/place/Corso+Garibaldi,+91,+60121+Ancona+AN,+Italia/@43.6177873,13.5117078,17z/data=!3m1!4b1!4m5!3m4!1s0x132d7fbc3dca2295:0xaef827aca378eaf8!8m2!3d43.6177834!4d13.5138965'
                 target='_blank'
+                rel='noopener noreferrer'
               >
                 <p style={{ lineHeight: '32px' }}>
                   Corso Garibaldi 91/b,
@@ -125,6 +128,7 @@ export const query = graphql`
         contact
         contactLink
         linkGetStarted
+        textGetStarted
       }
     }
     contact: file(name: { eq: $locale }, relativeDirectory: { eq: "contact" }) {

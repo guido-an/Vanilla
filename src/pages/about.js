@@ -8,7 +8,7 @@ import PageBody from '../components/pageBody'
 import './about.css'
 
 const About = ({ pageContext: { locale }, data }) => {
-  const { overtitle, title, subtitle, multiline1, photoOvertitle, photoTitle, photoSubtitle} = data.about.childAboutJson
+  const { overtitle, title, subtitle, multiline1, photoOvertitle, photoTitle, photoSubtitle } = data.about.childAboutJson
 
   return (
     <Layout path='/' locale={locale} data={data}>
@@ -20,42 +20,41 @@ const About = ({ pageContext: { locale }, data }) => {
         subtitle={subtitle}
         multiline1={multiline1}
       />
-      <div className="about-photo-container">
-        <span className="overtitle-dark">{photoOvertitle}</span>
+      <div className='about-photo-container'>
+        <span className='overtitle-dark'>{photoOvertitle}</span>
         <h1>{photoTitle}</h1>
-        <p className="subtitle-page">
+        <p className='subtitle-page'>
           {photoSubtitle}
         </p>
-        <div className="photo-row-1">
+        <div className='photo-row-1'>
           <Img
-            className="about-photo"
+            className='about-photo'
             fluid={data.carlotta.childImageSharp.fluid}
           />
           <Img
-            className="about-photo"
+            className='about-photo'
             fluid={data.fotoTeam.childImageSharp.fluid}
           />
           <Img
-            className="about-photo"
+            className='about-photo'
             fluid={data.martina.childImageSharp.fluid}
           />
         </div>
-        <div className="photo-row-2">
+        <div className='photo-row-2'>
           <Img
-            className="about-photo"
+            className='about-photo'
             fluid={data.guido.childImageSharp.fluid}
           />
           <Img
-            className="about-photo"
+            className='about-photo'
             fluid={data.enrico.childImageSharp.fluid}
           />
           <Img
-            className="about-photo"
+            className='about-photo'
             fluid={data.team2.childImageSharp.fluid}
           />
         </div>
       </div>
-
       <FooterCta
         linkGetStarted={data.header.childHeaderJson.linkGetStarted}
         textGetStarted={data.header.childHeaderJson.textGetStarted}
