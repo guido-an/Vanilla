@@ -6,7 +6,10 @@ import Footer from "./footer"
 import {LocaleProvider, LocaleConsumer} from '../constants/localeProviders'
 import "./layout.css"
 
+
+
 const Layout = ({ children, locale, data }) => {  // accesss data"
+
   return(  
     <LocaleProvider value={locale}>
       <>

@@ -8,11 +8,11 @@ import PageBody from '../components/pageBody'
 import './about.css'
 
 const About = ({ pageContext: { locale }, data }) => {
-  const { overtitle, title, subtitle, multiline1, photoOvertitle, photoTitle, photoSubtitle } = data.about.childAboutJson
+  const { overtitle, title, subtitle, multiline1, photoOvertitle, photoTitle, photoSubtitle, titleSeo, descriptionSeo } = data.about.childAboutJson
 
   return (
     <Layout path='/' locale={locale} data={data}>
-      <SEO title='Chi Siamo | Vanilla Marketing' />
+      <SEO title={titleSeo} description={descriptionSeo} />
       <PageBody
         bigIcon={data.bigIcon.childImageSharp.fluid}
         overtitle={overtitle}
@@ -89,6 +89,8 @@ export const query = graphql`
         photoOvertitle,
         photoTitle,
         photoSubtitle
+        titleSeo
+        descriptionSeo
       }
     }
     bigIcon: file(relativePath: { eq: "vanilla-chi-siamo.jpg" }) {
