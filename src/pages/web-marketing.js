@@ -9,7 +9,7 @@ import FooterCta from "../components/footerCta"
 const webMarketing = ({ pageContext: { locale }, data }) => {
   return (
     <Layout path="/" locale={locale} data={data}>
-      <SEO title="Web Marketing | Vanilla Marketing" />
+      <SEO title={data.webMarketing.childWebMarketingJson.titleSeo} description={data.webMarketing.childWebMarketingJson.descriptionSeo} />
       <PageBody
         bigIcon={data.bigIcon.childImageSharp.fluid}
         overtitle={data.webMarketing.childWebMarketingJson.overtitle}
@@ -56,6 +56,8 @@ export const query = graphql`
         title
         subtitle
         multiline1
+        titleSeo
+        descriptionSeo
       }
     }
     bigIcon: file(relativePath: { eq: "web-marketing.jpg" }) {

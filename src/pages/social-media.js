@@ -9,7 +9,7 @@ import FooterCta from "../components/footerCta"
 const socialMedia = ({ pageContext: { locale }, data }) => {
   return (
     <Layout path="/" locale={locale} data={data}>
-      <SEO title="Social Media Marketing | Vanilla Marketing" />
+      <SEO title={data.socialMedia.childSocialMediaJson.titleSeo} description={data.socialMedia.childSocialMediaJson.descriptionSeo} />
       <PageBody
         bigIcon={data.bigIcon.childImageSharp.fluid}
         overtitle={data.socialMedia.childSocialMediaJson.overtitle}
@@ -56,6 +56,8 @@ export const query = graphql`
         title
         multiline1
         subtitle
+        titleSeo
+        descriptionSeo
       }
     }
     portfolio: file(

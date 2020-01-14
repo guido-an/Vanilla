@@ -9,7 +9,7 @@ import FooterCta from "../components/footerCta"
 const webDevelopment = ({ pageContext: { locale }, data }) => {
   return (
     <Layout path="/" locale={locale} data={data}>
-      <SEO title="Web Development | Vanilla Marketing" />
+      <SEO title={data.webDevelopment.childWebDevelopmentJson.titleSeo} description={data.webDevelopment.childWebDevelopmentJson.descriptionSeo} />
       <PageBody
         bigIcon={data.bigIcon.childImageSharp.fluid}
         overtitle={data.webDevelopment.childWebDevelopmentJson.overtitle}
@@ -56,6 +56,8 @@ export const query = graphql`
         title
         subtitle
         multiline1
+        titleSeo
+        descriptionSeo
       }
     }
     portfolio: file(
