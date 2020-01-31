@@ -1,28 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from "gatsby"
-import Header from "./header"
-import Footer from "./footer"
-import {LocaleProvider, LocaleConsumer} from '../constants/localeProviders'
-import "./layout.css"
-import { Helmet } from "react-helmet";
+import { graphql } from 'gatsby'
+import Header from './header'
+import Footer from './footer'
+import { LocaleProvider, LocaleConsumer } from '../constants/localeProviders'
+import './layout.css'
+import { Helmet } from 'react-helmet'
 
-const Layout = ({ children, locale, data }) => {  // accesss data"
-
-  return(  
+const Layout = ({ children, locale, data }) => { // accesss data"
+  return (
     <LocaleProvider value={locale}>
       <>
-      <Helmet>
-      <script>
-      
-        </script>
-      </Helmet>
-      <Header dataHeader={data} />        {/*pass 'data' to header so it can use GraphQL query  */}
-      <div>
-      <main>{children}</main>
-      <Footer />
-      </div>
-     </>
+        <Helmet>
+          <meta name='google-site-verification' content='je8XZorft6_E_TOYu8NPKBEFWQvBdvyudBiF8ppInPY' />
+        </Helmet>
+        <Header dataHeader={data} />        {/* pass 'data' to header so it can use GraphQL query  */}
+        <div>
+          <main>{children}</main>
+          <Footer />
+        </div>
+      </>
     </LocaleProvider>
   )
 }
@@ -39,6 +36,5 @@ Layout.propTypes = {
 Layout.defaultProps = {
   path: '/'
 }
-
 
 export default Layout
