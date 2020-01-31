@@ -5,14 +5,18 @@ import Header from "./header"
 import Footer from "./footer"
 import {LocaleProvider, LocaleConsumer} from '../constants/localeProviders'
 import "./layout.css"
-
-
+import { Helmet } from "react-helmet";
 
 const Layout = ({ children, locale, data }) => {  // accesss data"
 
   return(  
     <LocaleProvider value={locale}>
       <>
+      <Helmet>
+      <script>
+      
+        </script>
+      </Helmet>
       <Header dataHeader={data} />        {/*pass 'data' to header so it can use GraphQL query  */}
       <div>
       <main>{children}</main>
