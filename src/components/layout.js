@@ -5,6 +5,7 @@ import Header from './header'
 import Footer from './footer'
 import { LocaleProvider, LocaleConsumer } from '../constants/localeProviders'
 import './layout.css'
+import CookieBanner from './cookieBanner'
 import { Helmet } from 'react-helmet'
 
 const Layout = ({ children, locale, data }) => { // accesss data"
@@ -17,6 +18,7 @@ const Layout = ({ children, locale, data }) => { // accesss data"
           <main>{children}</main>
           <Footer />
         </div>
+        <CookieBanner />
       </>
     </LocaleProvider>
   )
