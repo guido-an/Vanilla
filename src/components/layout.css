@@ -693,6 +693,7 @@ p {
 .subtitle-page {
   font-size: 18px;
   line-height: 32px;
+  margin: 0 auto;
 }
 
 .page-bg .text-service-container p {
