@@ -1,64 +1,74 @@
-import React, { useState } from "react"
-import { css, cx } from "emotion"
-import benedusi from "../images/alberto-benedusi.jpg"
-import scavone from "../images/giuseppe-scavone.jpg"
-import salvatore from "../images/salvatore-di-giovanni.jpg"
-import monica from "../images/monica-gili.jpg"
-import saputo from "../images/michele-saputo.jpg"
+import React, { useState } from 'react'
+import { css, cx } from 'emotion'
+import benedusi from '../images/alberto-benedusi.jpg'
+import scavone from '../images/giuseppe-scavone.jpg'
+import salvatore from '../images/salvatore-di-giovanni.jpg'
+import monica from '../images/monica-gili.jpg'
+import saputo from '../images/michele-saputo.jpg'
+import aquilanti from '../images/lucia-aquilanti.jpg'
 
-export default function Testimonial({ testimonials, overtitle, title1, title2 }) {
+export default function Testimonial ({ testimonials, overtitle, title1, title2 }) {
+  console.log(testimonials, 'testtimonial page')
   const quotes = [
     {
       client: testimonials.client0,
       quote: testimonials.quote0,
-      company: "La Scarpiera Slim",
-      img: scavone,
+      company: 'La Scarpiera Slim',
+      img: scavone
     },
     {
       client: testimonials.client1,
       quote: testimonials.quote1,
-      company: "Italia Bulldog",
-      img: saputo,
+      company: 'Italia Bulldog',
+      img: saputo
     },
     {
       client: testimonials.client2,
       quote: testimonials.quote2,
-      company: "Difar",
-      img: salvatore,
+      company: 'Difar',
+      img: salvatore
     },
     {
       client: testimonials.client3,
       quote: testimonials.quote3,
-      company: "Officina del Mugello",
-      img: benedusi,
+      company: 'Officina del Mugello',
+      img: benedusi
     },
     {
       client: testimonials.client4,
       quote: testimonials.quote4,
-      company: "La Curandera",
-      img: monica,
+      company: 'La Curandera',
+      img: monica
     },
+    {
+      client: testimonials.client5,
+      quote: testimonials.quote5,
+      company: 'Università Politecnica delle Marche',
+      img: aquilanti
+    }
   ]
 
   const [current, setCurrent] = useState(quotes[0])
   const [active, setActive] = useState(0)
 
   const handleSetClick = e => {
-    setCurrent(quotes[e.target.getAttribute("data-quote")])
-    setActive(e.target.getAttribute("data-quote"))
+    setCurrent(quotes[e.target.getAttribute('data-quote')])
+    setActive(e.target.getAttribute('data-quote'))
   }
 
   return (
     <section className={css`
         margin-bottom: 140px;
-    `}>
+    `}
+    >
       <div className={css`
         text-align: center;
         margin-top: 120px
       
-      `}>
-        <span className="overtitle-dark">{overtitle}</span>
-        <h2 className="title-section">
+      `}
+      >
+        <span className='overtitle-dark'>{overtitle}</span>
+        <h2 className='title-section'>
           {title1}
           <br /> {title2}
         </h2>
@@ -97,7 +107,7 @@ export default function Testimonial({ testimonials, overtitle, title1, title2 })
           }
         `}
       >
-        <img src={current.img}></img>
+        <img src={current.img} />
         <p>{current.quote}</p>
         <p>{current.client}</p>
         <span>{current.company}</span>
