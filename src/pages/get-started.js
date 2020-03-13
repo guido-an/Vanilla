@@ -5,7 +5,6 @@ import Img from "gatsby-image"
 import "./get-started.css"
 import { LocaleProvider } from "../constants/localeProviders"
 import LocalizedLink from "../components/LocalizedLink"
-import LogoOnScroll from "../components/logoOnScroll"
 
 const getStarted = ({ pageContext: { locale }, data }) => {
   const {
@@ -83,12 +82,27 @@ const getStarted = ({ pageContext: { locale }, data }) => {
                   required
                 />
               </div>
-              <button type="submit">{ctaButton}</button>
+              <button id="formButton" type="submit">{ctaButton}</button>
             </form>
           </div>
         </div>
       </section>
       <Footer />
+
+      <script
+  dangerouslySetInnerHTML={{
+    __html: `
+    let button = document.getElementById('formButton')
+  button.addEventListener('click', function() { 
+       console.log('form submitted')         
+    }
+  );
+        `,
+  }}
+/>
+      
+    
+
     </LocaleProvider>
   )
 }
