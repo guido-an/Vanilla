@@ -94,7 +94,8 @@ const getStarted = ({ pageContext: { locale }, data }) => {
     __html: `
     let button = document.getElementById('formButton')
   button.addEventListener('click', function() { 
-       console.log('form submitted')         
+       console.log('form submitted')
+       fbq('track', 'Contact');         
     }
   );
         `,
