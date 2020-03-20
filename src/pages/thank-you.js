@@ -16,7 +16,7 @@ const thankYou = ({ pageContext: { locale }, data }) => {
         </header>
         <div style={{height: "100vh", textAlign: "center"}}>
           <h1 style={{marginTop: "180px"}}>Grazie per averci contattato!</h1>
-          <p>Avrei presto nostre notizie :) </p>
+          <p>Avrai presto nostre notizie :) </p>
         </div>
      <Footer/>
     </LocaleProvider>
