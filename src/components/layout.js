@@ -12,7 +12,11 @@ const Layout = ({ children, locale, data }) => { // accesss data"
   return (
     <LocaleProvider value={locale}>
       <>
-        <Helmet />
+        <Helmet
+          meta={[
+            { name: 'google-site-verification', content: 'je8XZorft6_E_TOYu8NPKBEFWQvBdvyudBiF8ppInPY' }
+          ]}
+        />
         <Header dataHeader={data} />        {/* pass 'data' to header so it can use GraphQL query  */}
         <div>
           <main>{children}</main>
