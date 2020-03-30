@@ -8,7 +8,7 @@ import saputo from '../images/michele-saputo.jpg'
 import aquilanti from '../images/lucia-aquilanti.jpg'
 
 export default function Testimonial ({ testimonials, overtitle, title1, title2 }) {
-  console.log(testimonials, 'testtimonial page')
+  console.log(testimonials.forbesArticle, 'testtimonial page')
   const quotes = [
     {
       client: testimonials.client0,
@@ -147,7 +147,19 @@ export default function Testimonial ({ testimonials, overtitle, title1, title2 }
             />
           ))}
         </div>
+        <p>{testimonials.forbesArticle}: <br /><a id='forbes' href='https://www.forbes.fr/mediasfrance/vanilla-marketing-les-createurs-numeriques/?cn-reloaded=1'>> Forbes</a></p>
       </div>
+      <style jsx='true'>{`
+        #forbes{
+          text-decoration: none;
+          color: #222;
+          font-weight: 500
+        }
+        #forbes:hover{
+          color: #000
+        }
+        `}
+      </style>
     </section>
   )
 }

@@ -8,8 +8,6 @@ import LocalizedLink from './LocalizedLink'
 import Cta from './cta'
 
 const Header = ({ dataHeader }) => {
-  console.log(dataHeader, 'data')
-
   const data = useStaticQuery(graphql`
     query {
       arrowDown: file(relativePath: { eq: "arrow-down.png" }) {

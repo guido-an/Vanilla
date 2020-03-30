@@ -8,7 +8,6 @@ import ServicesSection from '../components/servicesSection'
 import Testimonials from '../components/testimonials'
 
 const IndexPage = ({ pageContext: { locale }, data }) => {
-  console.log(data.testimonials.childTestimonialsJson, 'index')
   return (
     <Layout path='/' locale={locale} data={data}>
       {/* site title gets from graphql query and pass it to layout component */}
@@ -108,7 +107,8 @@ export const query = graphql`
         client4
         quote4
         client5
-        quote5
+        quote5,
+        forbesArticle
       }
     }
     footerCta: file(
