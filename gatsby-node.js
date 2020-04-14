@@ -1,15 +1,40 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
+const path = require('path')
 const locales = require('./src/constants/locales')
+
+// exports.createPages = async ({ graphql, actions }) => {
+//   const { createPage } = actions
+
+//   const result = await graphql(`
+//     query {
+//       allWordpressPost {
+//         edges {
+//           node {
+//             id
+//             slug
+//             content
+//             title
+//           }
+//         }
+//       }
+//     }
+//   `)
+
+//   result.data.allWordpressPost.edges.forEach(edge => {
+//     createPage({
+//       path: edge.node.slug,
+//       component: path.resolve('./src/templates/blog-post.js'),
+//       context: {
+//         id: edge.node.id,
+//         locale: 'it'
+//       }
+//     })
+//   })
+// }
 
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions
 
-  return new Promise(resolve => {
+  const myPages = new Promise(resolve => {
     deletePage(page)
 
     Object.keys(locales).map(lang => {
@@ -28,4 +53,5 @@ exports.onCreatePage = ({ page, actions }) => {
 
     resolve()
   })
+  return myPages
 }

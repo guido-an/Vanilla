@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import {LocaleConsumer} from '../constants/localeProviders'
+import { LocaleConsumer } from '../constants/localeProviders'
 
 import locales from '../constants/locales'
 

@@ -57,10 +57,22 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-facebook-pixel`,
+      resolve: 'gatsby-plugin-facebook-pixel',
       options: {
-        pixelId: '1285281921665685',
-      },
+        pixelId: '1285281921665685'
+      }
     },
+    {
+      resolve: 'gatsby-source-wordpress',
+      options: {
+        // your WordPress source
+        baseUrl: 'https://blog.vanillamarketing.it/',
+        protocol: 'http',
+        // is it hosted on wordpress.com, or self-hosted?
+        hostingWPCOM: false,
+        // does your site use the Advanced Custom Fields Plugin?
+        useACF: false
+      }
+    }
   ]
 }
