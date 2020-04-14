@@ -22,7 +22,6 @@ export default ({ linkGetStarted, textGetStarted, heroSubtitle1, heroSubtitle2, 
             {ctaSubtitle}
           </p>
         </div>
-
       </div>
     </section>
   )

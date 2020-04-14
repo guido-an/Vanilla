@@ -9,7 +9,7 @@ import FooterCta from "../components/footerCta"
 const graphicDesign = ({ pageContext: { locale }, data }) => {
   return (
     <Layout path="/" locale={locale} data={data}>
-      <SEO title={data.graphicDesign.childGraphicDesignJson.title} subtitle={data.graphicDesign.childGraphicDesignJson.subtitle} />
+      <SEO title={data.graphicDesign.childGraphicDesignJson.titleSeo} subtitle={data.graphicDesign.childGraphicDesignJson.descriptionSeo} />
       <PageBody
         bigIcon={data.bigIcon.childImageSharp.fluid}
         overtitle={data.graphicDesign.childGraphicDesignJson.overtitle}
