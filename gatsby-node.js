@@ -6,6 +6,7 @@
 
 const locales = require('./src/constants/locales')
 
+
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions
 
