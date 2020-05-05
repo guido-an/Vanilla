@@ -14,7 +14,7 @@ import hearthIcon from '../images/hearth-icon.jpg'
 const prenotaDaMangiare = ({ pageContext: { locale }, data }) => {
   return (
     <Layout path='/' locale={locale} data={data}>
-      {/* <SEO title={data.socialMedia.childSocialMediaJson.titleSeo} description={data.socialMedia.childSocialMediaJson.descriptionSeo} /> */}
+      <SEO title='Prenota Da Mangiare' description='Il Tuo Locale Online' />
       <section className='prenota-da-mangiare-section'>
         <div className='prenota-da-mangiare-hero'>
           <div>
