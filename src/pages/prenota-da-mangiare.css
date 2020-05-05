@@ -68,6 +68,14 @@
     right: 4px;
 }
 
+.prenota-da-mangiare-testimonial .link-example {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    font-weight: 500;
+    color: #777
+}
+
 /* values */
 
 .prenota-da-mangiare-values {

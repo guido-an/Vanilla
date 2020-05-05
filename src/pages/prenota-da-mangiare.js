@@ -40,6 +40,7 @@ const prenotaDaMangiare = ({ pageContext: { locale }, data }) => {
             <p><span className='quotes'>"</span>Ho scelto prenotadamangiare.it e tutto è diventato più semplice! È facile da usare sia per me che per i miei clienti e questo significa avere più ordini e lavorare con più serenità! L'assistenza, poi, è molto preparata e disponibile. Sono assolutamente soddisfatta!</p>
           </div>
           <p className='testimonial-name'>Sofia, Zazie</p>
+          <a className='link-example' href='https://zazie.prenotadamangiare.it/' target='_blank'>zazie.prenotadamangiare.it</a>
         </div>
         <div className='prenota-da-mangiare-values'>
           <h2>Vendere Online Con Facilità</h2>
