@@ -1,0 +1,141 @@
+.prenota-da-mangiare-section {
+    margin: 140px 4% 0;
+}
+
+.prenota-da-mangiare-list-item {
+    display: flex;
+}
+
+.prenota-da-mangiare-list-item:nth-child(2) {
+    position: relative;
+    bottom: 10px;
+}
+
+.prenota-da-mangiare-list-item:nth-child(3) {
+    position: relative;
+    bottom: 18px;
+}
+
+.prenota-da-mangiare-list-item img {
+    width: 16px;
+    height: 16px;
+}
+
+.prenota-da-mangiare-list-item p {
+    position: relative;
+    left: 20px;
+    bottom: 5px;
+    font-weight: 500;
+}
+
+.prenota-da-mangiare-cta-text {
+    position: relative;
+    bottom: 20px;
+    font-weight: 600;
+}
+
+.prenota-da-mangiare-cta-text img {
+    position: relative;
+    top: 5px;
+    left: 5px
+}
+
+/* testimonial */
+
+.prenota-da-mangiare-testimonial {
+    position: relative;
+    bottom: 30px;
+    box-shadow: rgba(46, 41, 51, 0.08) 0px 1px 2px, rgba(71, 63, 79, 0.08) 0px 2px 4px;
+    padding: 40px;
+}
+
+.prenota-da-mangiare-wrapper p {
+    line-height: 26px;
+}
+
+.prenota-da-mangiare-testimonial .testimonial-name {
+    text-align: right;
+    font-style: italic;
+    font-size: 15px;
+}
+
+.quotes {
+    font-size: 48px;
+    color: #f6ec32;
+    font-weight: 800;
+    position: relative;
+    top: 20px;
+    right: 4px;
+}
+
+/* values */
+
+.prenota-da-mangiare-values {
+    margin: 80px 0 120px
+}
+
+.divider {
+    background-color: #f6ec32;
+    width: 100px;
+    height: 3px;
+    position: relative;
+    bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.prenota-da-mangiare-values img {
+    position: relative;
+    top: 5px;
+    width: 64px
+}
+
+.prenota-da-mangiare-values .subtitle {
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.prenota-da-mangiare-values .values-subtitle {
+    position: relative;
+    bottom: 15px;
+}
+
+@media(min-width:768px) {
+    .prenota-da-mangiare-section {
+        margin: 180px 10% 0;
+    }
+    .prenota-da-mangiare-hero {
+        display: flex;
+        justify-content: space-between;
+    }
+    /* testimonial */
+    .prenota-da-mangiare-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 40px
+    }
+    .prenota-da-mangiare-testimonial p:nth-child(1) {
+        min-width: 25%;
+    }
+    .prenota-da-mangiare-testimonial p:nth-child(2) {
+        position: relative;
+        bottom: 10px;
+    }
+    .prenota-da-mangiare-testimonial {
+        padding: 40px 80px
+    }
+    /*values*/
+    .prenota-da-mangiare-values {
+        text-align: center;
+    }
+    .divider {
+        margin: 0 auto 20px;
+    }
+    .prenota-da-mangiare-values .icons-wrapper {
+        display: flex;
+        margin-top: 60px
+    }
+    .prenota-da-mangiare-values .subtitle {
+        max-width: 60%;
+        margin: 0 auto;
+    }
+}

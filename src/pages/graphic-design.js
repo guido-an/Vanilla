@@ -1,14 +1,14 @@
-import React from "react"
-import { graphql } from "gatsby"
-import SEO from "../components/seo"
-import Layout from "../components/layout"
-import PageBody from "../components/pageBody"
-import PortfolioLogo from "../components/portfolioLogo"
-import FooterCta from "../components/footerCta"
+import React from 'react'
+import { graphql } from 'gatsby'
+import SEO from '../components/seo'
+import Layout from '../components/layout'
+import PageBody from '../components/pageBody'
+import PortfolioLogo from '../components/portfolioLogo'
+import FooterCta from '../components/footerCta'
 
 const graphicDesign = ({ pageContext: { locale }, data }) => {
   return (
-    <Layout path="/" locale={locale} data={data}>
+    <Layout path='/' locale={locale} data={data}>
       <SEO title={data.graphicDesign.childGraphicDesignJson.titleSeo} subtitle={data.graphicDesign.childGraphicDesignJson.descriptionSeo} />
       <PageBody
         bigIcon={data.bigIcon.childImageSharp.fluid}
