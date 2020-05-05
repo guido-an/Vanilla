@@ -1,5 +1,5 @@
 .prenota-da-mangiare-section {
-    margin: 140px 4% 0;
+    margin: 140px 6% 0;
 }
 
 .prenota-da-mangiare-list-item {
@@ -99,7 +99,7 @@
     bottom: 15px;
 }
 
-@media(min-width:768px) {
+@media(min-width:1200px) {
     .prenota-da-mangiare-section {
         margin: 180px 10% 0;
     }
