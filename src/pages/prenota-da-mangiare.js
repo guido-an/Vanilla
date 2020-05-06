@@ -1,7 +1,6 @@
 import './prenota-da-mangiare.css'
 import React from 'react'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import FooterCta from '../components/footerCta'
@@ -11,6 +10,7 @@ import whatsapp from '../images/whatsapp.png'
 import boatIcon from '../images/boat-icon.jpg'
 import elephantIcon from '../images/elephant-icon.jpg'
 import hearthIcon from '../images/hearth-icon.jpg'
+import diamondIcon from '../images/diamond-icon.jpg'
 
 const prenotaDaMangiare = ({ pageContext: { locale }, data }) => {
   return (
@@ -25,6 +25,7 @@ const prenotaDaMangiare = ({ pageContext: { locale }, data }) => {
               <div className='prenota-da-mangiare-list-item'><img src={checkMark} alt='check-mark' /><p>Fatto su misura per te</p></div>
               <div className='prenota-da-mangiare-list-item'><img src={checkMark} alt='check-mark' /><p>La nostra esperienza a tua disposizione</p></div>
               <div className='prenota-da-mangiare-list-item'><img src={checkMark} alt='check-mark' /><p>Super eroi della customer care</p></div>
+              <div className='prenota-da-mangiare-list-item'><img src={checkMark} alt='check-mark' /><p>Nessun costo fisso</p></div>
             </div>
             <p>La gestione online di delivery e take away senza pensieri.<br />Ne vuoi sapere di più?</p>
             {/* <p>Nessun costo di attivazione | Disponibilità immediata | Facile da usare</p> */}
@@ -47,22 +48,30 @@ const prenotaDaMangiare = ({ pageContext: { locale }, data }) => {
           <div className='divider' />
           <p className='subtitle'>La gestione di delivery e take away che funziona! Tutta l’esperienza della nostra digital agency a servizio del tuo locale, perché la giusta soluzione è facile.</p>
           <div className='icons-wrapper'>
-            <div style={{ margin: '0 20px ' }}>
+            <div className="value-box">
               <img src={boatIcon} alt='boat-icon' />
               <p><strong>Fatto su misura per te</strong></p>
               <p className='values-subtitle'>Non tutte le esigenze sono uguali, questo è il motivo per cui ti proponiamo una soluzione fatta su misura: per non farti perdere tempo e per vederti soddisfatto.</p>
             </div>
-            <div style={{ margin: '0 20px ' }}>
+            <div className="value-box">
               <img src={elephantIcon} alt='check-mark' />
               <p><strong>La nostra esperienza a tua disposizione</strong></p>
               <p className='values-subtitle'>È la nostra esperienza che ci ha fatto creare 'Prenota Da Mangiare': il servizio facile da usare e per questo davvero efficace per te e per i tuoi clienti.</p>
             </div>
-            <div style={{ margin: '0 20px ' }}>
-              <img src={hearthIcon} alt='check-mark' />
-              <p><strong>Super eroi della customer care</strong></p>
-              <p className='values-subtitle'>Faremo in modo che il tuo sito sia sempre funzionante, con il menù aggiornato e con foto di qualità e quando avrai bisogno di aiuto noi ci saremo!</p>
             </div>
-          </div>
+            <div className='icons-wrapper'>
+               <div className="value-box">
+                 <img src={hearthIcon} alt='check-mark' />
+                 <p><strong>Super eroi della customer care</strong></p>
+                 <p className='values-subtitle'>Faremo in modo che il tuo sito sia sempre funzionante, con il menù aggiornato e con foto di qualità e quando avrai bisogno di aiuto noi ci saremo!</p>
+               </div>
+               <div className="value-box">
+                 <img src={diamondIcon} alt='check-mark' />
+                 <p><strong>Nessun costo fisso</strong></p>
+                 <p className='values-subtitle'>Nessun costo di attivazione e nessun costo fisso. Saremo i tuoi alleati con un obiettivo comune: lavorare di più e meglio!</p>
+               </div>
+            </div>
+        
         </div>
       </section>
       <FooterCta
