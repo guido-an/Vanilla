@@ -45,6 +45,10 @@
     left: 5px
 }
 
+.hideOnMobile {
+    display: none
+}
+
 /* testimonial */
 
 .prenota-da-mangiare-testimonial {
@@ -119,6 +123,12 @@
     .prenota-da-mangiare-hero {
         display: flex;
         justify-content: space-between;
+    }
+    .hideOnDesktop {
+        display: none
+    }
+    .hideOnMobile {
+        display: block
     }
     /* testimonial */
     .prenota-da-mangiare-wrapper {
