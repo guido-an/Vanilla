@@ -48,10 +48,7 @@ const Contact = ({ pageContext: { locale }, data }) => {
               </p>
               <a href='mailto:info@vanillamarketing.it'>
                 <p>info@vanillamarketing.it</p>
-              </a>
-              <a href='mailto:careers@vanillamarketing.it'>
-                <p>careers@vanillamarketing.it</p>
-              </a>
+              </a>   
             </div>
             <div>
               <Img
