@@ -343,12 +343,9 @@ const Header = ({ dataHeader }) => {
                   <LocalizedLink className='dropdown-item' to='/graphic-design'>
                     Graphic Design
                   </LocalizedLink>
-                  <LocalizedLink className='dropdown-item' to='/blogs'>
-                    Blogs
-                  </LocalizedLink>
                 </div>
               )}
-
+              <LocalizedLink to="/blog">Blog</LocalizedLink>
               <LocalizedLink to={contactLink}>{contact}</LocalizedLink>
             </ul>
             <div className='mobile-menu-cta'>
@@ -399,7 +396,7 @@ const Header = ({ dataHeader }) => {
                     />
                   </span>
                 </LocalizedLink>
-
+                <LocalizedLink to="/blog">Blog</LocalizedLink>
                 <LocalizedLink to={contactLink}>{contact}</LocalizedLink>
               </ul>
             </nav>

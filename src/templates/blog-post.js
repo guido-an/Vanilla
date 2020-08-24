@@ -37,11 +37,7 @@ const BlogTemplate = ({ data }) => {
   const post = data.wordpressPost
   return (
     <Layout path='/' locale='it' data={data}>
-      <div className='blog-post' style={{ marginTop: '180px' }}>
-        <div
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
-      </div>
+      <div>blog</div>
       <FooterCta
         linkGetStarted={data.header.childHeaderJson.linkGetStarted}
         textGetStarted={data.header.childHeaderJson.textGetStarted}

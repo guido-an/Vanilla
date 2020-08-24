@@ -161,7 +161,7 @@ module.exports = [
   //   component: path.resolve('src/pages/blogPage.js')
   // },
   {
-    path: '/page/:slug',
+    path: '/:slug',
     component: path.resolve('src/templates/blog-post.js')
   }
 
