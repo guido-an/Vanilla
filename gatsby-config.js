@@ -57,10 +57,10 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-facebook-pixel`,
+      resolve: 'gatsby-plugin-facebook-pixel',
       options: {
-        pixelId: '1285281921665685',
-      },
-    },
+        pixelId: '1285281921665685'
+      }
+    }
   ]
 }
