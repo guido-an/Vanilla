@@ -27,7 +27,8 @@ export default ({ linkGetStarted, textGetStarted, heroSubtitle1, heroSubtitle2, 
           />
         </div>
         <div class='video-container' id='video-mobile'>
-          <iframe width='560' height='315' src='https://www.youtube.com/embed/N6mvPVrWqXc' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen />
+          {/* <iframe width='560' height='315' src='https://www.youtube.com/watch?v=Z_12MmcTHig&feature=youtu.be' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen /> */}
+          <iframe width='560' height='315' src='https://www.youtube.com/embed/Z_12MmcTHig' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen />
         </div>
       </div>
     </section>
