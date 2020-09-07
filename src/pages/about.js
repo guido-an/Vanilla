@@ -29,30 +29,47 @@ const About = ({ pageContext: { locale }, data }) => {
         <div className='photo-row-1'>
           <Img
             className='about-photo'
-            fluid={data.carlotta.childImageSharp.fluid}
+            fluid={data.vanillaTeam8.childImageSharp.fluid}
           />
           <Img
             className='about-photo'
-            fluid={data.fotoTeam.childImageSharp.fluid}
+            fluid={data.vanillaTeam6.childImageSharp.fluid}
           />
           <Img
             className='about-photo'
-            fluid={data.martina.childImageSharp.fluid}
+            fluid={data.vanillaTeam3.childImageSharp.fluid}
           />
+
         </div>
         <div className='photo-row-2'>
           <Img
             className='about-photo'
-            fluid={data.guido.childImageSharp.fluid}
+            fluid={data.vanillaTeam4.childImageSharp.fluid}
           />
           <Img
             className='about-photo'
-            fluid={data.enrico.childImageSharp.fluid}
+            fluid={data.vanillaTeam9.childImageSharp.fluid}
           />
           <Img
             className='about-photo'
-            fluid={data.team2.childImageSharp.fluid}
+            fluid={data.vanillaTeam5.childImageSharp.fluid}
           />
+
+        </div>
+        <div className='photo-row-2'>
+          <Img
+            className='about-photo'
+            fluid={data.vanillaTeam7.childImageSharp.fluid}
+          />
+          <Img
+            className='about-photo'
+            fluid={data.vanillaTeam1.childImageSharp.fluid}
+          />
+          <Img
+            className='about-photo'
+            fluid={data.vanillaTeam2.childImageSharp.fluid}
+          />
+
         </div>
       </div>
       <FooterCta
@@ -109,48 +126,70 @@ export const query = graphql`
         subtitle
       }
     }
-    fotoTeam: file(relativePath: { eq: "vanilla-marketing-team.jpg" }) {
+    vanillaTeam1: file(relativePath: { eq: "vanilla-team-1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    guido: file(relativePath: { eq: "guido-carucci-web-developer.jpg" }) {
+    vanillaTeam2: file(relativePath: { eq: "vanilla-team-2.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    martina: file(relativePath: { eq: "martina-veroli-graphic-designer.jpg" }) {
+    vanillaTeam3: file(relativePath: { eq: "vanilla-team-3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    carlotta: file(relativePath: { eq: "carlotta-carucci.jpg" }) {
+    vanillaTeam4: file(relativePath: { eq: "vanilla-team-4.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    team2: file(relativePath: { eq: "vanilla-marketing-team-2.jpg" }) {
+    vanillaTeam5: file(relativePath: { eq: "vanilla-team-5.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    enrico: file(relativePath: { eq: "enrico-giaccaglia-designer.jpg" }) {
+    vanillaTeam6: file(relativePath: { eq: "vanilla-team-6.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
+    vanillaTeam7: file(relativePath: { eq: "vanilla-team-7.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    vanillaTeam8: file(relativePath: { eq: "vanilla-team-8.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    vanillaTeam9: file(relativePath: { eq: "vanilla-team-9.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  
   }
 
   

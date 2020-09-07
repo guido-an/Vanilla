@@ -1,7 +1,6 @@
 import React from 'react'
 import './footerCta.css'
 import Cta from './cta'
-import LocalizedLink from './LocalizedLink'
 
 export default function footerCta ({
   linkGetStarted,
