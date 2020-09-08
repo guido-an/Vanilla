@@ -71,5 +71,5 @@ module.exports = [
   {
     path: '/blog',
     component: path.resolve('src/pages/blog.js')
-  },
+  }
 ]

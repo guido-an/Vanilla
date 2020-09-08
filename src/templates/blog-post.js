@@ -1,17 +1,19 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import FooterCta from "../components/footerCta"
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/layout'
+import FooterCta from '../components/footerCta'
+import Seo from '../components/seo'
 
-const BlogTemplate = ({pageContext: { locale }, data }) => {
+const BlogTemplate = ({ pageContext: { locale }, data }) => {
   const post = data.wordpressPost
-  console.log({ data })
+  console.log(post, 'post')
 
   return (
     <Layout locale={locale} data={data}>
+      <Seo title={post.title} />
       <div
         dangerouslySetInnerHTML={{ __html: post.content }}
-      ></div>
+      />
       <FooterCta
         linkGetStarted={data.header.childHeaderJson.linkGetStarted}
         textGetStarted={data.header.childHeaderJson.textGetStarted}
@@ -50,7 +52,7 @@ export const query = graphql`
     }
     wordpressPost(id: { eq: $id }) {
       title
-      content
+      content  
     }
   }
 `

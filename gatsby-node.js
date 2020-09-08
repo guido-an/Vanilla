@@ -1,10 +1,10 @@
-const path = require("path")
-const locales = require("./src/constants/locales")
-const routes = require("./src/routes")
+const path = require('path')
+const locales = require('./src/constants/locales')
+const routes = require('./src/routes')
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const BlogTemplate = path.resolve("./src/templates/blog-post.js")
+  const BlogTemplate = path.resolve('./src/templates/blog-post.js')
 
   routes.forEach(route => {
     Object.keys(locales).map(lang => {
@@ -16,8 +16,8 @@ exports.createPages = async ({ graphql, actions }) => {
         path: localizedPath,
         component: route.component,
         context: {
-          locale: lang,
-        },
+          locale: lang
+        }
       })
     })
   })
@@ -38,14 +38,14 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     `).then(result => {
       if (result.errors) {
-        console.log("Error while running GraphQL query.")
+        console.log('Error while running GraphQL query.')
         return
       }
 
       const posts = result.data.allWordpressPost.edges
       posts.forEach(edge => {
         Object.keys(locales).map(lang => {
-          const path = `/blogs/${edge.node.slug}`
+          const path = `/blog/${edge.node.slug}`
           const localizedPath = locales[lang].default
             ? path
             : locales[lang].path + path
@@ -53,7 +53,7 @@ exports.createPages = async ({ graphql, actions }) => {
           createPage({
             path: localizedPath,
             component: BlogTemplate,
-            context: { id: edge.node.id, locale: lang },
+            context: { id: edge.node.id, locale: lang }
           })
         })
       })
@@ -69,7 +69,7 @@ exports.onCreatePage = ({ page, actions }) => {
   // page.matchPath is a special key that's used for matching pages
   // only on the client.
   if (page.path.match(/^\/page/)) {
-    page.matchPath = "/page/*"
+    page.matchPath = '/page/*'
 
     // Update the page.
     createPage({ ...page })
@@ -84,8 +84,8 @@ exports.onCreatePage = ({ page, actions }) => {
       ...page,
       path: localizedPath,
       context: {
-        locale: lang,
-      },
+        locale: lang
+      }
     })
   })
 }
