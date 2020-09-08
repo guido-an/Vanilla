@@ -41,14 +41,6 @@ module.exports = {
         path: `${__dirname}/src/data/`
       }
     },
-
-    {
-      resolve: 'gatsby-plugin-routes',
-      options: {
-        // this is the path to your routes configuration file
-        path: `${__dirname}/src/routes.js`
-      }
-    },
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {

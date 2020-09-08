@@ -14,7 +14,6 @@
     "gatsby-plugin-manifest": "^2.2.25",
     "gatsby-plugin-offline": "^3.0.17",
     "gatsby-plugin-react-helmet": "^3.1.21",
-    "gatsby-plugin-routes": "^1.0.0",
     "gatsby-plugin-sharp": "^2.6.11",
     "gatsby-plugin-sitemap": "^2.2.26",
     "gatsby-remark-responsive-iframe": "^2.2.30",
