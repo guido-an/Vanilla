@@ -5,8 +5,6 @@ import FooterCta from "../components/footerCta"
 
 const BlogTemplate = ({pageContext: { locale }, data }) => {
   const post = data.wordpressPost
-  console.log({ data })
-
   return (
     <Layout locale={locale} data={data}>
       <div
