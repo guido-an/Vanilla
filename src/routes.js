@@ -1,3 +1,4 @@
+
 const path = require('path')
 
 module.exports = [
@@ -41,10 +42,6 @@ module.exports = [
     path: '/web-development',
     component: path.resolve('src/pages/web-development.js')
   },
-  {
-    path: '/web-development',
-    component: path.resolve('src/pages/web-development.js')
-  },
   // SOCIAL MEDIA
   {
     path: '/social-media-marketing',
@@ -64,14 +61,15 @@ module.exports = [
     path: '/contact',
     component: path.resolve('src/pages/contact.js')
   },
-  {
-    path: '/contact',
-    component: path.resolve('src/pages/contact.js')
-  },
   // POLICY
   {
     path: '/policy',
     component: path.resolve('src/pages/privacyPolicy.js')
-  }
+  },
 
+  // blogs
+  {
+    path: '/blog',
+    component: path.resolve('src/pages/blog.js')
+  },
 ]

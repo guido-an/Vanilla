@@ -11,11 +11,10 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'images',
+        name: 'images', 
         path: `${__dirname}/src/images`
       }
     },
-
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
@@ -42,14 +41,6 @@ module.exports = {
         path: `${__dirname}/src/data/`
       }
     },
-
-    {
-      resolve: 'gatsby-plugin-routes',
-      options: {
-        // this is the path to your routes configuration file
-        path: `${__dirname}/src/routes.js`
-      }
-    },
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
@@ -60,6 +51,35 @@ module.exports = {
       resolve: 'gatsby-plugin-facebook-pixel',
       options: {
         pixelId: '1285281921665685'
+      }
+    },
+    {
+      resolve: 'gatsby-source-wordpress',
+      options: {
+        // your WordPress source
+        baseUrl: 'blog.vanillamarketing.it',
+        protocol: 'https',
+        // is it hosted on wordpress.com, or self-hosted?
+        hostingWPCOM: false,
+        // does your site use the Advanced Custom Fields Plugin?
+        useACF: true,
+        acfOptionPageIds: [],
+        verboseOutput: false,
+        includedRoutes: [
+          '**/categories',
+          '**/posts',
+          '**/page',
+          '**/media',
+          '**/tags',
+          '**/taxonomies',
+          '**/users',
+          '**/*/*/menus',
+          '**/*/*/menu-locations'
+        ],
+        excludedRoutes: [],
+        normalizer: function ({ entities }) {
+          return entities
+        }
       }
     }
   ]

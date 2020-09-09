@@ -8,7 +8,6 @@ import saputo from '../images/michele-saputo.jpg'
 import aquilanti from '../images/lucia-aquilanti.jpg'
 
 export default function Testimonial ({ testimonials, overtitle, title1, title2 }) {
-  console.log(testimonials.forbesArticle, 'testtimonial page')
   const quotes = [
     {
       client: testimonials.client0,
