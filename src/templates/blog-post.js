@@ -6,13 +6,20 @@ import Layout from '../components/layout'
 import FooterCta from '../components/footerCta'
 import './blog-post.css'
 
+const excapeSpecialHtmlCharacter = string => {
+  return string
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, `"`)
+    .replace(/&#039;/g, "'")
+}
 
 const BlogTemplate = ({ pageContext: { locale }, data }) => {
   const post = data.wordpressPost
-  console.log(post)
   return (
     <Layout locale={locale} data={data}>
-      <Seo title={post.yoast_title} description={post.yoast_meta[0].content} />
+      <Seo title={post.yoast_title} description={excapeSpecialHtmlCharacter(post.yoast_meta[0].content)} />
       {post.featured_media && <Img fluid={post.featured_media.localFile.childImageSharp.fluid}/>}
       <div
         className='post'
