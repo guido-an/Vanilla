@@ -1,15 +1,18 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import FooterCta from "../components/footerCta"
+import './blog-post.css'
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/layout'
+import FooterCta from '../components/footerCta'
 
-const BlogTemplate = ({pageContext: { locale }, data }) => {
+const BlogTemplate = ({ pageContext: { locale }, data }) => {
   const post = data.wordpressPost
+  console.log(post)
   return (
     <Layout locale={locale} data={data}>
       <div
+        className='post'
         dangerouslySetInnerHTML={{ __html: post.content }}
-      ></div>
+      />
       <FooterCta
         linkGetStarted={data.header.childHeaderJson.linkGetStarted}
         textGetStarted={data.header.childHeaderJson.textGetStarted}
