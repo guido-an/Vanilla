@@ -2,11 +2,15 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import FooterCta from "../components/footerCta"
+import Seo from '../components/seo';
+import Img from "gatsby-image"
 
 const BlogTemplate = ({pageContext: { locale }, data }) => {
   const post = data.wordpressPost
   return (
     <Layout locale={locale} data={data}>
+      <Seo title={post.yoast_title} description={post.yoast_meta[0].content} />
+      {post.featured_media && <Img fluid={post.featured_media.localFile.childImageSharp.fluid}/>}
       <div
         dangerouslySetInnerHTML={{ __html: post.content }}
       ></div>
@@ -49,6 +53,20 @@ export const query = graphql`
     wordpressPost(id: { eq: $id }) {
       title
       content
+      yoast_title
+      featured_media {
+        localFile {
+          childImageSharp {
+            fluid(maxWidth: 650) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+      yoast_meta{
+        property
+        content
+      }
     }
   }
 `

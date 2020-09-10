@@ -2,6 +2,21 @@ const path = require("path")
 const locales = require("./src/constants/locales")
 const routes = require("./src/routes")
 
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type WordpressYoastMeta @dontInfer {
+      property: String
+      content: String
+    }
+
+    type wordpress__POST implements Node @infer {
+      yoast_meta: [WordpressYoastMeta]
+    }
+  `
+  createTypes(typeDefs)
+}
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const BlogTemplate = path.resolve("./src/templates/blog-post.js")
