@@ -1,19 +1,20 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import FooterCta from "../components/footerCta"
-import Seo from '../components/seo';
-import Img from "gatsby-image"
+import './blog-post.css'
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/layout'
+import FooterCta from '../components/footerCta'
 
-const BlogTemplate = ({pageContext: { locale }, data }) => {
+const BlogTemplate = ({ pageContext: { locale }, data }) => {
   const post = data.wordpressPost
+  console.log(post)
   return (
     <Layout locale={locale} data={data}>
       <Seo title={post.yoast_title} description={post.yoast_meta[0].content} />
       {post.featured_media && <Img fluid={post.featured_media.localFile.childImageSharp.fluid}/>}
       <div
+        className='post'
         dangerouslySetInnerHTML={{ __html: post.content }}
-      ></div>
+      />
       <FooterCta
         linkGetStarted={data.header.childHeaderJson.linkGetStarted}
         textGetStarted={data.header.childHeaderJson.textGetStarted}
