@@ -1,8 +1,11 @@
-import './blog-post.css'
 import React from 'react'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import Seo from '../components/seo'
 import Layout from '../components/layout'
 import FooterCta from '../components/footerCta'
+import './blog-post.css'
+
 
 const BlogTemplate = ({ pageContext: { locale }, data }) => {
   const post = data.wordpressPost
