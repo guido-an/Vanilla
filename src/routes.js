@@ -65,11 +65,11 @@ module.exports = [
   {
     path: '/policy',
     component: path.resolve('src/pages/privacyPolicy.js')
-  },
+  }
 
   // blogs
-  {
-    path: '/blog',
-    component: path.resolve('src/pages/blog.js')
-  },
+  // {
+  //   path: '/blog',
+  //   component: path.resolve('src/pages/blog.js')
+  // },
 ]
