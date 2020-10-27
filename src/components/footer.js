@@ -6,6 +6,7 @@ import LocalizedLink from './LocalizedLink'
 import italyFlag from '../images/italy-flag.png'
 import ukFlag from '../images/uk-flag.png'
 import franceFlag from '../images/france-flag.png'
+import logoHubspot from '../images/partner-horizontal-white.png'
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -225,6 +226,11 @@ export default () => {
           </div>
         </div>
       </div>
+      <img
+        style={{ width: '280px', display: 'block', margin: '0 auto', position: 'relative', bottom: '60px' }}
+        src={logoHubspot} alt='logo-partner-hubspot'
+      />
+
     </footer>
   )
 }
