@@ -1,12 +1,22 @@
-// import React, { useState } from 'react'
-// import { graphql, Link } from 'gatsby'
-// import Img from 'gatsby-image'
-// import BackgroundImage from 'gatsby-background-image'
-// import Layout from '../components/layout'
-// import SEO from '../components/seo'
-// import LocalizedLink from '../components/LocalizedLink'
-// import FooterCta from '../components/footerCta'
-// import './blog.css'
+import React, { useState } from 'react'
+import { graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
+import BackgroundImage from 'gatsby-background-image'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import LocalizedLink from '../components/LocalizedLink'
+import FooterCta from '../components/footerCta'
+import './blog.css'
+
+const Blog = () => {
+  return (
+    <div>
+        blog
+    </div>
+  )
+}
+
+export default Blog
 
 // export default ({ pageContext: { locale }, data }) => {
 //   const [postsCopy, setPostsCopy] = useState(data.allWordpressPost.edges)
