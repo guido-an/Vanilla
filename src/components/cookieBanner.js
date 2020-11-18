@@ -26,11 +26,9 @@ const CookieBanner = () => {
     return (
       <div className='cookie-banner'>
         <span>
-                    Utilizziamo i cookie per fornire all'utente la migliore esperienza possibile nel nostro sito.
+          Utilizziamo i cookie per fornire all'utente la migliore esperienza possibile nel nostro sito.
           <button id='cookie-action-accept' onClick={handleAccept}>Accetto</button>
-          
           <LocalizedLink to='/policy'>policy</LocalizedLink>
-
         </span>
       </div>
     )

@@ -22,7 +22,7 @@ const Layout = ({ children, locale, data }) => { // accesss data"
           <main>{children}</main>
           <Footer />
         </div>
-        <CookieBanner />
+        {/* <CookieBanner /> */}
       </>
 
     </LocaleProvider>
