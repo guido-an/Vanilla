@@ -6,8 +6,6 @@
     "services": "Services",
     "contact": "Contact",
     "contactLink": "/contact",
-    "linkGetStarted": "/get-started",
+    "linkGetStarted": "https://cta-redirect.hubspot.com/cta/redirect/8068265/43a0c3b9-5369-4ef7-adce-0c6a07e22d76",
     "textGetStarted": "Start from here"
 }
-
-
