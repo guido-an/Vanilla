@@ -228,7 +228,7 @@ import HamburgerMenu from 'react-hamburger-menu'
 import LocalizedLink from './LocalizedLink'
 import Cta from './cta'
 
-const Header = ({ dataHeader }) => {
+const Header = ({ dataHeader, locale }) => {
   const data = useStaticQuery(graphql`
     query {
       arrowDown: file(relativePath: { eq: "arrow-down.png" }) {
@@ -317,6 +317,7 @@ const Header = ({ dataHeader }) => {
             <ul>
               <LocalizedLink to={homeLink}>{home}</LocalizedLink>
               <LocalizedLink to={aboutLink}>{about}</LocalizedLink>
+              {locale === 'it' && <LocalizedLink to='/il-metodo'>Il metodo</LocalizedLink>}
               <p className='services-mobile' onClick={listenDropDownMenu}>
                 {services}
                 <span className='dropdown-icon'>
@@ -383,6 +384,7 @@ const Header = ({ dataHeader }) => {
               <ul>
                 <LocalizedLink to={homeLink}>{home}</LocalizedLink>
                 <LocalizedLink to={aboutLink}>{about}</LocalizedLink>
+                {locale === 'it' && <LocalizedLink to='/il-metodo'>Il metodo</LocalizedLink>}
                 <LocalizedLink
                   onMouseEnter={showDropDownMenuDesktop}
                   to='#'
