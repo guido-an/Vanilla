@@ -17,7 +17,7 @@ const Layout = ({ children, locale, data }) => { // accesss data"
             { name: 'google-site-verification', content: 'je8XZorft6_E_TOYu8NPKBEFWQvBdvyudBiF8ppInPY' }
           ]}
         />
-        <Header dataHeader={data} />        {/* pass 'data' to header so it can use GraphQL query  */}
+        <Header dataHeader={data} locale={locale} />        {/* pass 'data' to header so it can use GraphQL query  */}
         <div>
           <main>{children}</main>
           <Footer />
