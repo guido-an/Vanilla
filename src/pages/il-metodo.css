@@ -1,0 +1,12 @@
+.metodo-section {
+    margin: 140px 6% 0;
+}
+.metodo-section li {
+    font-size: 16px
+}
+@media(min-width:968px){
+    .metodo-section {
+        margin: 140px 20% 0;
+    }
+}
+
