@@ -346,7 +346,7 @@ const Header = ({ dataHeader, locale }) => {
                   </LocalizedLink>
                 </div>
               )}
-              {/* <LocalizedLink to="/blog">Blog</LocalizedLink> */}
+              {locale === 'it' && <LocalizedLink to='/blog'>Blog</LocalizedLink>}
               <LocalizedLink to={contactLink}>{contact}</LocalizedLink>
             </ul>
             <div className='mobile-menu-cta'>
@@ -398,7 +398,7 @@ const Header = ({ dataHeader, locale }) => {
                     />
                   </span>
                 </LocalizedLink>
-                {/* <LocalizedLink to="/blog">Blog</LocalizedLink> */}
+                {locale === 'it' && <LocalizedLink to='/blog'>Blog</LocalizedLink>}
                 <LocalizedLink to={contactLink}>{contact}</LocalizedLink>
               </ul>
             </nav>

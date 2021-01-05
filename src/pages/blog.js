@@ -12,7 +12,6 @@ export default ({ pageContext: { locale }, data }) => {
   const [postsCopy, setPostsCopy] = useState(data.allWordpressPost.edges)
   const [posts, setPosts] = useState(data.allWordpressPost.edges)
   const [categoriesSelected, setCategoriesSelected] = useState([])
-
   const onCategoryChange = e => {
     const { name } = e.target
     if (e.target.checked) {
@@ -39,10 +38,11 @@ export default ({ pageContext: { locale }, data }) => {
     }
   }, [categoriesSelected])
 
+  console.log(posts, 'posts')
   return (
     <Layout path='/' locale={locale} data={data}>
       <div className='blog-section'>
-        <div className='wrapper-categories'>
+        {/* <div className='wrapper-categories'>
           <div className='input-wrapper'>
             <div className='switch'>
               <input
@@ -103,14 +103,29 @@ export default ({ pageContext: { locale }, data }) => {
             </div>
             <div>Graphic Design</div>
           </div>
-        </div>
+          <div className='input-wrapper'>
+            <div className='switch'>
+              <input
+                onChange={onCategoryChange}
+                name='Strategia'
+                id='switch-5'
+                type='checkbox'
+                className='switch-input'
+              />
+              <label htmlFor='switch-5' className='switch-label'>
+                Strategia
+              </label>
+            </div>
+            <div>Strategia</div>
+          </div>
+        </div> */}
 
         <div className='blog-container'>
           {posts &&
             posts.map((blog, i) => (
               <div className='article-wrapper' key={i}>
                 <LocalizedLink to={`/blog/${blog.node.slug}`}>
-                  {/* {blog.node.featured_media && (
+                  {blog.node.featured_media && (
                     <BackgroundImage
                       fluid={
                         blog.node.featured_media.localFile.childImageSharp.fluid
@@ -120,14 +135,14 @@ export default ({ pageContext: { locale }, data }) => {
                         height: 350
                       }}
                     />
-                  )} */}
+                  )}
                   <div className='article-wrapper-text'>
                     <h2 style={{ marginBottom: 0 }}>{blog.node.title}</h2>
                     <div
                       className='excerpt'
                       dangerouslySetInnerHTML={{ __html: blog.node.excerpt }}
                     />
-                    <p style={{ fontWeight: '500' }}> Leggi l'articolo</p>
+                    <p style={{ fontWeight: '500' }}>> Leggi l'articolo </p>
                   </div>
                 </LocalizedLink>
               </div>
@@ -179,58 +194,17 @@ export const pageQuery = graphql`
           content
           excerpt
           date(fromNow: true)
+          featured_media {
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 650) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
         }
       }
     }
   }
 `
-
-// export const pageQuery = graphql`
-//   query Blog($locale: String) {
-//     header: file(name: { eq: $locale }, relativeDirectory: { eq: "header" }) {
-//       childHeaderJson {
-//         home
-//         homeLink
-//         about
-//         aboutLink
-//         services
-//         contact
-//         contactLink
-//         linkGetStarted
-//         textGetStarted
-//       }
-//     }
-//     footerCta: file(
-//       name: { eq: $locale }
-//       relativeDirectory: { eq: "footer-cta" }
-//     ) {
-//       childFooterCtaJson {
-//         title
-//         subtitle
-//       }
-//     }
-//     allWordpressPost {
-//       edges {
-//         node {
-//           categories {
-//             name
-//           }
-//           title
-//           slug
-//           content
-//           excerpt
-//           date(fromNow: true)
-//           featured_media {
-//             localFile {
-//               childImageSharp {
-//                 fluid(maxWidth: 650) {
-//                   ...GatsbyImageSharpFluid
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `

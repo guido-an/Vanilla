@@ -17,10 +17,13 @@ const excapeSpecialHtmlCharacter = string => {
 
 const BlogTemplate = ({ pageContext: { locale }, data }) => {
   const post = data.wordpressPost
+  console.log(post)
   return (
     <Layout locale={locale} data={data}>
       <Seo title={post.yoast_title} description={excapeSpecialHtmlCharacter(post.yoast_meta[0].content)} />
-      {/* {post.featured_media && <Img fluid={post.featured_media.localFile.childImageSharp.fluid} />} */}
+      <div className='image-container-blog-post'>
+        {post.featured_media && <Img fluid={post.featured_media.localFile.childImageSharp.fluid} />}
+      </div>
       <div
         className='post'
         dangerouslySetInnerHTML={{ __html: post.content }}
@@ -65,6 +68,15 @@ export const query = graphql`
       title
       content
       yoast_title
+      featured_media {
+        localFile {
+          childImageSharp {
+            fluid(maxWidth: 650) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
       yoast_meta{
         property
         content
@@ -72,48 +84,3 @@ export const query = graphql`
     }
   }
 `
-
-// export const query = graphql`
-//   query currentPostQuery($id: String!) {
-//     header: file(name: { eq: "it" }, relativeDirectory: { eq: "header" }) {
-//       childHeaderJson {
-//         home
-//         homeLink
-//         about
-//         aboutLink
-//         services
-//         contact
-//         contactLink
-//         linkGetStarted
-//         textGetStarted
-//       }
-//     }
-//     footerCta: file(
-//       name: { eq: "it" }
-//       relativeDirectory: { eq: "footer-cta" }
-//     ) {
-//       childFooterCtaJson {
-//         title
-//         subtitle
-//       }
-//     }
-//     wordpressPost(id: { eq: $id }) {
-//       title
-//       content
-//       yoast_title
-//       featured_media {
-//         localFile {
-//           childImageSharp {
-//             fluid(maxWidth: 650) {
-//               ...GatsbyImageSharpFluid
-//             }
-//           }
-//         }
-//       }
-//       yoast_meta{
-//         property
-//         content
-//       }
-//     }
-//   }
-// `
