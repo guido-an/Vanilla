@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import LocalizedLink from '../components/LocalizedLink'
 import FooterCta from '../components/footerCta'
 import './blog.css'
@@ -41,6 +41,7 @@ export default ({ pageContext: { locale }, data }) => {
   console.log(posts, 'posts')
   return (
     <Layout path='/' locale={locale} data={data}>
+      <Seo title='Il blog di Vanilla Marketing | Digital Creators' description="Non perderti l'opportunità di leggere guide, news, case history e approfondimenti sul mondo del web marketing all'interno del blog di Vanilla Marketing." />
       <div className='blog-section'>
         {/* <div className='wrapper-categories'>
           <div className='input-wrapper'>
@@ -197,7 +198,7 @@ export const pageQuery = graphql`
           featured_media {
             localFile {
               childImageSharp {
-                fluid(maxWidth: 650) {
+                fluid(maxWidth: 900) {
                   ...GatsbyImageSharpFluid
                 }
               }

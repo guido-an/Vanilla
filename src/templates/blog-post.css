@@ -1,9 +1,8 @@
 .post {
-    margin-top: 80px;
+    margin-top: 40px;
     margin-bottom: 120px;
     padding: 0 10px
 }
-
 
 @media(min-width: 768px) {
     .post {
@@ -12,7 +11,7 @@
     }
 
     .image-container-blog-post{
-       width: 600px;
+       width: 80vw;
        height: 401;
        margin: 0 auto;
        box-shadow: rgba(46, 41, 51, 0.08) 0px 1px 2px, rgba(71, 63, 79, 0.08) 0px 2px 4px;
