@@ -28,12 +28,6 @@ export default function Testimonial ({ testimonials, overtitle, title1, title2 }
       img: salvatore
     },
     {
-      client: testimonials.client3,
-      quote: testimonials.quote3,
-      company: 'Officina del Mugello',
-      img: benedusi
-    },
-    {
       client: testimonials.client4,
       quote: testimonials.quote4,
       company: 'La Curandera',

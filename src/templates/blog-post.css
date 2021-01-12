@@ -3,6 +3,12 @@
     margin-bottom: 120px;
     padding: 0 10px
 }
+.post h2 {
+    font-weight: 700;
+}
+.post h5 {
+    font-weight: 600;
+}
 
 @media(min-width: 768px) {
     .post {

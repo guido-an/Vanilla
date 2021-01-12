@@ -152,7 +152,7 @@ export default () => {
               fluid={data.mobileIcon.childImageSharp.fluid}
             />
             <a className='footer-link' href='tel:+39071204002'>
-              +39 351 671 1311
+             +39 351 504 7951
             </a>
           </div>
         </div>

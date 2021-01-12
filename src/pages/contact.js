@@ -31,7 +31,7 @@ const Contact = ({ pageContext: { locale }, data }) => {
                 <strong>{phoneText}</strong>
               </p>
               <a href='tel:+393516711311'>
-                <p>+39 351 671 1311</p>
+                <p>+39 351 504 7951</p>
               </a>
               <a href='tel:+39071204002'>
                 <p>+39 071 204002</p>
@@ -48,7 +48,7 @@ const Contact = ({ pageContext: { locale }, data }) => {
               </p>
               <a href='mailto:info@vanillamarketing.it'>
                 <p>info@vanillamarketing.it</p>
-              </a>   
+              </a>
             </div>
             <div>
               <Img
