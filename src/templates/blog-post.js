@@ -28,6 +28,7 @@ const BlogTemplate = ({ pageContext: { locale }, data }) => {
         className='post'
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
+
       <FooterCta
         linkGetStarted={data.header.childHeaderJson.linkGetStarted}
         textGetStarted={data.header.childHeaderJson.textGetStarted}
