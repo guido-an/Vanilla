@@ -8,6 +8,31 @@ import ukFlag from '../images/uk-flag.png'
 import franceFlag from '../images/france-flag.png'
 import logoHubspot from '../images/partner-horizontal-white.png'
 
+class HubspotForm extends React.Component {
+  componentDidMount () {
+  	const script = document.createElement('script')
+    script.src = 'https://js.hsforms.net/forms/v2.js'
+    document.body.appendChild(script)
+
+    script.addEventListener('load', () => {
+    	if (window.hbspt) {
+      	window.hbspt.forms.create({
+        	portalId: '8068265',
+          formId: '067dc150-cd21-41de-aa83-ec7d9be95a77'
+        })
+      }
+    })
+  }
+
+  render () {
+  	return (
+    <div>
+        <div id='hubspotForm' />
+      </div>
+    )
+  }
+}
+
 export default () => {
   const data = useStaticQuery(graphql`
     query {
@@ -74,6 +99,7 @@ export default () => {
     <footer className='footer'>
       <div className='footer-container'>
         <div className='footer-section-container'>
+
           <LocalizedLink to='/'>
             <Img
               className='logo-footer'
@@ -226,6 +252,7 @@ export default () => {
           </div>
         </div>
       </div>
+
       <img
         style={{ width: '280px', display: 'block', margin: '0 auto', position: 'relative', bottom: '60px' }}
         src={logoHubspot} alt='logo-partner-hubspot'

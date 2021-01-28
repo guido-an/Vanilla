@@ -8,8 +8,6 @@ import ServicesSection from '../components/servicesSection'
 import Testimonials from '../components/testimonials'
 
 const IndexPage = ({ pageContext: { locale }, data }) => {
-
-  console.log(locale, 'locale')
   return (
     <Layout path='/' locale={locale} data={data}>
       {/* site title gets from graphql query and pass it to layout component */}
@@ -35,12 +33,14 @@ const IndexPage = ({ pageContext: { locale }, data }) => {
           data.services.childServicesSectionJson.graphicDesignDesc
         }
       />
+
       <Testimonials
         testimonials={data.testimonials.childTestimonialsJson}
         overtitle={data.testimonials.childTestimonialsJson.overtitle}
         title1={data.testimonials.childTestimonialsJson.title1}
         title2={data.testimonials.childTestimonialsJson.title2}
       />
+
       <FooterCta
         linkGetStarted={data.header.childHeaderJson.linkGetStarted}
         textGetStarted={data.header.childHeaderJson.textGetStarted}

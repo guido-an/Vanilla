@@ -12,6 +12,7 @@ export default function footerCta ({
     <footer className='footerCta'>
       <div className='footerCta-container'>
         <div className='footerCta-cta'>
+
           <span className='overtitle-yellow'>DIGITAL CREATORS</span>
           <h2 className='title-section'>{title}</h2>
           <p className='footerCta-subtitle'>{subtitle}</p>

@@ -17,7 +17,6 @@ const excapeSpecialHtmlCharacter = string => {
 
 const BlogTemplate = ({ pageContext: { locale }, data }) => {
   const post = data.wordpressPost
-  console.log(post.featured_media.localFile.childImageSharp.fluid, 'post.featured_media.localFile.childImageSharp.fluid')
   return (
     <Layout locale={locale} data={data}>
       <Seo title={post.yoast_title} description={excapeSpecialHtmlCharacter(post.yoast_meta[0].content)} />
