@@ -11,7 +11,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'images', 
+        name: 'images',
         path: `${__dirname}/src/images`
       }
     },
@@ -51,6 +51,13 @@ module.exports = {
       resolve: 'gatsby-plugin-facebook-pixel',
       options: {
         pixelId: '1285281921665685'
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'GTM-KHDSLRX',
+        includeInDevelopment: false
       }
     },
     {
