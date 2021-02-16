@@ -346,7 +346,7 @@ const Header = ({ dataHeader, locale }) => {
                   </LocalizedLink>
                 </div>
               )}
-              {locale === 'it' && <LocalizedLink to='/blog'>Blog</LocalizedLink>}
+              {locale === 'it' && <a href='https://storie.vanillamarketing.it/' target='_blank' rel='noopener norefferer'>Blog</a>}
               <LocalizedLink to={contactLink}>{contact}</LocalizedLink>
             </ul>
             <div className='mobile-menu-cta'>
@@ -398,7 +398,7 @@ const Header = ({ dataHeader, locale }) => {
                     />
                   </span>
                 </LocalizedLink>
-                {locale === 'it' && <LocalizedLink to='/blog'>Blog</LocalizedLink>}
+                {locale === 'it' && <a href='https://storie.vanillamarketing.it/' rel='noopener norefferer' target='_blank'>Blog</a>}
                 <LocalizedLink to={contactLink}>{contact}</LocalizedLink>
               </ul>
             </nav>
