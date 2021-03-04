@@ -5,50 +5,50 @@ import Img from 'gatsby-image'
 export default ({ overtitle, title, subtitle }) => {
   const data = useStaticQuery(graphql`
     query {
-      blomdahl: file(relativePath: { eq: "portfolio/blomdahl-logo.png" }) {
+      comune: file(relativePath: { eq: "portfolio/comune-logo.png" }) {
         childImageSharp {
           fluid(maxWidth: 350, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      difar: file(relativePath: { eq: "portfolio/difar-logo.png" }) {
+      frolla: file(relativePath: { eq: "portfolio/frolla-logo.png" }) {
         childImageSharp {
           fluid(maxWidth: 350, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      mongrip: file(relativePath: { eq: "portfolio/mongrip-logo.png" }) {
+      gambino: file(relativePath: { eq: "portfolio/gambino-vini-logo.png" }) {
         childImageSharp {
           fluid(maxWidth: 350, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      curandera: file(relativePath: { eq: "portfolio/curandera-logo.png" }) {
+      gramineta: file(relativePath: { eq: "portfolio/gramineta-logo.png" }) {
         childImageSharp {
           fluid(maxWidth: 350, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      yumyum: file(relativePath: { eq: "portfolio/yum-yum-logo.png" }) {
+      habitat: file(relativePath: { eq: "portfolio/habitat.png" }) {
         childImageSharp {
           fluid(maxWidth: 350, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      univpm: file(relativePath: { eq: "portfolio/univpm-logo.png" }) {
+      hobo: file(relativePath: { eq: "portfolio/hobo-logo.png" }) {
         childImageSharp {
           fluid(maxWidth: 350, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      autoritaPortuale: file(
-        relativePath: { eq: "portfolio/autorita-portuale-logo.png" }
+      lesLandes: file(
+        relativePath: { eq: "portfolio/les-landes-logo.png" }
       ) {
         childImageSharp {
           fluid(maxWidth: 350, quality: 100) {
@@ -56,8 +56,8 @@ export default ({ overtitle, title, subtitle }) => {
           }
         }
       }
-      cameraCommercio: file(
-        relativePath: { eq: "portfolio/camera-di-commercio-ancona-logo.png" }
+      mewa: file(
+        relativePath: { eq: "portfolio/mewa-logo.png" }
       ) {
         childImageSharp {
           fluid(maxWidth: 350, quality: 100) {
@@ -65,15 +65,15 @@ export default ({ overtitle, title, subtitle }) => {
           }
         }
       }
-      aroundAwt: file(relativePath: { eq: "portfolio/around-awt-logo.png" }) {
+      oroConero: file(relativePath: { eq: "portfolio/oro-del-conero-logo.png" }) {
         childImageSharp {
           fluid(maxWidth: 350, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      walkingEolie: file(
-        relativePath: { eq: "portfolio/walking-eolie-logo.png" }
+      rami: file(
+        relativePath: { eq: "portfolio/rami-logo.png" }
       ) {
         childImageSharp {
           fluid(maxWidth: 350, quality: 100) {
@@ -93,51 +93,51 @@ export default ({ overtitle, title, subtitle }) => {
       <div className='logo-portfolio-container'>
         <Img
           className='logo-portfolio'
-          fluid={data.cameraCommercio.childImageSharp.fluid}
-        />
-
-        {/* <Img
-          className="logo-portfolio"
-          fluid={data.univpm.childImageSharp.fluid}
-        /> */}
-        <Img
-          className='logo-portfolio'
-          fluid={data.mongrip.childImageSharp.fluid}
+          fluid={data.comune.childImageSharp.fluid}
         />
 
         <Img
           className='logo-portfolio'
-          fluid={data.autoritaPortuale.childImageSharp.fluid}
+          fluid={data.frolla.childImageSharp.fluid}
         />
 
         <Img
           className='logo-portfolio'
-          fluid={data.curandera.childImageSharp.fluid}
+          fluid={data.gambino.childImageSharp.fluid}
+        />
+
+        <Img
+          className='logo-portfolio'
+          fluid={data.gramineta.childImageSharp.fluid}
+        />
+        <Img
+          className='logo-portfolio'
+          fluid={data.habitat.childImageSharp.fluid}
         />
       </div>
 
       <div className='logo-portfolio-container'>
         <Img
           className='logo-portfolio'
-          fluid={data.blomdahl.childImageSharp.fluid}
+          fluid={data.hobo.childImageSharp.fluid}
         />
-        {/* <Img
-          className="logo-portfolio"
-          fluid={data.yumyum.childImageSharp.fluid}
-        /> */}
+        <Img
+          className='logo-portfolio'
+          fluid={data.lesLandes.childImageSharp.fluid}
+        />
+        <Img
+          className='logo-portfolio'
+          fluid={data.oroConero.childImageSharp.fluid}
+        />
+        <Img
+          className='logo-portfolio'
+          fluid={data.mewa.childImageSharp.fluid}
+        />
+        <Img
+          className='logo-portfolio'
+          fluid={data.rami.childImageSharp.fluid}
+        />
 
-        <Img
-          className='logo-portfolio'
-          fluid={data.aroundAwt.childImageSharp.fluid}
-        />
-        <Img
-          className='logo-portfolio'
-          fluid={data.walkingEolie.childImageSharp.fluid}
-        />
-        <Img
-          className='logo-portfolio'
-          fluid={data.difar.childImageSharp.fluid}
-        />
       </div>
     </div>
   )

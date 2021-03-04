@@ -185,42 +185,6 @@ export default () => {
         <div className='footer-section-container'>
           <p className='footer-title'>Social</p>
           <div className='footer-social-container'>
-            {/* <a
-              href="https://www.facebook.com/AgenziaVanillaMarketing"
-              target="_blank"
-            >
-              <Img
-                className="footer-social-icon"
-                fluid={data.facebookIcon.childImageSharp.fluid}
-              />
-            </a>
-            <a
-              href="https://www.instagram.com/vanilla.marketing/"
-              target="_blank"
-            >
-              <Img
-                className="footer-social-icon"
-                fluid={data.instagramIcon.childImageSharp.fluid}
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/vanilla-marketing"
-              target="_blank"
-            >
-              <Img
-                className="footer-social-icon"
-                fluid={data.linkedinIcon.childImageSharp.fluid}
-              />
-            </a>
-            <a
-              href="https://open.spotify.com/user/jq8rsmhffl01j9izazr9hx2yk?si=fJCM68DNRxuUxsYcWoay_g"
-              target="_blank"
-            >
-              <Img
-                className="footer-social-icon"
-                fluid={data.spotifyIcon.childImageSharp.fluid}
-              />
-            </a> */}
             <a
               className='footer-link'
               href='https://www.facebook.com/AgenziaVanillaMarketing'
@@ -252,12 +216,10 @@ export default () => {
           </div>
         </div>
       </div>
-
       <img
         style={{ width: '280px', display: 'block', margin: '0 auto', position: 'relative', bottom: '60px' }}
         src={logoHubspot} alt='logo-partner-hubspot'
       />
-
     </footer>
   )
 }

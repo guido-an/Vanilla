@@ -6,6 +6,7 @@ import Hero from '../components/hero'
 import FooterCta from '../components/footerCta'
 import ServicesSection from '../components/servicesSection'
 import Testimonials from '../components/testimonials'
+import PortfolioLogo from '../components/portfolioLogo'
 
 const IndexPage = ({ pageContext: { locale }, data }) => {
   return (
@@ -40,7 +41,6 @@ const IndexPage = ({ pageContext: { locale }, data }) => {
         title1={data.testimonials.childTestimonialsJson.title1}
         title2={data.testimonials.childTestimonialsJson.title2}
       />
-
       <FooterCta
         linkGetStarted={data.header.childHeaderJson.linkGetStarted}
         textGetStarted={data.header.childHeaderJson.textGetStarted}
@@ -88,6 +88,16 @@ export const query = graphql`
         socialMediaDesc
         webMarketingDesc
         graphicDesignDesc
+      }
+    }
+    portfolio: file(
+      name: { eq: $locale }
+      relativeDirectory: { eq: "portfolio" }
+    ) {
+      childPortfolioJson {
+        overtitle
+        title
+        subtitle
       }
     }
     testimonials: file(
