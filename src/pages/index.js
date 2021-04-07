@@ -12,7 +12,10 @@ const IndexPage = ({ pageContext: { locale }, data }) => {
   return (
     <Layout path='/' locale={locale} data={data}>
       {/* site title gets from graphql query and pass it to layout component */}
-      <SEO title={data.hero.childHeroJson.titleSeo} description={data.hero.childHeroJson.descriptionSeo} />
+      <SEO
+        title={data.hero.childHeroJson.titleSeo}
+        description={data.hero.childHeroJson.descriptionSeo}
+      />
       <Hero
         linkGetStarted={data.header.childHeaderJson.linkGetStarted}
         heroSubtitle1={data.hero.childHeroJson.heroSubtitle1}
