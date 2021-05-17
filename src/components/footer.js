@@ -201,6 +201,13 @@ export default () => {
             </a>
             <a
               className='footer-link'
+              href='https://www.tiktok.com/@vanillamarketing?lang=it-IT'
+              target='_blank'
+            >
+              TikTok
+            </a>
+            <a
+              className='footer-link'
               href='https://www.linkedin.com/company/vanilla-marketing'
               target='_blank'
             >
