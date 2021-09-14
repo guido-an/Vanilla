@@ -19,14 +19,14 @@ const BlogTemplate = ({ pageContext: { locale }, data }) => {
   const post = data.wordpressPost
   return (
     <Layout locale={locale} data={data}>
-      <Seo title={post.yoast_title} description={excapeSpecialHtmlCharacter(post.yoast_meta[0].content)} />
+      {/* <Seo title={post.yoast_title} description={excapeSpecialHtmlCharacter(post.yoast_meta[0].content)} />
       <div className='image-container-blog-post'>
         {post.featured_media && <Img fluid={post.featured_media.localFile.childImageSharp.fluid} />}
       </div>
       <div
         className='post'
         dangerouslySetInnerHTML={{ __html: post.content }}
-      />
+      /> */}
 
       <FooterCta
         linkGetStarted={data.header.childHeaderJson.linkGetStarted}
