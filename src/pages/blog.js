@@ -126,7 +126,7 @@ export default ({ pageContext: { locale }, data }) => {
             posts.map((blog, i) => (
               <div className='article-wrapper' key={i}>
                 <LocalizedLink to={`/blog/${blog.node.slug}`}>
-                  {blog.node.featured_media && (
+                  {/* {blog.node.featured_media && (
                     <BackgroundImage
                       fluid={
                         blog.node.featured_media.localFile.childImageSharp.fluid
@@ -136,9 +136,14 @@ export default ({ pageContext: { locale }, data }) => {
                         height: 350
                       }}
                     />
-                  )}
+                  )} */}
                   <div className='article-wrapper-text'>
-                    <h2 style={{ marginBottom: 0 }}>{blog.node.title}</h2>
+                    {/* <h2 style={{ marginBottom: 0 }}>{blog.node.title}</h2> */}
+                    <div
+                      className='title'
+                      dangerouslySetInnerHTML={{ __html: blog.node.title }}
+                    />
+                    
                     <div
                       className='excerpt'
                       dangerouslySetInnerHTML={{ __html: blog.node.excerpt }}

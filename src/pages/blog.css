@@ -3,9 +3,11 @@
     text-decoration: none;
 }
 
-.blog-section h2 {
+.title {
     color: #272727;
     font-size: 24px;
+    padding-top: 10px;
+    font-weight: 700
 }
 
 .blog-section a {
@@ -22,10 +24,6 @@
 
 .article-wrapper-text {
     padding: 10px 20px
-}
-
-.article-wrapper-text h2 {
-    padding-top: 10px 
 }
 
 .article-img:hover {
