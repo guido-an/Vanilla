@@ -181,6 +181,11 @@ export default () => {
              +39 351 504 7951
             </a>
           </div>
+          <div className='footer-contact-container'>
+            <a className='footer-link' href='tel:+39071204002'>
+              PI: 02646270427
+            </a>
+          </div>
         </div>
         <div className='footer-section-container'>
           <p className='footer-title'>Social</p>
