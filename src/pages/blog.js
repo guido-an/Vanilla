@@ -12,6 +12,7 @@ export default ({ pageContext: { locale }, data }) => {
   const [postsCopy, setPostsCopy] = useState(data.allWordpressPost.edges)
   const [posts, setPosts] = useState(data.allWordpressPost.edges)
   const [categoriesSelected, setCategoriesSelected] = useState([])
+  
   const onCategoryChange = e => {
     const { name } = e.target
     if (e.target.checked) {
@@ -25,8 +26,6 @@ export default ({ pageContext: { locale }, data }) => {
   }
 
   React.useEffect(() => {
-    // Side-effect logic gets executed when values in array
-    // only get updated
     const newArray = postsCopy.filter(post => {
       if (categoriesSelected.includes(post.node.categories[0].name)) {
         return post
