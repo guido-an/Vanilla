@@ -4,16 +4,15 @@
     padding: 0 10px
 }
 
-
 @media(min-width: 768px) {
     .post {
-        margin-top: 60px;
-        padding: 0 20%
+        margin: 360px 0 20px;
+        padding: 0 20%;
     }
 
     .image-container-blog-post{
        width: 80vw;
-       height: 401;
+       height: 401px;
        margin: 0 auto;
        box-shadow: rgba(46, 41, 51, 0.08) 0px 1px 2px, rgba(71, 63, 79, 0.08) 0px 2px 4px;
        margin-top: 90px

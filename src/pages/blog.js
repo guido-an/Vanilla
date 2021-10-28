@@ -43,7 +43,7 @@ export default ({ pageContext: { locale }, data }) => {
     <Layout path='/' locale={locale} data={data}>
       <Seo title='Il blog di Vanilla Marketing | Digital Creators' description="Non perderti l'opportunità di leggere guide, news, case history e approfondimenti sul mondo del web marketing all'interno del blog di Vanilla Marketing." />
       <div className='blog-section'>
-        {/* <div className='wrapper-categories'>
+        <div className='wrapper-categories'>
           <div className='input-wrapper'>
             <div className='switch'>
               <input
@@ -119,24 +119,29 @@ export default ({ pageContext: { locale }, data }) => {
             </div>
             <div>Strategia</div>
           </div>
-        </div> */}
+        </div>
 
         <div className='blog-container'>
           {posts &&
             posts.map((blog, i) => (
               <div className='article-wrapper' key={i}>
                 <LocalizedLink to={`/blog/${blog.node.slug}`}>
-                  {blog.node.featured_media && (
+                  {/* {blog.node.featured_media.localFile && (
                     <BackgroundImage
                       fluid={
-                        blog.node.featured_media.localFile && blog.node.featured_media.localFile.childImageSharp.fluid
+                        blog.node.featured_media.localFile.childImageSharp.fluid
                       }
                       className='article-img'
                       style={{
                         height: 350
                       }}
+                    />    
+                  )} */}
+                  <img 
+                     src={blog.node.featured_media.source_url}  
+                     className='article-img'
                     />
-                  )}
+
                   <div className='article-wrapper-text'>
                     {/* <h2 style={{ marginBottom: 0 }}>{blog.node.title}</h2> */}
                     <div
@@ -201,6 +206,7 @@ export const pageQuery = graphql`
           excerpt
           date(fromNow: true)
           featured_media {
+            source_url
             localFile {
               childImageSharp {
                 fluid(maxWidth: 900) {

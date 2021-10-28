@@ -43,7 +43,7 @@
 }
 
 .wrapper-categories {
-    margin-left: 4%
+    margin-left: 4%;
 }
 
 .input-wrapper {
@@ -124,7 +124,7 @@
         margin-left: 0
     }
     .blog-section {
-        margin: 180px 4% 120px 4%;
+        margin: 140px 4% 120px 4%;
     }
     .blog-container {
         display: flex;
