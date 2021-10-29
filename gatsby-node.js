@@ -60,7 +60,7 @@ exports.createPages = async ({ graphql, actions }) => {
       const posts = result.data.allWordpressPost.edges
       posts.forEach(edge => {
         Object.keys(locales).map(lang => {
-          const path = `/blog/${edge.node.slug}`
+          const path = `/storie/${edge.node.slug}`
           const localizedPath = locales[lang].default
             ? path
             : locales[lang].path + path

@@ -124,7 +124,7 @@ export default ({ pageContext: { locale }, data }) => {
           {posts &&
             posts.map((blog, i) => (
               <div className='article-wrapper' key={i}>
-                <LocalizedLink to={`/blog/${blog.node.slug}`}>
+                <LocalizedLink to={`/storie/${blog.node.slug}`}>
                   {/* {blog.node.featured_media.localFile && (
                     <BackgroundImage
                       fluid={
