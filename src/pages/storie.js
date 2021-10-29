@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import Seo from '../components/seo'
 import LocalizedLink from '../components/LocalizedLink'
 import FooterCta from '../components/footerCta'
-import './blog.css'
+import './storie.css'
 
 export default ({ pageContext: { locale }, data }) => {
   const [postsCopy, setPostsCopy] = useState(data.allWordpressPost.edges)
