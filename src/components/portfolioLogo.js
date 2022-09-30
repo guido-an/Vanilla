@@ -14,7 +14,7 @@ export default ({ overtitle, title, subtitle }) => {
       }
       frolla: file(relativePath: { eq: "portfolio/frolla-logo.png" }) {
         childImageSharp {
-          fluid(maxWidth: 350, quality: 100) {
+          fluid(maxWidth: 150, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

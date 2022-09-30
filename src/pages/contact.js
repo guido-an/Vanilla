@@ -105,6 +105,16 @@ const Contact = ({ pageContext: { locale }, data }) => {
                   <br /> Ancona, 60129
                 </p>
               </a>
+              <a
+                href='https://www.google.com/maps/place/Piazza+Delle+Erbe,+14,+60121+Ancona+AN/@43.6187606,13.5118844,17z/data=!3m1!4b1!4m5!3m4!1s0x132d7fbc05bf8725:0x6b4a87f2e47fcac6!8m2!3d43.6187567!4d13.5140731'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <p style={{ lineHeight: '32px' }}>
+                  Piazza delle Erbe 14,
+                  <br /> Ancona, 60131
+                </p>
+              </a>
             </div>
           </div>
         </div>

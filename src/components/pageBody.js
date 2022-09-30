@@ -1,11 +1,13 @@
 import React from 'react'
 import Img from 'gatsby-image'
+import gif from '../images/anim_vanilla.gif'
 
-const pageBody = props => {
+const pageBody = (props) => {
   return (
     <section className='margin-top'>
       <div className='about-section-container'>
-        <Img className='big-icon' fluid={props.bigIcon} />
+        {props.gif ? <img style={{ maxWidth: "400px", display: "block", margin: "80px auto"}} src={gif} alt="vanilla-gif" /> :  <Img className='big-icon' fluid={props.bigIcon} />}
+        
         <div className='page-bg'>
           <span className='overtitle-dark'>DIGITAL CREATORS</span>
           <h1>{props.title}</h1>

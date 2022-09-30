@@ -210,12 +210,10 @@ const Header = ({ dataHeader, locale }) => {
           </div>
           <div className='cta-header-container'>
             <a
-              onClick={comingSoon}
               className='cta-header-btn'
-              target='_blank'
+              href="/richiedi-un-preventivo"
             >
-              {' '}
-              Premium Support
+              Richiedi un preventivo
             </a>
           </div>
         </div>

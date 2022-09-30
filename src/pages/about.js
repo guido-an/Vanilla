@@ -14,6 +14,7 @@ const About = ({ pageContext: { locale }, data }) => {
     <Layout path='/' locale={locale} data={data}>
       <SEO title={titleSeo} description={descriptionSeo} />
       <PageBody
+        gif={true}
         bigIcon={data.bigIcon.childImageSharp.fluid}
         overtitle={overtitle}
         title={title}

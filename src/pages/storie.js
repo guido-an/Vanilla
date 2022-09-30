@@ -73,7 +73,7 @@ export default ({ pageContext: { locale }, data }) => {
             </div>
             <div>Social Media</div>
           </div>
-          <div className='input-wrapper'>
+          {/* <div className='input-wrapper'>
             <div className='switch'>
               <input
                 onChange={onCategoryChange}
@@ -87,7 +87,7 @@ export default ({ pageContext: { locale }, data }) => {
               </label>
             </div>
             <div>Web Marketing</div>
-          </div>
+          </div> */}
           <div className='input-wrapper'>
             <div className='switch'>
               <input
