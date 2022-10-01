@@ -19,7 +19,7 @@
     "gatsby-plugin-sitemap": "^2.2.26",
     "gatsby-remark-responsive-iframe": "^2.2.30",
     "gatsby-source-filesystem": "^2.1.35",
-    "gatsby-source-wordpress": "^3.3.11",
+    "gatsby-source-wordpress": "^4.0.8",
     "gatsby-transformer-json": "^2.2.16",
     "gatsby-transformer-remark": "^2.6.42",
     "gatsby-transformer-sharp": "^2.5.5",
