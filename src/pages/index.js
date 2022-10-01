@@ -67,6 +67,7 @@ export const query = graphql`
         contactLink
         linkGetStarted
         textGetStarted
+        ctaHeader
       }
     }
     hero: file(name: { eq: $locale }, relativeDirectory: { eq: "hero" }) {

@@ -6,6 +6,8 @@
     "services": "Services",
     "contact": "Contact",
     "contactLink": "/contact",
-    "linkGetStarted": "/get-started",
-    "textGetStarted": "Start from here"
+    "linkGetStarted": "/en/get-started",
+    "textGetStarted": "Start from here",
+    "ctaHeader": "Ask for a quotation"
+
 }

@@ -6,6 +6,7 @@
     "services": "Services",
     "contact": "Contact",
     "contactLink": "/contact",
-    "linkGetStarted": "/part-d-ici ",
-    "textGetStarted": "Part d’ici "
+    "linkGetStarted": "/fr/part-d-ici ",
+    "textGetStarted": "Part d’ici ",
+    "ctaHeader": "Demandez une cotation "
 }

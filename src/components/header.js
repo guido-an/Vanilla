@@ -37,7 +37,9 @@ const Header = ({ dataHeader, locale }) => {
     aboutLink,
     services,
     contact,
-    contactLink
+    contactLink,
+    ctaHeader,
+    linkGetStarted
   } = dataHeader.header.childHeaderJson
 
   const listenDropDownMenu = () => {
@@ -211,9 +213,9 @@ const Header = ({ dataHeader, locale }) => {
           <div className='cta-header-container'>
             <a
               className='cta-header-btn'
-              href="/richiedi-un-preventivo"
+              href={linkGetStarted}
             >
-              Richiedi un preventivo
+              {ctaHeader}
             </a>
           </div>
         </div>
