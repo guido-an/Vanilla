@@ -12,7 +12,7 @@ export default ({ overtitle, title, subtitle }) => {
           }
         }
       }
-      frolla: file(relativePath: { eq: "portfolio/frolla-logo.png" }) {
+      frolla: file(relativePath: { eq: "portfolio/logo_frolla.png" }) {
         childImageSharp {
           fluid(maxWidth: 150, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -26,7 +26,7 @@ export default ({ overtitle, title, subtitle }) => {
           }
         }
       }
-      gramineta: file(relativePath: { eq: "portfolio/gramineta-logo.png" }) {
+      affinitis: file(relativePath: { eq: "portfolio/logo_affinitis.png" }) {
         childImageSharp {
           fluid(maxWidth: 350, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -41,6 +41,20 @@ export default ({ overtitle, title, subtitle }) => {
         }
       }
       hobo: file(relativePath: { eq: "portfolio/hobo-logo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 350, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      altrapelle: file(relativePath: { eq: "portfolio/logo_altrapelle.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 350, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      avalon: file(relativePath: { eq: "portfolio/logo_avalon.png" }) {
         childImageSharp {
           fluid(maxWidth: 350, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -66,6 +80,41 @@ export default ({ overtitle, title, subtitle }) => {
         }
       }
       oroConero: file(relativePath: { eq: "portfolio/oro-del-conero-logo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 350, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      perspirex: file(relativePath: { eq: "portfolio/logo_perspirex.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 350, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      argento: file(relativePath: { eq: "portfolio/logo_argentovivo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 350, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      filotea: file(relativePath: { eq: "portfolio/logo_filotea.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 350, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      yumyum: file(relativePath: { eq: "portfolio/logo_yumyum.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 350, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      giampaoli: file(relativePath: { eq: "portfolio/logo_giampaoli.png" }) {
         childImageSharp {
           fluid(maxWidth: 350, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -105,38 +154,49 @@ export default ({ overtitle, title, subtitle }) => {
           className='logo-portfolio'
           fluid={data.gambino.childImageSharp.fluid}
         />
-
-        <Img
-          className='logo-portfolio'
-          fluid={data.gramineta.childImageSharp.fluid}
-        />
         <Img
           className='logo-portfolio'
           fluid={data.habitat.childImageSharp.fluid}
         />
+        <Img
+          className='logo-portfolio'
+          fluid={data.affinitis.childImageSharp.fluid}
+        />
       </div>
-
       <div className='logo-portfolio-container'>
         <Img
           className='logo-portfolio'
-          fluid={data.hobo.childImageSharp.fluid}
+          fluid={data.perspirex.childImageSharp.fluid}
         />
         <Img
           className='logo-portfolio'
-          fluid={data.lesLandes.childImageSharp.fluid}
+          fluid={data.altrapelle.childImageSharp.fluid}
         />
         <Img
           className='logo-portfolio'
-          fluid={data.oroConero.childImageSharp.fluid}
+          fluid={data.avalon.childImageSharp.fluid}
         />
         <Img
           className='logo-portfolio'
-          fluid={data.mewa.childImageSharp.fluid}
+          fluid={data.argento.childImageSharp.fluid}
+        />
+     
+        <Img
+          className='logo-portfolio'
+          fluid={data.filotea.childImageSharp.fluid}
+        />
+
+      </div>
+      <div className='logo-portfolio-container'>
+        <Img
+          className='logo-portfolio'
+          fluid={data.yumyum.childImageSharp.fluid}
         />
         <Img
           className='logo-portfolio'
-          fluid={data.rami.childImageSharp.fluid}
+          fluid={data.giampaoli.childImageSharp.fluid}
         />
+   
 
       </div>
     </div>
