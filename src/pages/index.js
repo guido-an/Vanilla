@@ -37,13 +37,18 @@ const IndexPage = ({ pageContext: { locale }, data }) => {
           data.services.childServicesSectionJson.graphicDesignDesc
         }
       />
-
+      <PortfolioLogo
+        overtitle={data.portfolio.childPortfolioJson.overtitle}
+        title={data.portfolio.childPortfolioJson.title}
+        subtitle={data.portfolio.childPortfolioJson.subtitle}
+      />
       <Testimonials
         testimonials={data.testimonials.childTestimonialsJson}
         overtitle={data.testimonials.childTestimonialsJson.overtitle}
         title1={data.testimonials.childTestimonialsJson.title1}
         title2={data.testimonials.childTestimonialsJson.title2}
       />
+      
       <FooterCta
         linkGetStarted={data.header.childHeaderJson.linkGetStarted}
         textGetStarted={data.header.childHeaderJson.textGetStarted}
@@ -104,6 +109,7 @@ export const query = graphql`
         subtitle
       }
     }
+    
     testimonials: file(
       name: { eq: $locale }
       relativeDirectory: { eq: "testimonials" }
