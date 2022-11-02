@@ -130,6 +130,24 @@ export default ({ overtitle, title, subtitle }) => {
           }
         }
       }
+      oasitigre: file(
+        relativePath: { eq: "portfolio/logo_oasitigre.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 350, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      universita2: file(
+        relativePath: { eq: "portfolio/logo_universita2.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 350, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   return (
@@ -195,6 +213,14 @@ export default ({ overtitle, title, subtitle }) => {
         <Img
           className='logo-portfolio'
           fluid={data.giampaoli.childImageSharp.fluid}
+        />
+        <Img
+          className='logo-portfolio'
+          fluid={data.oasitigre.childImageSharp.fluid}
+        />
+        <Img
+          className='logo-portfolio'
+          fluid={data.universita2.childImageSharp.fluid}
         />
    
 
