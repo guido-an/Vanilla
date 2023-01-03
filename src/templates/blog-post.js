@@ -54,6 +54,7 @@ export const query = graphql`
         contactLink
         linkGetStarted
         textGetStarted
+        ctaHeader
       }
     }
     footerCta: file(

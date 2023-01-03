@@ -10,7 +10,7 @@ const Contact = ({ pageContext: { locale }, data }) => {
     title,
     subtitle,
     phoneText,
-    addressText
+    addressText,
   } = data.contact.childContactJson
 
   return (
@@ -136,6 +136,7 @@ export const query = graphql`
         contactLink
         linkGetStarted
         textGetStarted
+        ctaHeader
       }
     }
     contact: file(name: { eq: $locale }, relativeDirectory: { eq: "contact" }) {
