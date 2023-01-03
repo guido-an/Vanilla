@@ -96,6 +96,7 @@ export const query = graphql`
         contactLink
         linkGetStarted
         textGetStarted
+        ctaHeader
       }
     }
     about: file(name: { eq: $locale }, relativeDirectory: { eq: "about" }) {

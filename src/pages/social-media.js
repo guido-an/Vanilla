@@ -45,6 +45,7 @@ export const query = graphql`
         contactLink
         linkGetStarted
         textGetStarted
+        ctaHeader
       }
     }
     socialMedia: file(

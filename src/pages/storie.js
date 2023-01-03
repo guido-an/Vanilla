@@ -182,6 +182,7 @@ export const pageQuery = graphql`
         contactLink
         linkGetStarted
         textGetStarted
+        ctaHeader
       }
     }
     footerCta: file(
