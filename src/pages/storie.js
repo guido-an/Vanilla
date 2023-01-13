@@ -152,7 +152,7 @@ export default ({ pageContext: { locale }, data }) => {
                       className='excerpt'
                       dangerouslySetInnerHTML={{ __html: blog.node.excerpt }}
                     />
-                    <p style={{ fontWeight: '500' }}>> Leggi l'articolo </p>
+                    <p style={{ fontWeight: '500' }}>{"> Leggi l'articolo" }</p>
                   </div>
                 </LocalizedLink>
               </div>
@@ -183,6 +183,7 @@ export const pageQuery = graphql`
         linkGetStarted
         textGetStarted
         ctaHeader
+        feelHappy
       }
     }
     footerCta: file(
