@@ -3,25 +3,22 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import PageBody from "../components/pageBody"
-import PortfolioLogo from "../components/portfolioLogo"
 import FooterCta from "../components/footerCta"
 
-const webMarketing = ({ pageContext: { locale }, data }) => {
+const feelHappy = ({ pageContext: { locale }, data }) => {
+  console.log(data,"datatatatta");
   return (
     <Layout path="/" locale={locale} data={data}>
-      <SEO title={data.webMarketing.childWebMarketingJson.titleSeo} description={data.webMarketing.childWebMarketingJson.descriptionSeo} />
+      <SEO title={data.feelGood.childFeelGoodJson.titleSeo} description={data.feelGood.childFeelGoodJson.descriptionSeo} />
       <PageBody
-        bigIcon={data.bigIcon.childImageSharp.fluid}
-        overtitle={data.webMarketing.childWebMarketingJson.overtitle}
-        title={data.webMarketing.childWebMarketingJson.title}
-        subtitle={data.webMarketing.childWebMarketingJson.subtitle}
-        multiline1={data.webMarketing.childWebMarketingJson.multiline1}
+        feelHappyGif={true}
+        gif={true}
+        overtitle={data.feelGood.childFeelGoodJson.overtitle}
+        title={data.feelGood.childFeelGoodJson.title}
+        subtitle={data.feelGood.childFeelGoodJson.subtitle}
+        multiline1={data.feelGood.childFeelGoodJson.multiline1}
       />
-      <PortfolioLogo
-        overtitle={data.portfolio.childPortfolioJson.overtitle}
-        title={data.portfolio.childPortfolioJson.title}
-        subtitle={data.portfolio.childPortfolioJson.subtitle}
-      />
+
       <FooterCta
         linkGetStarted={data.header.childHeaderJson.linkGetStarted}
         textGetStarted={data.header.childHeaderJson.textGetStarted}
@@ -33,7 +30,7 @@ const webMarketing = ({ pageContext: { locale }, data }) => {
 }
 
 export const query = graphql`
-  query WebMarketing($locale: String) {
+  query feelHappy($locale: String) {
     header: file(name: { eq: $locale }, relativeDirectory: { eq: "header" }) {
       childHeaderJson {
         home
@@ -49,34 +46,24 @@ export const query = graphql`
         feelHappy
       }
     }
-    webMarketing: file(
+    feelGood: file(
       name: { eq: $locale }
-      relativeDirectory: { eq: "web-marketing" }
+      relativeDirectory: { eq: "feel-good" }
     ) {
-      childWebMarketingJson {
+      childFeelGoodJson {
         overtitle
         title
-        subtitle
         multiline1
+        subtitle
         titleSeo
         descriptionSeo
       }
     }
-    bigIcon: file(relativePath: { eq: "web-marketing.jpg" }) {
+    bigIcon: file(relativePath: { eq: "feel2-happy.gif" }) {
       childImageSharp {
         fluid(maxWidth: 323, quality: 100) {
           ...GatsbyImageSharpFluid
         }
-      }
-    }
-    portfolio: file(
-      name: { eq: $locale }
-      relativeDirectory: { eq: "portfolio" }
-    ) {
-      childPortfolioJson {
-        overtitle
-        title
-        subtitle
       }
     }
     footerCta: file(
@@ -90,5 +77,4 @@ export const query = graphql`
     }
   }
 `
-
-export default webMarketing
+export default feelHappy

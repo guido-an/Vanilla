@@ -58,6 +58,7 @@ export const query = graphql`
         linkGetStarted
         textGetStarted
         ctaHeader
+        feelHappy
       }
     }
     socialMedia: file(

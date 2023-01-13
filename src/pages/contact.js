@@ -137,6 +137,7 @@ export const query = graphql`
         linkGetStarted
         textGetStarted
         ctaHeader
+        feelHappy
       }
     }
     contact: file(name: { eq: $locale }, relativeDirectory: { eq: "contact" }) {

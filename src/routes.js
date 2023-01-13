@@ -65,6 +65,10 @@ module.exports = [
   {
     path: '/policy',
     component: path.resolve('src/pages/privacyPolicy.js')
+  },
+  {
+    path: '/feel-good',
+    component: path.resolve('src/pages/feelHappy.js')
   }
 
   // blogs
