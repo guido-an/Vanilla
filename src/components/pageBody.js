@@ -34,11 +34,33 @@ const pageBody = (props) => {
                       </p>
                     </a>
                   )
-                } else {
+                }
+                else if (string.includes('Associazione Amici Animali')) {
+                  var str = 'Associazione Amici Animali'
+                  var URL = 'http://www.amicianimali.org'
+                  var splitText = string.split(str)
+                  return (
+                    <p>
+                    {splitText[0]}
+                    <a
+                      style={{ textDecoration: 'none' }}
+                      href={URL}
+                      target='_blank'
+                    >
+                    {str}   
+                    </a>
+                    {splitText[1]}
+                    </p>
+  
+                  )
+                }
+              else {
                   return <p key={i}>{string}</p>
                 }
               })}
+              
             </div>
+
           </div>
         </div>
       </div>
