@@ -1,18 +1,18 @@
-import React, { useState } from 'react'
-import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
-import BackgroundImage from 'gatsby-background-image'
-import Layout from '../components/layout'
-import Seo from '../components/seo'
-import LocalizedLink from '../components/LocalizedLink'
-import FooterCta from '../components/footerCta'
-import './storie.css'
+import React, { useState } from "react"
+import { graphql, Link } from "gatsby"
+import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+import LocalizedLink from "../components/LocalizedLink"
+import FooterCta from "../components/footerCta"
+import "./storie.css"
 
 export default ({ pageContext: { locale }, data }) => {
   const [postsCopy, setPostsCopy] = useState(data.allWordpressPost.edges)
   const [posts, setPosts] = useState(data.allWordpressPost.edges)
   const [categoriesSelected, setCategoriesSelected] = useState([])
-  
+
   const onCategoryChange = e => {
     const { name } = e.target
     if (e.target.checked) {
@@ -37,37 +37,39 @@ export default ({ pageContext: { locale }, data }) => {
     }
   }, [categoriesSelected])
 
-  console.log(posts, 'posts')
   return (
-    <Layout path='/' locale={locale} data={data}>
-      <Seo title='Il blog di Vanilla Marketing | Digital Creators' description="Non perderti l'opportunità di leggere guide, news, case history e approfondimenti sul mondo del web marketing all'interno del blog di Vanilla Marketing." />
-      <div className='blog-section'>
-        <div className='wrapper-categories'>
-          <div className='input-wrapper'>
-            <div className='switch'>
+    <Layout path="/" locale={locale} data={data}>
+      <Seo
+        title="Il blog di Vanilla Marketing | Digital Creators"
+        description="Non perderti l'opportunità di leggere guide, news, case history e approfondimenti sul mondo del web marketing all'interno del blog di Vanilla Marketing."
+      />
+      <div className="blog-section">
+        <div className="wrapper-categories">
+          <div className="input-wrapper">
+            <div className="switch">
               <input
                 onChange={onCategoryChange}
-                name='Web Development'
-                id='switch-1'
-                type='checkbox'
-                className='switch-input'
+                name="Web Development"
+                id="switch-1"
+                type="checkbox"
+                className="switch-input"
               />
-              <label htmlFor='switch-1' className='switch-label'>
+              <label htmlFor="switch-1" className="switch-label">
                 Web Development
               </label>
             </div>
             <div>Web Development</div>
           </div>
-          <div className='input-wrapper'>
-            <div className='switch'>
+          <div className="input-wrapper">
+            <div className="switch">
               <input
                 onChange={onCategoryChange}
-                name='Social Media Marketing'
-                id='switch-2'
-                type='checkbox'
-                className='switch-input'
+                name="Social Media Marketing"
+                id="switch-2"
+                type="checkbox"
+                className="switch-input"
               />
-              <label htmlFor='switch-2' className='switch-label'>
+              <label htmlFor="switch-2" className="switch-label">
                 Social Media
               </label>
             </div>
@@ -88,31 +90,31 @@ export default ({ pageContext: { locale }, data }) => {
             </div>
             <div>Web Marketing</div>
           </div> */}
-          <div className='input-wrapper'>
-            <div className='switch'>
+          <div className="input-wrapper">
+            <div className="switch">
               <input
                 onChange={onCategoryChange}
-                name='Social Media Marketing'
-                id='switch-4'
-                type='checkbox'
-                className='switch-input'
+                name="Social Media Marketing"
+                id="switch-4"
+                type="checkbox"
+                className="switch-input"
               />
-              <label htmlFor='switch-4' className='switch-label'>
+              <label htmlFor="switch-4" className="switch-label">
                 Graphic Design
               </label>
             </div>
             <div>Graphic Design</div>
           </div>
-          <div className='input-wrapper'>
-            <div className='switch'>
+          <div className="input-wrapper">
+            <div className="switch">
               <input
                 onChange={onCategoryChange}
-                name='Strategia'
-                id='switch-5'
-                type='checkbox'
-                className='switch-input'
+                name="Strategia"
+                id="switch-5"
+                type="checkbox"
+                className="switch-input"
               />
-              <label htmlFor='switch-5' className='switch-label'>
+              <label htmlFor="switch-5" className="switch-label">
                 Strategia
               </label>
             </div>
@@ -120,12 +122,16 @@ export default ({ pageContext: { locale }, data }) => {
           </div>
         </div>
 
-        <div className='blog-container'>
+        <div className="blog-container">
           {posts &&
-            posts.map((blog, i) => (
-              <div className='article-wrapper' key={i}>
-                <LocalizedLink to={`/storie/${blog.node.slug}`}>
-                  {/* {blog.node.featured_media.localFile && (
+            posts
+              .filter(post => {
+                return post.node.categories[0].name !== "Scatti"
+              })
+              .map((blog, i) => (
+                <div className="article-wrapper" key={i}>
+                  <LocalizedLink to={`/storie/${blog.node.slug}`}>
+                    {/* {blog.node.featured_media.localFile && (
                     <BackgroundImage
                       fluid={
                         blog.node.featured_media.localFile.childImageSharp.fluid
@@ -136,27 +142,29 @@ export default ({ pageContext: { locale }, data }) => {
                       }}
                     />    
                   )} */}
-                  <img 
-                     src={blog.node.featured_media.source_url}  
-                     className='article-img'
+                    <img
+                      src={blog.node.featured_media.source_url}
+                      className="article-img"
                     />
 
-                  <div className='article-wrapper-text'>
-                    {/* <h2 style={{ marginBottom: 0 }}>{blog.node.title}</h2> */}
-                    <div
-                      className='title'
-                      dangerouslySetInnerHTML={{ __html: blog.node.title }}
-                    />
-                    
-                    <div
-                      className='excerpt'
-                      dangerouslySetInnerHTML={{ __html: blog.node.excerpt }}
-                    />
-                    <p style={{ fontWeight: '500' }}>{"> Leggi l'articolo" }</p>
-                  </div>
-                </LocalizedLink>
-              </div>
-            ))}
+                    <div className="article-wrapper-text">
+                      {/* <h2 style={{ marginBottom: 0 }}>{blog.node.title}</h2> */}
+                      <div
+                        className="title"
+                        dangerouslySetInnerHTML={{ __html: blog.node.title }}
+                      />
+
+                      <div
+                        className="excerpt"
+                        dangerouslySetInnerHTML={{ __html: blog.node.excerpt }}
+                      />
+                      <p style={{ fontWeight: "500" }}>
+                        {"> Leggi l'articolo"}
+                      </p>
+                    </div>
+                  </LocalizedLink>
+                </div>
+              ))}
         </div>
       </div>
       <FooterCta

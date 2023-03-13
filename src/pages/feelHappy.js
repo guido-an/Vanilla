@@ -6,7 +6,6 @@ import PageBody from "../components/pageBody"
 import FooterCta from "../components/footerCta"
 
 const feelHappy = ({ pageContext: { locale }, data }) => {
-  console.log(data,"datatatatta");
   return (
     <Layout path="/" locale={locale} data={data}>
       <SEO title={data.feelGood.childFeelGoodJson.titleSeo} description={data.feelGood.childFeelGoodJson.descriptionSeo} />

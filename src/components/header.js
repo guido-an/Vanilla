@@ -9,7 +9,6 @@ import LocalizedLink from './LocalizedLink'
 import Cta from './cta'
 
 const Header = ({ dataHeader, locale }) => {
-  console.log(dataHeader,"dataHeader")
   const data = useStaticQuery(graphql`
     query {
       arrowDown: file(relativePath: { eq: "arrow-down.png" }) {
@@ -41,6 +40,7 @@ const Header = ({ dataHeader, locale }) => {
     contactLink,
     ctaHeader,
     feelHappy,
+    scati,
     linkGetStarted
   } = dataHeader.header.childHeaderJson
 
@@ -131,6 +131,7 @@ const Header = ({ dataHeader, locale }) => {
                 </div>
               )}
               {locale === 'it' && <Link to='/storie'>Storie</Link>}
+              <Link to='/scatti'>Scatti</Link>
               <LocalizedLink to='/feel-good'>{feelHappy}</LocalizedLink>
               <LocalizedLink to={contactLink}>{contact}</LocalizedLink>
             </ul>
@@ -187,6 +188,7 @@ const Header = ({ dataHeader, locale }) => {
                    Storie
                 </Link>
                 }
+                <Link to='/scatti'>Scatti</Link>
                 <LocalizedLink to='/feel-good'>{feelHappy}</LocalizedLink>
                 <LocalizedLink to={contactLink}>{contact}</LocalizedLink>
               </ul>
