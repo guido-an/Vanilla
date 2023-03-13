@@ -69,6 +69,10 @@ module.exports = [
   {
     path: '/feel-good',
     component: path.resolve('src/pages/feelHappy.js')
+  },
+  {
+    path: '/scatti',
+    component: path.resolve('src/pages/scatti.js')
   }
 
   // blogs

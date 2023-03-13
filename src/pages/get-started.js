@@ -39,7 +39,6 @@ const getStarted = ({ pageContext: { locale }, data }) => {
             fontSize: '16px',
             fontWeight: '500'
           }}
-          to='/'
         >
           {rejectText}
         </LocalizedLink>

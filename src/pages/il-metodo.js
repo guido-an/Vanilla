@@ -8,7 +8,6 @@ import FooterCta from '../components/footerCta'
 import ilMetodoImg from '../images/il-metodo-vanilla-marketing.jpg'
 
 const ilMetodo = ({ pageContext: { locale }, data }) => {
-  console.log(data, 'data')
   return (
     <Layout path='/' locale={locale} data={data}>
       <SEO title='Digital Creators Method | Vanilla Marketing' />
