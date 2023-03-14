@@ -78,7 +78,14 @@
 .mobile-menu-cta {
   margin-top: 80px
 }
-
+@media (min-width: 1280px) and (max-width:1462px) {
+  .desktop-header-container {
+    margin:0px!important;
+  }
+  .desktop-header-container ul a{
+    padding: 30px 11px!important;
+  }
+}
 @media (min-width: 1280px) {
   #header-mobile {
     display: none;
