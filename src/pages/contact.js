@@ -30,7 +30,7 @@ const Contact = ({ pageContext: { locale }, data }) => {
               <p>
                 <strong>{phoneText}</strong>
               </p>
-              <a href='tel:+393516711311'>
+              <a href='tel:+393515047951'>
                 <p>+39 351 504 7951</p>
               </a>
               <a href='tel:+39071204002'>
