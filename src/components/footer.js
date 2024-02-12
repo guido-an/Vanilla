@@ -9,24 +9,24 @@ import franceFlag from '../images/france-flag.png'
 import logoHubspot from '../images/partner-horizontal-white.png'
 
 class HubspotForm extends React.Component {
-  componentDidMount () {
-  	const script = document.createElement('script')
+  componentDidMount() {
+    const script = document.createElement('script')
     script.src = 'https://js.hsforms.net/forms/v2.js'
     document.body.appendChild(script)
 
     script.addEventListener('load', () => {
-    	if (window.hbspt) {
-      	window.hbspt.forms.create({
-        	portalId: '8068265',
+      if (window.hbspt) {
+        window.hbspt.forms.create({
+          portalId: '8068265',
           formId: '067dc150-cd21-41de-aa83-ec7d9be95a77'
         })
       }
     })
   }
 
-  render () {
-  	return (
-    <div>
+  render() {
+    return (
+      <div>
         <div id='hubspotForm' />
       </div>
     )
@@ -168,7 +168,7 @@ export default () => {
               className='icon-footer'
               fluid={data.phoneIcon.childImageSharp.fluid}
             />
-            <a className='footer-link' href='tel:+393516711311'>
+            <a className='footer-link' href='tel:+39071204002'>
               +39 071 204002
             </a>
           </div>
@@ -178,7 +178,7 @@ export default () => {
               fluid={data.mobileIcon.childImageSharp.fluid}
             />
             <a className='footer-link' href='tel:+39071204002'>
-             +39 351 504 7951
+              +39 351 504 7951
             </a>
           </div>
           <div className='footer-contact-container'>
